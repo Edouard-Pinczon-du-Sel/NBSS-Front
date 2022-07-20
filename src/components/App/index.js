@@ -1,13 +1,15 @@
 // == Import
-import reactLogo from './react-logo.svg';
 import './styles.css';
 
 // == Composant
+import AppHeader from '../AppHeader';
+import AppFooter from '../AppFooter';
+
 function App() {
   return (
     <div className="app">
-      <img src={reactLogo} alt="react logo" />
-      <h1>Composant : The App</h1>
+      <AppHeader />
+      <AppFooter />
     </div>
   );
 }
