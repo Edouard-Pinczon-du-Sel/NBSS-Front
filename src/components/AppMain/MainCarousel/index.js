@@ -3,11 +3,11 @@
 import './styles.scss';
 
 // == Composant
-function HeaderCarousel() {
+function MainCarousel() {
   return (
     <div>Carousel</div>
   );
 }
 
 // == Export
-export default HeaderCarousel;
+export default MainCarousel;
