@@ -1,0 +1,29 @@
+@use 'src/styles/vars';
+
+.header {
+  border: 1.5px solid black;
+  height: 5.5rem;
+  padding: .5rem 0;
+  background-color: vars.$blue-color;
+  opacity: 40%;
+  color: #fff;
+
+  &__band {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-left: 1rem;
+    width: 4.25rem;
+    height: 3.87rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+}
+

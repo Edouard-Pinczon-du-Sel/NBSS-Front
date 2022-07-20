@@ -4,15 +4,15 @@ import './styles.scss';
 
 // == Composant
 import HeaderTop from './HeaderTop';
+import ResponsiveNavBar from './HeaderNavBar/ResponsiveNavBar';
 import HeaderNavBar from './HeaderNavBar';
-import HeaderCarousel from './HeaderCarousel';
 
 function AppHeader() {
   return (
-    <div>
+    <div className="top__header">
       <HeaderTop />
+      <ResponsiveNavBar />
       <HeaderNavBar />
-      <HeaderCarousel />
     </div>
   );
 }

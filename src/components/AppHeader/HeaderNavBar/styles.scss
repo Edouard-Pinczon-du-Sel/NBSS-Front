@@ -1,0 +1,71 @@
+@use 'src/styles/vars';
+.nav {
+  height: 4.5rem;
+  padding: 0 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: vars.$pink-color;
+  margin-bottom: 2rem;
+
+  &__btn {
+    color: #fff;
+    background-color: vars.$blue-color;
+    font-size: 1.31rem;
+    font-weight: bold;
+    height: 3.18rem;
+    border:none; 
+    box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+    border-top-left-radius: 800px;
+    border-top-right-radius: 5000px;
+    border-bottom-right-radius: 800px;
+    border-bottom-left-radius: 8000px;
+    transition: all 500ms ease-in-out;
+  }
+
+  &__btn:hover{
+    box-shadow: 2px 5px 20px 3px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 5000px;
+    border-top-right-radius: 800px;
+    border-bottom-right-radius: 8000px;
+    border-bottom-left-radius: 800px;
+  }
+
+  &__btn:nth-child(1) {
+    width: 9.81rem;
+    
+  }
+
+  &__btn:nth-child(2) {
+    width: 14.37rem;
+  }
+
+  &__btn:nth-last-child(2) {
+    width: 13.62rem;
+  }
+
+  &__btn:last-child {
+    width: 9.81rem;
+  }
+}
+
+
+
+// RECUPERER LES BOUTONS 
+
+// .headerNavbar-container {
+//   // TODO intégré le menu burger
+//   margin-bottom: 1rem;
+//   border: 1px dotted purple;
+//   background-color: #f0f;
+//   height: 3rem;
+//   &-list {
+//     height: 2rem;
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//   }
+//   &-item {
+//    
+//   }
+// }
