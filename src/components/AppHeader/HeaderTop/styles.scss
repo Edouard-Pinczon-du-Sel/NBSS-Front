@@ -1,0 +1,12 @@
+.headerTop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  border: 2px dotted purple;
+
+  &-logo {
+    position: absolute;
+    left: 0;
+  }
+}

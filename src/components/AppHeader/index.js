@@ -8,7 +8,7 @@ import HeaderNavBar from './HeaderNavBar';
 
 function AppHeader() {
   return (
-    <div>
+    <div className="appHeader-container">
       <HeaderTop />
       <HeaderNavBar />
     </div>
