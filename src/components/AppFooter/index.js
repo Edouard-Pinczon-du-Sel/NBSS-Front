@@ -1,6 +1,6 @@
 // == Import
 // import PropTypesLib from 'prop-types';
-import './style.scss';
+import './styles.scss';
 
 // == Composant
 import FooterMap from './FooterMap';
