@@ -4,12 +4,14 @@ import './styles.scss';
 
 // == Composant
 import HeaderTop from './HeaderTop';
+import ResponsiveNavBar from './HeaderNavBar/ResponsiveNavBar';
 import HeaderNavBar from './HeaderNavBar';
 
 function AppHeader() {
   return (
-    <div className="appHeader-container">
+    <div className="top__header">
       <HeaderTop />
+      <ResponsiveNavBar />
       <HeaderNavBar />
     </div>
   );

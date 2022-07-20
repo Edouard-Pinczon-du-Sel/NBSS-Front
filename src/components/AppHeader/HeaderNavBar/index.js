@@ -5,13 +5,12 @@ import './styles.scss';
 // == Composant
 function HeaderNavBar() {
   return (
-    <div className="headerNavbar-container">
-      <ul className="headerNavbar-container-list">
-        <li className="headerNavbar-container-item">Accueil</li>
-        <li className="headerNavbar-container-item">Nos Services</li>
-        <li className="headerNavbar-container-item">Nous Recrutons</li>
-        <li className="headerNavbar-container-item">Contact</li>
-      </ul>
+    <div className="nav">
+      {/*<NavLink className={({isActive}) => isActive ? 'current' : ''} to="/contact">Contactez-nous</NavLink>*/}
+      <button className="nav__btn" type="button">Accueil</button>
+      <button className="nav__btn" type="button">Nos Services</button>
+      <button className="nav__btn" type="button">Nous recrutons</button>
+      <button className="nav__btn" type="button">Contact</button>
     </div>
   );
 }

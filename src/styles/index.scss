@@ -2,22 +2,12 @@
 @use 'vars';
 @use 'font';
 
+body {
+  background-color: vars.$body-color;
+}
+
 // MOBILE PART
 .app {
   font-family: 'Montserrat', sans-serif;
-  background-color: vars.$body-color;
-  width: 100%;
 }
 
-
-
-
-// DESTOCKP PART
-
-@media screen and (min-width: 768px) { 
-  .app {
-    margin: 0 auto;
-    width: 90%;
-    background-color: rgba(0, 0, 255, 0.246);
-  }
-}

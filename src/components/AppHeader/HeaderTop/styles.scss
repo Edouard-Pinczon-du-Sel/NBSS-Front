@@ -1,21 +1,29 @@
 @use 'src/styles/vars';
 
-.headerTop-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3rem;
-  border: 2px dotted purple;
-  background-color: #006072;
-
-  &-logo {
-    position: absolute;
-    left: 0;
-  }
-}
-
-.title {
-  text-transform:uppercase ;
-  font-weight: bold;
+.header {
+  border: 1.5px solid black;
+  height: 5.5rem;
+  padding: .5rem 0;
+  background-color: vars.$blue-color;
+  opacity: 40%;
   color: #fff;
+
+  &__band {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-left: 1rem;
+    width: 4.25rem;
+    height: 3.87rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
 }
+
