@@ -11,7 +11,7 @@ function FooterMap() {
         <h4 className="map__data">54 Avenue de Nantes</h4>
         <h4 className="map__data">44116 Vieillevigne</h4>
         <h4 className="map__data">France</h4>
-        <img className="map__img" src={img} alt="map" />
+        <img className="map__img" src="#" alt="map" />
       </div>
     </div>
   );
