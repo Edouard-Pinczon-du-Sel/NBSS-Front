@@ -9,7 +9,7 @@ function HeaderTop() {
       <div className="headerTop-container-logo">
         <img src="https://fakeimg.pl/40/" alt="fake logo" />
       </div>
-      <div>nb services et soins</div>
+      <div className="title">nb services et soins</div>
     </div>
   );
 }
