@@ -1,0 +1,47 @@
+@use 'src/styles/vars';
+
+// Format Native en min 0 max 375 px
+
+//! max-width == jusqu'à 375px ! ! ! 
+
+// MOBILE
+@media screen and (max-width: 375px) {
+  .contact {
+    margin: 1rem 2.5rem 1rem 2.5rem;
+    padding: 1.2rem 0.5rem;
+
+    &__data {
+      font-size: 0.93rem;
+    }
+
+  }
+
+  .horaires {
+    margin: 0rem 2.5rem 1rem 2.5rem;
+    padding: 1.2rem 0.5rem;
+  }
+
+  .map {
+    margin: 0rem 2.5rem 1rem 2.5rem;
+    padding: 1.5rem 0rem;
+  }
+  
+}
+
+// TABLET 
+@media screen and (min-width: 376px) and (max-width: 1023px) {
+
+  
+}
+// LAPTOP 
+@media screen and (min-width: 1024px) {
+
+  
+}
+
+
+// DESKTOP 
+@media screen and (min-width: 1080px) {
+
+  
+}
