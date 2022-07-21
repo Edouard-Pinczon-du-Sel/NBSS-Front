@@ -2,3 +2,8 @@ $body-color: #E4E8F8;
 $blue-color: #006072;
 $pink-color: #E36386;
 
+$breakpoints: (
+    "phone-down": 500px,
+    "desktop-up": 1024px,
+    "desktop-down": 1280px
+);

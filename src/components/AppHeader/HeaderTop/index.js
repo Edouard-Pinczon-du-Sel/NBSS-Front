@@ -1,21 +1,21 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import logo from 'src/assets/images/LOGO-NBSS-blanc.png';
+import titreImg from 'src/assets/images/titreImg.png';
 import './styles.scss';
-import './burger.css';
+import './burger.scss';
 
 // == Composant
 function HeaderTop() {
   function handleDisplay() {
-    const responsiveNavBar = document.querySelector('.nav__responsive');
-    // console.log(responsiveNavBar);
+    const responsiveNavBar = document.querySelector('.nav');
     responsiveNavBar.classList.toggle('nav__responsive--display');
   }
   return (
     <div className="header">
       <div className="header__band">
         <img className="header__logo" src={logo} alt="logo" />
-        <h1 className="header__title">NB SERVICES ET SOINS</h1>
+        <img className="header__title" src={titreImg} alt="rien" />
         <div id="webapp_cover">
           <div id="menu_button">
             <input type="checkbox" id="menu_checkbox" onClick={handleDisplay} />

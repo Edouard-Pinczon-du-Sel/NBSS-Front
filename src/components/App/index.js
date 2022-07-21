@@ -1,5 +1,6 @@
 // == Import
 import 'src/styles/index.scss';
+import 'src/components/AppHeader/stylesMediaQueries.scss';
 
 // == Composant
 import AppHeader from '../AppHeader';
