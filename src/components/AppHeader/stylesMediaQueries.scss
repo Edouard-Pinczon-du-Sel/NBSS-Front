@@ -19,9 +19,6 @@
       display: none ;
     }
   }
-  .header__title {
-    font-size: 1.1rem;
-  }
 }
 
 // TABLET 
@@ -38,9 +35,6 @@
     &__responsive--display {
       display: none ;
     }
-  }
-  .header__title {
-      font-size: 1.2rem;
   }
 }
 // MEDIUM Size
@@ -108,10 +102,6 @@
       font-size: 2rem;
       font-weight: bold;
     }
-  }
-
-  .header__title {
-    font-size: 1.5rem ;
   }
 }
 
