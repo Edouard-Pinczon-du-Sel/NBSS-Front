@@ -1,0 +1,35 @@
+@use 'src/styles/vars';
+
+.contact {
+  background-color: vars.$pink-color;
+  color: #fff;
+  margin: 1rem 2.5rem 1rem 2.5rem;
+  padding: 1.2rem 0.5rem;
+  border: 1.8px solid black;
+
+  &__title {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+  }
+
+  &__label {
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+  }
+
+  &__data {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.1rem;
+
+
+  }
+
+  &__data--infos {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    color : rgba(255, 255, 255, 0.813);
+  }
+}
