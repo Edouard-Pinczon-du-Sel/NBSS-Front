@@ -2,13 +2,12 @@
 // import PropTypesLib from 'prop-types';
 import logo from 'src/assets/images/LOGO-NBSS-blanc.png';
 import './styles.scss';
-import './burger.css';
+import './burger.scss';
 
 // == Composant
 function HeaderTop() {
   function handleDisplay() {
-    const responsiveNavBar = document.querySelector('.nav__responsive');
-    // console.log(responsiveNavBar);
+    const responsiveNavBar = document.querySelector('.nav');
     responsiveNavBar.classList.toggle('nav__responsive--display');
   }
   return (

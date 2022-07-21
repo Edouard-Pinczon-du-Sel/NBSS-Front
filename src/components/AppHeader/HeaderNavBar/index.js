@@ -5,7 +5,7 @@ import './styles.scss';
 // == Composant
 function HeaderNavBar() {
   return (
-    <div className="nav">
+    <div className="nav nav__responsive--display">
       {/*<NavLink className={({isActive}) => isActive ? 'current' : ''} to="/contact">Contactez-nous</NavLink>*/}
       <button className="nav__btn" type="button">Accueil</button>
       <button className="nav__btn" type="button">Nos Services</button>
