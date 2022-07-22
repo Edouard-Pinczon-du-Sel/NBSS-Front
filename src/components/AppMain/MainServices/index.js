@@ -6,7 +6,7 @@ import img from '../../../assets/images/7.jpg';
 // == Composant
 function MainServices() {
   return (
-    <div>
+    <div className="services__list">
       <div className="services">
         <div className="services__container">
           <h1 className="services__title">Services 1</h1>
