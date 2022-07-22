@@ -7,6 +7,7 @@ import img from '../../../assets/images/7.jpg';
 function MainServices() {
   return (
     <div className="services__list">
+      {/* Rajouter titre nos services */}
       <div className="services">
         <div className="services__container">
           <h1 className="services__title">Services 1</h1>
