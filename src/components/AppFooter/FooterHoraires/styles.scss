@@ -1,0 +1,27 @@
+@use 'src/styles/vars';
+
+.horaires {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    font-size: 0.9rem;
+  }
+
+  &__container--data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__border {
+    width: calc(1/6*100%);
+    margin: 1rem 0;
+  }
+
+  &__data {
+    font-weight: 500;
+  }
+}

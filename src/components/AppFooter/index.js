@@ -1,6 +1,6 @@
 // == Import
 // import PropTypesLib from 'prop-types';
-import './styles.scss';
+import './stylesMediaQueries.scss';
 
 // == Composant
 import FooterMap from './FooterMap';
@@ -10,12 +10,14 @@ import FooterLegacy from './FooterLegacy';
 
 function AppFooter() {
   return (
-    <div>
-      <FooterMap />
-      <FooterContact />
-      <FooterHoraires />
+    <>
+      <div className="footer">
+        <FooterMap />
+        <FooterContact />
+        <FooterHoraires />
+      </div>
       <FooterLegacy />
-    </div>
+    </>
   );
 }
 

@@ -5,7 +5,14 @@ import './styles.scss';
 // == Composant
 function FooterLegacy() {
   return (
-    <div>Footer Legacy</div>
+    <>
+      <hr className="legacy__border" />
+      <div className="legacy">
+        <a className="legacy__link" href="#">Mentions Légales</a>
+        <a className="legacy__link" href="#">Copyright NB Services et Soins</a>
+        <a className="legacy__link" href="#">Plan du site</a>
+      </div>
+    </>
   );
 }
 

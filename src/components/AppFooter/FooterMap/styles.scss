@@ -1,0 +1,22 @@
+@use 'src/styles/vars';
+
+.map {
+  background-color: vars.$pink-color;
+  color: #fff;
+  
+  &__title {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+
+  }
+
+  &__data {
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+  // &__img {
+  //   margin-top: 1rem;
+  // }
+}

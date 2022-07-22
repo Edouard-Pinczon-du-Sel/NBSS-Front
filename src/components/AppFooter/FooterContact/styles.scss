@@ -1,0 +1,30 @@
+@use 'src/styles/vars';
+
+.contact {
+  background-color: vars.$pink-color;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  
+
+  &__title {
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+  }
+
+  &__label {
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+
+  &__data {
+    font-weight: 400;
+    margin-bottom: 0.1rem;
+  }
+
+  &__data--infos {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    color : rgba(255, 255, 255, 0.813);
+  }
+}
