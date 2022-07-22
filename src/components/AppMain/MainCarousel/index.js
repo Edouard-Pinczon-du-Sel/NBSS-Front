@@ -7,11 +7,27 @@ import './styles.scss';
 // == Composant
 function MainCarousel() {
   return (
-    <Carousel>
-      <img src="https://fakeimg.pl/250x100/" />
-      <img src="https://fakeimg.pl/250x100/" />
-      <img src="https://fakeimg.pl/250x100/" />
-      <img src="https://fakeimg.pl/250x100/" />
+    <Carousel
+      pauseOnHover
+      autoplay
+      wrapAround
+      cellAlign="center"
+      className="test_v2"
+      pagingDotsClassName="dots"
+      renderTopCenterControls={({ currentSlide }) => (
+        <div>Slide: {currentSlide}</div>
+      )}
+      renderCenterLeftControls={false}
+      renderCenterRightControls={false}
+      defaultControlsConfig={{
+        pagingDotsStyle: {
+          fill: 'red',
+        },
+      }}
+    >
+      <img className="test" src="https://fakeimg.pl/800x250/" />
+      <img className="test" src="https://fakeimg.pl/800x250/" />
+      <img className="test" src="https://fakeimg.pl/800x250/" />
     </Carousel>
   );
 }
