@@ -1,13 +1,17 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import MainCarousel from './MainCarousel';
-import './styles.scss';
+import MainServices from './MainServices';
+import './stylesMediaQueries.scss';
 
 // == Composant
 function AppMain() {
   return (
-    <div>
+    <div className="main">
       <MainCarousel />
+      <div className="preview">
+        <MainServices />
+      </div>
     </div>
   );
 }
