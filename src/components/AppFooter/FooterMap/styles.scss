@@ -3,9 +3,7 @@
 .map {
   background-color: vars.$pink-color;
   color: #fff;
-  display: flex;
-  justify-content: center;
-
+  
   &__title {
     font-size: 1.4rem;
     margin-bottom: 0.8rem;
@@ -18,7 +16,7 @@
     font-weight: 300;
   }
 
-  &__img {
-    margin-top: 1rem;
-  }
+  // &__img {
+  //   margin-top: 1rem;
+  // }
 }

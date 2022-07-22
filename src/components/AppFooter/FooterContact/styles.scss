@@ -3,10 +3,11 @@
 .contact {
   background-color: vars.$pink-color;
   color: #fff;
+  display: flex;
+  flex-direction: column;
   
 
   &__title {
-    font-size: 1.4rem;
     margin-bottom: 0.8rem;
     font-weight: bold;
   }
@@ -14,14 +15,11 @@
   &__label {
     font-weight: 500;
     margin-bottom: 0.2rem;
-    
   }
 
   &__data {
     font-weight: 400;
     margin-bottom: 0.1rem;
-
-
   }
 
   &__data--infos {
