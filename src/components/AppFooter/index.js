@@ -11,11 +11,11 @@ import FooterLegacy from './FooterLegacy';
 function AppFooter() {
   return (
     <>
-      <div className="footer">
+      <footer className="footer">
         <FooterMap />
         <FooterContact />
         <FooterHoraires />
-      </div>
+      </footer>
       <FooterLegacy />
     </>
   );

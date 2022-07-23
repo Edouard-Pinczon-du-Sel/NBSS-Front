@@ -6,10 +6,10 @@ import HeaderNavBar from './HeaderNavBar';
 
 function AppHeader() {
   return (
-    <div className="top__header">
+    <header className="top__header">
       <HeaderTop />
       <HeaderNavBar />
-    </div>
+    </header>
   );
 }
 

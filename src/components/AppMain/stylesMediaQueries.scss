@@ -96,6 +96,26 @@
       width: 6.9rem;
     }
   }
+
+  .test {
+    display: block;
+    object-fit:none;
+  }
+  .slider-control-topcenter {
+    display: initial;
+  }
+  .slider-control-centerleft {
+    display: initial;
+  }  
+  .slider-control-centerright {
+    display: initial;
+  }
+  .slider-control-bottomcenter .info { 
+    width: 60vw;
+  }
+  .sliderBtn {
+    font-size: 3rem;
+  }
   
 }
 
@@ -119,6 +139,14 @@
       height: 2.05rem;
       width: 8.5rem;
     }
+  }
+}
+
+//? J'ai pas compris à quoi servait ce breakpoint 
+@media screen and (min-width: 1440px) {
+  .test {
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
