@@ -7,12 +7,12 @@ import './stylesMediaQueries.scss';
 // == Composant
 function AppMain() {
   return (
-    <div className="main">
+    <main className="main">
       <MainCarousel />
       <div className="preview">
         <MainServices />
       </div>
-    </div>
+    </main>
   );
 }
 
