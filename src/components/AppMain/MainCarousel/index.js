@@ -16,6 +16,7 @@ function MainCarousel() {
       adaptiveHeight
       speed={1500}
       autoplayInterval={4000}
+      // ? Pourquoi ce n'est pas utilisé ?
       renderBottomCenterControls={({ currentSlide }) => (
         <div className="info">
           <span className="info--title"> nb services et soins</span>
