@@ -10,7 +10,7 @@ import ServicesPage from '../ServicesPage';
 import ServiceDetails from '../ServiceDetails';
 // import ServicesPage from '../ServicesPage';
 import JobsPage from '../JobsPage';
-// import ContactPage from '../ContactPage';
+import ContactPage from '../ContactPage';
 
 
 import AppFooter from '../AppFooter';
@@ -25,7 +25,7 @@ function App() {
         <Route path="/test" element={<ServiceDetails />} />
         {/* <Route path="/services" element={<SercicesPage />} /> */}
         <Route path="/emplois" element={<JobsPage />} />
-        {/* <Route path="/contact" element={<ContactPage />} /> */}
+        <Route path="/contact" element={<ContactPage />} />
         {/* <Route path="/mentions-legal" element={<mentionsLegalPage />} /> */}
         {/* <Route path="/*" element={<Error />} /> */}
         {/* <Route path="/error" element={<FormError />} /> */}
