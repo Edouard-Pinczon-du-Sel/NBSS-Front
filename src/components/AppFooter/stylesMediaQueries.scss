@@ -1,7 +1,9 @@
 @use 'src/styles/vars';
 
 // Format Native en min 0 max 375 px
-
+.footer {
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+}
 //! max-width == jusqu'à 375px ! ! ! 
 
 // MOBILE

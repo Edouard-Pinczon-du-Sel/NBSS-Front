@@ -101,8 +101,15 @@
     height: 42rem;
     padding-top: 2rem;
 
+    &__container--data {
+      padding: 1.5rem 3.5rem;
+    }
     &__img {
       width: 40rem;
+    }
+
+    &__btn {
+      height: 4rem;
     }
   }
 }
