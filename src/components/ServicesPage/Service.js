@@ -1,5 +1,6 @@
 // == Import
 // import PropTypesLib from 'prop-types';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 import img from '../../assets/images/7.jpg';
 
@@ -17,7 +18,7 @@ function Service() {
                 llllllllllllllllllllllllllllllllllllllll
               </p>
             </div>
-            <button className="services--page__service--btn" type="button">Lire la suite</button>
+            <Link to="/test"><button className="services--page__service--btn" type="button">Lire la suite</button></Link>
           </div>
         </div>
       </div>
