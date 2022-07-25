@@ -1,5 +1,5 @@
 // == Import
-// import PropTypesLib from 'prop-types';
+import PropTypesLib from 'prop-types';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
@@ -16,5 +16,10 @@ function ServicesPreviews({ name, link, alt }) {
   );
 }
 
+PropTypesLib.propTypes = {
+  name: PropTypesLib.string.isRequired,
+  // link: PropTypesLib.img.isRequired,
+  alt: PropTypesLib.string.isRequired,
+};
 // == Export
 export default ServicesPreviews;
