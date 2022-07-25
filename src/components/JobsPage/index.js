@@ -1,6 +1,6 @@
 // == Import
 // import PropTypesLib from 'prop-types';
-import MainServices from './MainServices';
+import JobsList from './JobsList';
 import './stylesMediaQueries.scss';
 
 // == Composant
@@ -8,7 +8,7 @@ function JobsPage() {
   return (
     <main className="main">
       <div className="preview">
-        <MainServices />
+        <JobsList />
       </div>
     </main>
   );
