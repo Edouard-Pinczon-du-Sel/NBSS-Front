@@ -5,17 +5,17 @@ import './styles.scss';
 // == Composant
 function SpontaneousApplication() {
   return (
-    <div className="job">
-      <div className="job__container">
-        <h1 className="job__title">
-          <span className="job__title--name">
+    <div className="Annoucement">
+      <div className="Annoucement__container">
+        <h1 className="Annoucement__title">
+          <span className="Annoucement__title--name">
             En recherche d'un Emploie ?
           </span>
-          <span className="job__title--disponibility">
+          <span className="Annoucement__title--disponibility">
             Déposez notre votre candidature spontanément.
           </span>
         </h1>
-        <p className="job__text">
+        <p className="Annoucement__text">
           Vous souhaitez déposer votre candidateure spontannément ?
           <ul>
             <li>
@@ -30,7 +30,7 @@ function SpontaneousApplication() {
           </ul>
         </p>
         <a
-          className="job__btn"
+          className="Annoucement__btn"
           href="mailto:nbserviceetsoinsrecrutement@gmail.com"
         >
           Postuler
