@@ -7,7 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import AppHeader from '../AppHeader';
 import AppMain from '../AppMain';
 // import ServicesPage from '../ServicesPage';
-// import EmploisPage from '../EmploisPage';
+import JobsPage from '../JobsPage';
 // import ContactPage from '../ContactPage';
 
 import AppFooter from '../AppFooter';
@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AppMain />} />
         {/* <Route path="/services" element={<SercicesPage />} /> */}
-        {/* <Route path="/emplois" element={<EmploisPage />} /> */}
+        <Route path="/emplois" element={<JobsPage />} />
         {/* <Route path="/contact" element={<ContactPage />} /> */}
         {/* <Route path="/mentions-legal" element={<mentionsLegalPage />} /> */}
         {/* <Route path="/*" element={<Error />} /> */}

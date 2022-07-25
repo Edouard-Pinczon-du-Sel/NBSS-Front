@@ -1,0 +1,43 @@
+@use 'src/styles/vars';
+
+.services {
+  color: black;
+  
+  
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 500;
+    padding: 0.5rem;
+  }
+
+  &__img {
+    width: 16rem;
+  }
+
+  &__btn {
+    color: #fff;
+    background-color: vars.$blue-color;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border:none; 
+    box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+    border-top-left-radius: 800px;
+    border-top-right-radius: 5000px;
+    border-bottom-right-radius: 800px;
+    border-bottom-left-radius: 8000px;
+  }
+
+  &__btn:hover{
+    transition: box-shadow 500ms, border-radius 1s ease-in-out;
+    box-shadow: 2px 5px 20px 3px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 5000px;
+    border-top-right-radius: 800px;
+    border-bottom-right-radius: 8000px;
+    border-bottom-left-radius: 800px;
+  }
+}
