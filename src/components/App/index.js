@@ -6,6 +6,8 @@ import { Routes, Route } from 'react-router-dom';
 // == Composant
 import AppHeader from '../AppHeader';
 import AppMain from '../AppMain';
+import ServicesPage from '../ServicesPage';
+import ServiceDetails from '../ServiceDetails';
 // import ServicesPage from '../ServicesPage';
 import JobsPage from '../JobsPage';
 // import ContactPage from '../ContactPage';
@@ -19,6 +21,8 @@ function App() {
       <AppHeader />
       <Routes>
         <Route path="/" element={<AppMain />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/test" element={<ServiceDetails />} />
         {/* <Route path="/services" element={<SercicesPage />} /> */}
         <Route path="/emplois" element={<JobsPage />} />
         {/* <Route path="/contact" element={<ContactPage />} /> */}

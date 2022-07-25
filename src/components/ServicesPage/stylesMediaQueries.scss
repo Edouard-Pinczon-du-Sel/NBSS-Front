@@ -1,0 +1,288 @@
+@use 'src/styles/vars';
+// ? Surement du code à refacto quand on aura fini le reste
+
+// Format Native en min 0 max 375 px
+
+//! max-width == jusqu'à 375px ! ! ! 
+
+// MOBILE
+@media screen and (min-width: 0px) and (max-width: 410px) {
+  
+  .services--page {
+    margin: 0rem 2.5rem 1rem 2.5rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__container--title {
+    font-size: 1.69rem;
+    }
+
+    &__container--txt {
+      font-size: 1.15rem;
+    }
+
+    &__container--btn {
+      font-size: 1.1rem;
+      height: 2.2rem;
+      width: 12.5rem; 
+    }
+
+    &__service {
+      height: 19.5rem;
+      margin: 0rem 2.5rem 1rem 2.5rem;
+    }
+
+    &__service--container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__service--title {
+      font-size: 1.5rem;
+    }
+
+    // &__service--txt {
+    //   margin-bottom: 1.5rem;
+    // }
+
+    &__service--img {
+      width: 12rem;
+    }
+
+    &__service--btn {
+      font-size: 1.1rem;
+      height: 2.2rem;
+      width: 12.5rem; 
+    }
+  }
+}
+
+// TABLET 
+@media screen and (min-width: 411px) {
+
+  .services--page {
+    margin: 0rem 2.5rem 1rem 2.5rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__container--title {
+      font-size: 2rem;
+      }
+
+    &__container--txt {
+      font-size: 1.15rem;
+    }
+
+    &__container--btn {
+      font-size: 1.3rem;
+      height: 2.6rem;
+      width: 15.5rem; 
+    }
+
+    &__service {
+      margin: 0rem 2.5rem 1rem 2.5rem;
+    }
+
+    &__service--container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__service--title {
+      font-size: 1.5rem;
+    }
+
+    // &__service--txt {
+    //   margin-bottom: 1.5rem;
+    // }
+
+    &__service--img {
+      width: 20rem;
+    }
+
+    &__service--btn {
+      font-size: 1.3rem;
+      height: 2.6rem;
+      width: 15.5rem; 
+    }
+  }
+ 
+     
+}
+
+// TABLET 
+@media screen and (min-width: 768px){
+  .services--page {
+    margin: 0rem 2.5rem 1rem 2.5rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__container--title {
+      font-size: 2rem;
+      }
+    
+    &__container--txt {
+      font-size: 1.15rem;
+    }
+
+    &__container--btn {
+      font-size: 1.4rem;
+      height: 2.9rem;
+      width: 20rem; 
+    }
+
+    &__service {
+      margin: 0rem 2.5rem 1rem 2.5rem;
+    }
+
+    &__service--title {
+      font-size: 1.5rem;
+    }
+
+    &__service--txt {
+      font-size: 1.2rem;
+    }
+
+    &__service--img {
+      width: 35rem;
+    }
+
+    &__service--btn {
+      font-size: 1.4rem;
+      height: 2.9rem;
+      width: 20rem; 
+    }
+  }
+  
+}
+// LAPTOP 
+@media screen and (min-width: 1024px){
+  .services--page {
+    margin: 0rem 2.5rem 1rem 2.5rem;
+
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__container--title {
+      font-size: 2.8rem;
+      }
+
+    &__container--txt {
+      font-size: 1.6rem;
+    }
+
+    &__container--btn {
+      font-size: 1.4rem;
+      height: 2.9rem;
+      width: 20rem; 
+    }
+
+    &__service {
+      margin: 0rem 2.5rem 1rem 2.5rem;
+    }
+
+    &__service--container {
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    &__service--container--content {
+      margin-left: 3rem;
+      height: 17rem;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+
+    &__service--title {
+      font-size: 2.5rem;
+    }
+
+    &__service--txt {
+      font-size: 1.6rem;
+    }
+
+    &__service--img {
+      padding: 0;
+      width: 25rem;
+      border: 1rem solid beige;
+      margin: 1rem 0 1rem -1rem;
+    }
+
+    &__service--btn {
+      font-size: 1.4rem;
+      height: 2.9rem;
+      width: 20rem; 
+    }
+  }
+  
+}
+
+@media screen and (min-width: 1250px){ 
+  .services--page {
+    margin: 0rem 0.5rem 1rem 0.5rem;
+
+    &__container--btn {
+      font-size: 1.4rem;
+      height: 2.9rem;
+      width: 20rem; 
+    }
+
+    &__service {
+      margin: 0rem 0.5rem 1rem 0.5rem;
+    }
+
+    &__service--container {
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    &__service--container--content {
+      margin-left: 3rem;
+      height: 17rem;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+
+    &__service--btn {
+      margin-left: 18rem;
+      font-size: 1.4rem;
+      height: 2.9rem;
+      width: 20rem; 
+    }
+  }
+  
+}
+
+@media screen and (min-width: 1700px){ 
+.services--page {
+
+  &__container--btn {
+    font-size: 1.6rem;
+    height: 3rem;
+    width: 23rem; 
+  }
+
+  &__service--btn {
+    margin-left: 38rem;
+    font-size: 1.6rem;
+    height: 3rem;
+    width: 23rem; 
+  }
+
+  
+}
+
+}
