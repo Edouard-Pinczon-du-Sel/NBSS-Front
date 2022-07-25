@@ -3,7 +3,6 @@
 import './styles.scss';
 import './stylesMediaQueries.scss';
 import img from '../../assets/images/logoContact.png';
-// import mapImg from '../../assets/images/map.png';
 
 // == Composant
 function ContactPage() {
@@ -17,7 +16,6 @@ function ContactPage() {
         <span className="contact--page__adress"><p className="contact--page__label--data">Au 54 Avenue de Nantes 44116 Vieillevigne sans rendez-vous :</p>le Mardi de 14:00 à 17:00 et le Samedi de 9h30 à 12h30 </span>
       </div>
       <button className="contact--page__btn" type="button"><a href="mailto:nbservicesetsoins@gmail.com">Contactez nous</a></button>
-      {/* <img className="contact--page__map--img" src={mapImg} alt="map" /> */}
     </div>
   );
 }
