@@ -5,7 +5,11 @@
 }
 .nav {
   margin-bottom: 1rem;
-
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &__responsive--btn {
     font-size: 1.4rem;
     padding: 0.7rem;
