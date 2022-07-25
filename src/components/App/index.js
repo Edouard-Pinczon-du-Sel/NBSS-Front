@@ -8,7 +8,7 @@ import AppHeader from '../AppHeader';
 import AppMain from '../AppMain';
 // import ServicesPage from '../ServicesPage';
 // import EmploisPage from '../EmploisPage';
-// import ContactPage from '../ContactPage';
+import ContactPage from '../ContactPage';
 
 import AppFooter from '../AppFooter';
 
@@ -20,7 +20,7 @@ function App() {
         <Route path="/" element={<AppMain />} />
         {/* <Route path="/services" element={<SercicesPage />} /> */}
         {/* <Route path="/emplois" element={<EmploisPage />} /> */}
-        {/* <Route path="/contact" element={<ContactPage />} /> */}
+        <Route path="/contact" element={<ContactPage />} />
         {/* <Route path="/mentions-legal" element={<mentionsLegalPage />} /> */}
         {/* <Route path="/*" element={<Error />} /> */}
         {/* <Route path="/error" element={<FormError />} /> */}

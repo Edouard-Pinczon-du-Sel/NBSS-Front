@@ -1,0 +1,35 @@
+.contact--page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img {
+    width: 15rem;
+  }
+
+  &__title {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  &__container--data {
+    border: 1px solid black;
+    height: 13rem;
+    margin: 0 1rem;
+    padding: 1rem 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__label--data {
+    font-weight: 550;
+  }
+
+  // &__map--img {
+  //   width: 6rem;
+  //   transform: rotate(90deg);
+  // }
+}
