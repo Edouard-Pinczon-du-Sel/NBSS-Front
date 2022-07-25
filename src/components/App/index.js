@@ -8,8 +8,10 @@ import AppHeader from '../AppHeader';
 import AppMain from '../AppMain';
 import ServicesPage from '../ServicesPage';
 import ServiceDetails from '../ServiceDetails';
-// import EmploisPage from '../EmploisPage';
+// import ServicesPage from '../ServicesPage';
+import JobsPage from '../JobsPage';
 // import ContactPage from '../ContactPage';
+
 
 import AppFooter from '../AppFooter';
 
@@ -21,7 +23,8 @@ function App() {
         <Route path="/" element={<AppMain />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/test" element={<ServiceDetails />} />
-        {/* <Route path="/emplois" element={<EmploisPage />} /> */}
+        {/* <Route path="/services" element={<SercicesPage />} /> */}
+        <Route path="/emplois" element={<JobsPage />} />
         {/* <Route path="/contact" element={<ContactPage />} /> */}
         {/* <Route path="/mentions-legal" element={<mentionsLegalPage />} /> */}
         {/* <Route path="/*" element={<Error />} /> */}

@@ -1,0 +1,45 @@
+@use 'src/styles/vars';
+
+// TABLET 
+@media screen and (min-width: 426px) {
+  .job {
+    &__title {
+      font-size: 1.9rem;
+    }
+
+    &__text {
+      font-size: 1.5rem;
+    }
+
+    &__btn {
+      padding: 1rem 2.3rem;
+      font-size: 1.5rem;
+    }
+  }    
+}
+
+// TABLET 
+@media screen and (min-width: 768px) {
+  .job {
+    &__btn {
+      padding: 1.1rem 2.6rem;
+    }
+  }
+  
+}
+// LAPTOP 
+@media screen and (min-width: 1024px) {
+  
+  .job__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .job {
+   width: calc(1/2*90%);
+   margin: 1rem
+  }  
+}
