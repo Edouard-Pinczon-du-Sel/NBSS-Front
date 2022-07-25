@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 // == Composant
 import AppHeader from '../AppHeader';
 import AppMain from '../AppMain';
-// import ServicesPage from '../ServicesPage';
+import ServicesPage from '../ServicesPage';
 // import EmploisPage from '../EmploisPage';
 // import ContactPage from '../ContactPage';
 
@@ -18,7 +18,7 @@ function App() {
       <AppHeader />
       <Routes>
         <Route path="/" element={<AppMain />} />
-        {/* <Route path="/services" element={<SercicesPage />} /> */}
+        <Route path="/services" element={<ServicesPage />} />
         {/* <Route path="/emplois" element={<EmploisPage />} /> */}
         {/* <Route path="/contact" element={<ContactPage />} /> */}
         {/* <Route path="/mentions-legal" element={<mentionsLegalPage />} /> */}
