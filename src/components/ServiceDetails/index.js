@@ -1,6 +1,7 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import './styles.scss';
+import './stylesMediaQueries.scss';
 import img from '../../assets/images/7.jpg';
 
 // == Composant
