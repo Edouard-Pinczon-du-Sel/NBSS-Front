@@ -26,6 +26,7 @@ function ServicesPage() {
         data.map((item) => (
           <Service
             key={item.id}
+            id={item.id}
             name={item.name}
             link={item.link}
             alt={item.alt}

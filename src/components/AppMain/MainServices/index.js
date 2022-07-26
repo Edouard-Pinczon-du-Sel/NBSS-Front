@@ -11,7 +11,13 @@ function MainServices() {
     <div className="services__list">
       {
         data.map((item) => (
-          <ServicesPreviews key={item.id} name={item.name} link={item.link} alt={item.alt} />
+          <ServicesPreviews
+            key={item.id}
+            id={item.id}
+            name={item.name}
+            link={item.link}
+            alt={item.alt}
+          />
         ))
       }
     </div>
