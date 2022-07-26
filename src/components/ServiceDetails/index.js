@@ -1,26 +1,32 @@
 // == Import
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import ServiceSpecificsDetails from './ServiceSpecificsDetails';
 // import PropTypesLib from 'prop-types';
 import './styles.scss';
 import './stylesMediaQueries.scss';
 
 // == Composant
 function ServiceDetails() {
+  const param = useParams();
+  const dataService = useSelector(
+    (state) => state.services.list.find((service) => service.id === param.id),
+  );
+  console.log(dataService);
   return (
-    <div className="service--details">
-      <img className="service--details__img" src="#" alt="service" />
-      <h1 className="service--details__title">Service</h1>
-      <p className="service--details__txt">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        It has survived not only five centuries, but also the leap into electronic
-        typesetting, remaining essentially unchanged. It was popularised in the 1960s
-        with the release of Letraset sheets containing Lorem Ipsum passages, and more
-        recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
-      </p>
-      <button className="service--details__btn" type="button">J'accède à ce service</button>
-    </div>
+    <>
+      {
+        dataService.map((item) => (
+          <ServiceSpecificsDetails
+            key={item.id}
+            link={item.link}
+            alt={item.alt}
+            name={item.name}
+            explications={item.explications}
+          />
+        ))
+      }
+    </>
   );
 }
 
