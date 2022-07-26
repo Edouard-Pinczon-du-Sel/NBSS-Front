@@ -3,7 +3,7 @@
 import Service from './Service';
 import './styles.scss';
 import './stylesMediaQueries.scss';
-import data from '../data/services';
+import data from '../../data/services';
 
 // == Composant
 function ServicesPage() {
@@ -26,6 +26,7 @@ function ServicesPage() {
         data.map((item) => (
           <Service
             key={item.id}
+            id={item.id}
             name={item.name}
             link={item.link}
             alt={item.alt}

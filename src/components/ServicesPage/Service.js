@@ -5,6 +5,7 @@ import './styles.scss';
 
 // == Composant
 function Service({
+  id,
   name,
   link,
   alt,
@@ -21,7 +22,7 @@ function Service({
               {description}
             </p>
           </div>
-          <Link to="/test"><button className="services--page__service--btn" type="button">Lire la suite</button></Link>
+          <Link to={`service/${id}`}><button className="services--page__service--btn" type="button">Lire la suite</button></Link>
         </div>
       </div>
     </div>
@@ -29,6 +30,7 @@ function Service({
 }
 
 Service.propTypes = {
+  id: PropTypesLib.string.isRequired,
   name: PropTypesLib.string.isRequired,
   link: PropTypesLib.string.isRequired,
   alt: PropTypesLib.string.isRequired,

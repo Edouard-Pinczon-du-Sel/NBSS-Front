@@ -1,7 +1,7 @@
-import menageImg from '../../assets/images/7.jpg';
-import enfantsImg from '../../assets/images/enfants.jpg';
-import doucheImg from '../../assets/images/douche.jpg';
-import administratifImg from '../../assets/images/administratif.jpg';
+import menageImg from '../assets/images/7.jpg';
+import enfantsImg from '../assets/images/enfants.jpg';
+import doucheImg from '../assets/images/douche.jpg';
+import administratifImg from '../assets/images/administratif.jpg';
 
 export default
 [
