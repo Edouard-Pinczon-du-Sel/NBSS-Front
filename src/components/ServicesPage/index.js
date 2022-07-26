@@ -3,6 +3,7 @@
 import Service from './Service';
 import './styles.scss';
 import './stylesMediaQueries.scss';
+import data from '../data/services';
 
 // == Composant
 function ServicesPage() {
@@ -21,7 +22,17 @@ function ServicesPage() {
           <button className="services--page__container--btn" type="button">Formulaire Service</button>
         </div>
       </div>
-      <Service />
+      {
+        data.map((item) => (
+          <Service
+            key={item.id}
+            name={item.name}
+            link={item.link}
+            alt={item.alt}
+            description={item.description}
+          />
+        ))
+      }
     </div>
   );
 }
