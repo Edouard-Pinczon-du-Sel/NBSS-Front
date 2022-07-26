@@ -11,6 +11,7 @@ import ServiceDetails from '../ServiceDetails';
 import JobsPage from '../JobsPage';
 import JobsDetails from '../JobsDetails';
 import ContactPage from '../ContactPage';
+import LegacyPage from '../AppFooter/FooterLegacy/LegacyPage';
 import AppFooter from '../AppFooter';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/emplois" element={<JobsPage />} />
         <Route path="/emplois/details" element={<JobsDetails />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/mentions-legales" element={<LegacyPage />} />
         {/* <Route path="/mentions-legal" element={<mentionsLegalPage />} /> */}
         {/* <Route path="/*" element={<Error />} /> */}
         {/* <Route path="/error" element={<FormError />} /> */}
