@@ -1,7 +1,7 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import './styles.scss';
-import data from '../../data/services';
+import data from '../../../data/services';
 
 import ServicesPreviews from './ServicesPreviews';
 

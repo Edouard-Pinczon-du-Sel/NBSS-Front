@@ -3,7 +3,7 @@
 import Service from './Service';
 import './styles.scss';
 import './stylesMediaQueries.scss';
-import data from '../data/services';
+import data from '../../data/services';
 
 // == Composant
 function ServicesPage() {
