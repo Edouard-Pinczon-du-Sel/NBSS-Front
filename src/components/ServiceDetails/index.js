@@ -2,13 +2,12 @@
 // import PropTypesLib from 'prop-types';
 import './styles.scss';
 import './stylesMediaQueries.scss';
-import img from '../../assets/images/7.jpg';
 
 // == Composant
 function ServiceDetails() {
   return (
     <div className="service--details">
-      <img className="service--details__img" src={img} alt="service" />
+      <img className="service--details__img" src="#" alt="service" />
       <h1 className="service--details__title">Service</h1>
       <p className="service--details__txt">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry.

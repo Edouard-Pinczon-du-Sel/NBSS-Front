@@ -30,7 +30,7 @@ function Service({
 
 Service.propTypes = {
   name: PropTypesLib.string.isRequired,
-  // link: PropTypesLib.img.isRequired,
+  link: PropTypesLib.string.isRequired,
   alt: PropTypesLib.string.isRequired,
   description: PropTypesLib.string.isRequired,
 };

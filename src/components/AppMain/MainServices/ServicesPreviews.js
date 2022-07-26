@@ -18,7 +18,7 @@ function ServicesPreviews({ name, link, alt }) {
 
 ServicesPreviews.propTypes = {
   name: PropTypesLib.string.isRequired,
-  // link: PropTypesLib.img.isRequired,
+  link: PropTypesLib.string.isRequired,
   alt: PropTypesLib.string.isRequired,
 };
 // == Export
