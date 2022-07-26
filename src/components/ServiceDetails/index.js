@@ -16,7 +16,9 @@ function ServiceDetails() {
   return (
     <>
       {
-        dataService.map((item) => (
+        // Il faut rajouter des crochets pour convertir dataService qui est un objet en tableau
+        // Et pouvoir effectuer le map
+        [dataService].map((item) => (
           <ServiceSpecificsDetails
             key={item.id}
             link={item.link}
