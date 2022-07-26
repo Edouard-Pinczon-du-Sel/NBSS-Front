@@ -1,0 +1,110 @@
+@use 'src/styles/vars';
+
+// .page--services {
+//   background-color: beige;
+//   padding: 1rem 0.5rem 2rem 0.5rem;
+
+// }
+
+.services--page {
+
+  &__title {
+    color: vars.$blue-color;
+    font-weight: 500;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+  }
+
+  &__container {
+    background-color: vars.$blue-color;
+    padding: 0.5rem 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  &__container--title {
+    color: #fff;
+    font-weight: 400;
+    padding-top: 0.5rem;
+  }
+
+  &__container--txt {
+    color: #fff;
+    padding: 1rem 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &__container--btn {
+    color: #fff;
+    background-color: vars.$pink-color;
+    font-weight: bold;
+    border:none; 
+    box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+    border-top-left-radius: 800px;
+    border-top-right-radius: 5000px;
+    border-bottom-right-radius: 800px;
+    border-bottom-left-radius: 8000px;
+  }
+
+  &__container--btn:hover{
+    transition: box-shadow 500ms, border-radius 1s ease-in-out;
+    box-shadow: 2px 5px 20px 3px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 5000px;
+    border-top-right-radius: 800px;
+    border-bottom-right-radius: 8000px;
+    border-bottom-left-radius: 800px;
+  }
+
+  //! CUBE SERVICES PART --> Styles of Component Service.js
+  &__service {
+    color: #fff;
+  }
+
+  &__service--container {
+    background-color: vars.$blue-color;
+    margin: 0rem 0rem 1rem 0rem;
+    padding: 1rem 1rem 3.5rem 1rem;
+  }
+
+  &__service--container--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__service--img {
+    padding-top: 1rem;
+  }
+
+  &__service--title {
+    margin: 1.5rem 0 1.3rem 0;
+  }
+
+ 
+  &__service--txt {
+    text-align: justify;
+  }
+
+  &__service--btn {
+    color: #fff;
+    background-color: vars.$pink-color;
+    font-weight: bold;
+    border:none; 
+    box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+    border-top-left-radius: 800px;
+    border-top-right-radius: 5000px;
+    border-bottom-right-radius: 800px;
+    border-bottom-left-radius: 8000px;
+  }
+
+  &__service--btn:hover{
+    transition: box-shadow 500ms, border-radius 1s ease-in-out;
+    box-shadow: 2px 5px 20px 3px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 5000px;
+    border-top-right-radius: 800px;
+    border-bottom-right-radius: 8000px;
+    border-bottom-left-radius: 800px;
+  }
+}

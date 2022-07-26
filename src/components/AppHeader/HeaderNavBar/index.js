@@ -1,20 +1,24 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import './styles.scss';
+import { NavLink } from 'react-router-dom';
 
 // == Composant
 function HeaderNavBar() {
   return (
     <div className="nav nav__responsive--display">
-      {
-        /* <NavLink className={({isActive}) => isActive
-         ? 'current' : ''} to="/contact">Contactez-nous</NavLink>
-        */
-      }
-      <button className="nav__btn" type="button">Accueil</button>
-      <button className="nav__btn" type="button">Nos Services</button>
-      <button className="nav__btn" type="button">Nous recrutons</button>
-      <button className="nav__btn" type="button">Contact</button>
+      <NavLink className="nav__btn" to="/">
+        Accueil
+      </NavLink>
+      <NavLink className="nav__btn" to="/services">
+        Nos Services
+      </NavLink>
+      <NavLink className="nav__btn" to="/emplois">
+        Nous recrutons
+      </NavLink>
+      <NavLink className="nav__btn" to="/contact">
+        Contact
+      </NavLink>
     </div>
   );
 }
