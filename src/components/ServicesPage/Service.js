@@ -1,10 +1,15 @@
 // == Import
-// import PropTypesLib from 'prop-types';
+import PropTypesLib from 'prop-types';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
 // == Composant
-function Service({ name, link, alt, description }) {
+function Service({
+  name,
+  link,
+  alt,
+  description,
+}) {
   return (
     <div className="services--page__service">
       <div className="services--page__service--container">
@@ -23,5 +28,11 @@ function Service({ name, link, alt, description }) {
   );
 }
 
+Service.propTypes = {
+  name: PropTypesLib.string.isRequired,
+  // link: PropTypesLib.img.isRequired,
+  alt: PropTypesLib.string.isRequired,
+  description: PropTypesLib.string.isRequired,
+};
 // == Export
 export default Service;
