@@ -1,0 +1,19 @@
+@use 'src/styles/vars';
+
+
+// LAPTOP 
+@media screen and (min-width: 1024px) {
+  
+  .job__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .job--details {
+   width: 90%;
+   margin: 0 auto 1rem
+  }  
+}

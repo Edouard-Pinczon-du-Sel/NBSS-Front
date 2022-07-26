@@ -16,8 +16,9 @@ function SpontaneousApplication() {
           </span>
         </h1>
         <p className="Annoucement__text">
-          Vous souhaitez déposer votre candidateure spontannément ?
-          <ul>
+          Vous souhaitez déposer votre candidateure spontannément ?<br />
+          Envoyer nous :
+          <ul className="Annoucement__text--list">
             <li>
               CV
             </li>
