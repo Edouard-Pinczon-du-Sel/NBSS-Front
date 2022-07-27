@@ -1,7 +1,7 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import './styles.scss';
-import img from '../../../assets/images/map.png';
+import LeafletMapFooter from './Leaflet';
 
 // == Composant
 function FooterMap() {
@@ -14,7 +14,7 @@ function FooterMap() {
           <span className="map__data">Vieillevigne, 44116 </span>
           <span className="map__data">France</span>
         </div>
-        <img className="map__img" src={img} alt="map" />
+        <LeafletMapFooter />
       </div>
     </div>
   );
