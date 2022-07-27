@@ -5,7 +5,7 @@ import './stylesMediaQueries.scss';
 // == Composant
 function JobSpecificDetail({
   title,
-  /*visibility,*/
+  /* visibility, */
   publishedOn,
   titleDescription,
   description,
@@ -17,7 +17,7 @@ function JobSpecificDetail({
   avantage,
   licenceRequeried,
   experienceRequeried,
-  /*driveLicense,*/
+  /* driveLicense, */
   typeContrat,
   salary,
   deplacementInfo,
@@ -78,6 +78,12 @@ function JobSpecificDetail({
             Deplacement : {deplacementInfo}
           </p>
           <p className="job__text">
+            {licenceRequeried}
+          </p>
+          <p className="job__text">
+            Expérience requise : {experienceRequeried}
+          </p>
+          <p className="job__text">
             Congé : {dayOff}
           </p>
           <p className="job__text">
@@ -100,7 +106,7 @@ function JobSpecificDetail({
 
 JobSpecificDetail.propTypes = {
   title: PropTypesLib.string.isRequired,
-  /*visibility: PropTypesLib.string.isRequired,*/
+  /* visibility: PropTypesLib.string.isRequired, */
   publishedOn: PropTypesLib.string.isRequired,
   titleDescription: PropTypesLib.string.isRequired,
   description: PropTypesLib.string.isRequired,
@@ -112,7 +118,7 @@ JobSpecificDetail.propTypes = {
   avantage: PropTypesLib.string.isRequired,
   licenceRequeried: PropTypesLib.string.isRequired,
   experienceRequeried: PropTypesLib.string.isRequired,
-  /*driveLicense: PropTypesLib.string.isRequired,*/
+  /* driveLicense: PropTypesLib.string.isRequired, */
   typeContrat: PropTypesLib.string.isRequired,
   salary: PropTypesLib.string.isRequired,
   deplacementInfo: PropTypesLib.string.isRequired,
