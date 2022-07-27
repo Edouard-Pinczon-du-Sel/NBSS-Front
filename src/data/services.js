@@ -33,7 +33,7 @@ export default
   },
   {
     id: '4',
-    name: 'Aides administrative après décès',
+    name: 'Aides administrative',
     link: administratifImg,
     alt: 'fakeimg 1000x500',
     description: 'Le service administratif après décès propose : Aide pour envoi de courrier pour envoi de mail et appel téléphonique',

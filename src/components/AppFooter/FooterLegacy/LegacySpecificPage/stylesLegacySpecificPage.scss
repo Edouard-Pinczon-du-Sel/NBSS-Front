@@ -1,0 +1,62 @@
+// ! Styles de ChartePage
+.charte {
+  display: flex;
+  justify-content: center;
+
+  &__img {
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+  width: 100vw;
+  margin-bottom: 1rem;
+  }
+}
+
+// ! Styles de ReglementPage
+.reglement {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  &__img--reglement {
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+  width: 100vw;
+  margin-bottom: 1rem;
+  }
+}
+
+// ! Styles de SocietyPage
+
+.society {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  &__img--society {
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+  width: 100vw;
+  margin-bottom: 1rem;
+  }
+  
+}
+
+// ! Mediaqueries
+// TODO MediaQueries de LegacySpecificPage
+
+@media screen and (min-width: 1250px){ 
+  .charte {
+    &__img {
+      width: 60rem;
+    }
+  }
+
+  .reglement {
+    &__img--reglement {
+      width: 60rem;
+    }
+  }
+
+  .society {
+    &__img--society {
+      width: 70rem;
+    }
+  }
+}

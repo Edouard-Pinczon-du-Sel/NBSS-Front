@@ -1,3 +1,5 @@
+@use 'src/styles/vars';
+
 .legacy {
   display: flex;
   align-items: center;
@@ -11,5 +13,111 @@
   &__link {
     margin-bottom: 1rem;
     font-size: 0.7rem;
+  }
+}
+
+// ! Styles pour la page mentions légales du footer LegacyPage
+
+.legacy--page {
+  padding: 1rem 0.8rem;
+
+  &__title--page {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: vars.$blue-color;
+    
+  }
+
+  &__title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.9rem;
+  } 
+  
+  &__txt {
+    font-size: 0.9rem;
+  }
+
+  &__btn {
+    color: #fff;
+    background-color: vars.$blue-color;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    border:none; 
+    box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+    border-top-left-radius: 800px;
+    border-top-right-radius: 5000px;
+    border-bottom-right-radius: 800px;
+    border-bottom-left-radius: 8000px;
+    margin: 1rem 0 0.5rem 0;
+    transition: box-shadow 500ms, border-radius 1s ease-in-out;
+  }
+
+  &__btn:hover{
+    box-shadow: 2px 5px 20px 3px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 5000px;
+    border-top-right-radius: 800px;
+    border-bottom-right-radius: 8000px;
+    border-bottom-left-radius: 800px;
+  }
+
+  &__chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.47);
+    padding: 1rem 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  &__reglement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.47);
+    padding: 1rem 0.8rem;
+    margin-bottom: 1rem;
+
+  }
+
+  &__legacy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.47);
+    padding: 1rem 0.8rem;
+    margin-bottom: 1rem;
+
+  }
+
+}
+
+// ! Styles pour la page mentions légales du footer LegacyPage RESPONSIVE
+// TODO le responsive de LegacyPage est ici
+@media screen and (min-width: 1250px){ 
+  .legacy--page {
+    &__chart {
+      margin: 0 4rem 1rem 4rem;
+    }
+
+    &__reglement {
+      margin: 0 4rem 1rem 4rem;
+    }
+
+    &__legacy {
+      margin: 0 4rem 1rem 4rem;
+    }
+
+    &__btn {
+      margin-top: 1.5rem;
+      padding: 0.7rem 2rem;
+      font-size: 1rem;
+    }
   }
 }
