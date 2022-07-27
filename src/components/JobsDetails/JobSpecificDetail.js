@@ -4,31 +4,34 @@ import './stylesMediaQueries.scss';
 
 // == Composant
 function JobSpecificDetail({
-  titleGlobal,
-  titleDescription1,
-  description1,
+  title,
+  visibility,
+  publishedOn,
+  titleDescription,
+  description,
   titleDescription2,
   description2,
   titleDescription3,
   description3,
   weSearch,
-  avantages,
-  licencesRequeried,
-  driveLicence,
+  avantage,
+  licenceRequeried,
+  experienceRequeried,
+  driveLicense,
   typeContrat,
-  salaire,
+  salary,
   deplacementInfo,
   dayOff,
   opportunity,
+  workingHour,
 }) {
-console.log(titleGlobal, 'test');
   return (
     <div className="preview">
       <div className="job job--details">
         <div className="job__container">
           <h1 className="job__title">
             <span className="job__title--name">
-              {titleGlobal}
+              {title}
             </span>
             <span className="job__title--disponibility">
               (Post disponible)
