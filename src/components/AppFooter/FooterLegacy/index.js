@@ -9,7 +9,7 @@ function FooterLegacy() {
     <>
       <hr className="legacy__border" />
       <div className="legacy">
-        <Link to="/mentions-legales"><a className="legacy__link" href="#">Mentions Légales</a></Link>
+        <Link className="legacy__link" to="/mentions-legales">Mentions Légales</Link>
         <a className="legacy__link" href="#">Copyright NB Services et Soins</a>
         <a className="legacy__link" href="#">Plan du site</a>
       </div>

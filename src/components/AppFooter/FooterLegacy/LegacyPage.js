@@ -1,5 +1,6 @@
 // == Import
 import './styles.scss';
+import { Link } from 'react-router-dom';
 
 // Mettre lien vers la doc sur button
 
@@ -17,7 +18,7 @@ function LegacyPage() {
             Septembre 2003 qui stipule que toute entreprise
             de services et de soins doit la respecter
           </p>
-          <button className="legacy--page__btn" type="button">Voir le document</button>
+          <Link to="/mentions-legales/charte"><button className="legacy--page__btn" type="button">Voir le document</button></Link>
         </div>
         <div className="legacy--page__reglement">
           <h1 className="legacy--page__title">RÈGLEMENT DE FONCTIONNEMENT DU SERVICE D'AIDE À DOMICILE</h1>
@@ -27,17 +28,17 @@ function LegacyPage() {
             NB Services et Soins dans le respect des droits et libertés de chacun. Ce règlement
             de fonctionnement est révisable tous les 5 ans sauf disposition particulière.
           </p>
-          <button className="legacy--page__btn" type="button">Voir le document</button>
+          <Link to="/mentions-legales/reglement"><button className="legacy--page__btn" type="button">Voir le document</button></Link>
         </div>
         <div className="legacy--page__legacy">
-          <h1 className="legacy--page__title">INFORMATION LÉGALES</h1>
+          <h1 className="legacy--page__title">INFORMATIONS LÉGALES</h1>
           <p className="legacy--page__txt">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book. It has
           </p>
-          <button className="legacy--page__btn" type="button">Voir le document</button>
+          <Link to="/mentions-legales/societe"><button className="legacy--page__btn" type="button">Voir le document</button></Link>
         </div>
       </div>
     </div>

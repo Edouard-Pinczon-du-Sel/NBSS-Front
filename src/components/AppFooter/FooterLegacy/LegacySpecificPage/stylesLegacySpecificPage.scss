@@ -1,0 +1,39 @@
+// ! Styles de ChartePage
+.charte {
+  display: flex;
+  justify-content: center;
+
+  &__img {
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+  width: 60rem;
+  margin-bottom: 1rem;
+  }
+}
+
+// ! Styles de ReglementPage
+.reglement {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  &__img {
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+  width: 60rem;
+  margin-bottom: 1rem;
+  }
+}
+
+// ! Styles de SocietyPage
+
+.society {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  &__img {
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+  width: 60rem;
+  margin-bottom: 1rem;
+  }
+  
+}
