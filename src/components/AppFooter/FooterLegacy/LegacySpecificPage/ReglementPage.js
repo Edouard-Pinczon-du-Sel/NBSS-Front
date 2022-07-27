@@ -16,16 +16,16 @@ import reglement10 from '../../../../assets/images/infos-legales/reglement/regle
 function ReglementPage() {
   return (
     <div className="reglement">
-      <img className="reglement__img" src={reglement1} alt="charte de la personne accueillie" />
-      <img className="reglement__img" src={reglement2} alt="charte de la personne accueillie" />
-      <img className="reglement__img" src={reglement3} alt="charte de la personne accueillie" />
-      <img className="reglement__img" src={reglement4} alt="charte de la personne accueillie" />
-      <img className="reglement__img" src={reglement5} alt="charte de la personne accueillie" />
-      <img className="reglement__img" src={reglement6} alt="charte de la personne accueillie" />
-      <img className="reglement__img" src={reglement7} alt="charte de la personne accueillie" />
-      <img className="reglement__img" src={reglement8} alt="charte de la personne accueillie" />
-      <img className="reglement__img" src={reglement9} alt="charte de la personne accueillie" />
-      <img className="reglement__img" src={reglement10} alt="charte de la personne accueillie" />
+      <img className="reglement__img--reglement" src={reglement1} alt="charte de la personne accueillie" />
+      <img className="reglement__img--reglement" src={reglement2} alt="charte de la personne accueillie" />
+      <img className="reglement__img--reglement" src={reglement3} alt="charte de la personne accueillie" />
+      <img className="reglement__img--reglement" src={reglement4} alt="charte de la personne accueillie" />
+      <img className="reglement__img--reglement" src={reglement5} alt="charte de la personne accueillie" />
+      <img className="reglement__img--reglement" src={reglement6} alt="charte de la personne accueillie" />
+      <img className="reglement__img--reglement" src={reglement7} alt="charte de la personne accueillie" />
+      <img className="reglement__img--reglement" src={reglement8} alt="charte de la personne accueillie" />
+      <img className="reglement__img--reglement" src={reglement9} alt="charte de la personne accueillie" />
+      <img className="reglement__img--reglement" src={reglement10} alt="charte de la personne accueillie" />
     </div>
   );
 }

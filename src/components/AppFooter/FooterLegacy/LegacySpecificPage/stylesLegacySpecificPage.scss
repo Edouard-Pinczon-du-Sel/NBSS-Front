@@ -5,7 +5,7 @@
 
   &__img {
   box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
-  width: 60rem;
+  width: 100vw;
   margin-bottom: 1rem;
   }
 }
@@ -16,9 +16,9 @@
   flex-wrap: wrap;
   justify-content: center;
   
-  &__img {
+  &__img--reglement {
   box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
-  width: 60rem;
+  width: 100vw;
   margin-bottom: 1rem;
   }
 }
@@ -30,10 +30,33 @@
   flex-wrap: wrap;
   justify-content: center;
   
-  &__img {
+  &__img--society {
   box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
-  width: 60rem;
+  width: 100vw;
   margin-bottom: 1rem;
   }
   
+}
+
+// ! Mediaqueries
+
+
+@media screen and (min-width: 1250px){ 
+  .charte {
+    &__img {
+      width: 60rem;
+    }
+  }
+
+  .reglement {
+    &__img--reglement {
+      width: 60rem;
+    }
+  }
+
+  .society {
+    &__img--society {
+      width: 70rem;
+    }
+  }
 }

@@ -10,10 +10,10 @@ import infos4 from '../../../../assets/images/infos-legales/infos-society/infos4
 function SocietyPage() {
   return (
     <div className="society">
-      <img className="society__img" src={infos1} alt="informations société" />
-      <img className="society__img" src={infos2} alt="informations société" />
-      <img className="society__img" src={infos3} alt="informations société" />
-      <img className="society__img" src={infos4} alt="informations société" />
+      <img className="society__img--society" src={infos1} alt="informations société" />
+      <img className="society__img--society" src={infos2} alt="informations société" />
+      <img className="society__img--society" src={infos3} alt="informations société" />
+      <img className="society__img--society" src={infos4} alt="informations société" />
     </div>
   );
 }
