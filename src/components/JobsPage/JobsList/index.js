@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 // == Composant
 function JobsList({
-  titleGlobal,
+  title,
   weSearch,
   id,
 }) {
@@ -15,7 +15,7 @@ function JobsList({
       <div className="job__container">
         <h1 className="job__title">
           <span className="job__title--name">
-            { titleGlobal }
+            { title }
           </span>
           <span className="job__title--disponibility">
             (Post disponible)
@@ -41,9 +41,9 @@ function JobsList({
 }
 
 JobsList.propTypes = {
-  titleGlobal: PropTypesLib.string.isRequired,
+  title: PropTypesLib.string.isRequired,
   weSearch: PropTypesLib.string.isRequired,
-  id: PropTypesLib.string.isRequired,
+  id: PropTypesLib.number.isRequired,
 };
 
 // == Export

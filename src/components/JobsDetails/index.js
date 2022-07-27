@@ -17,7 +17,7 @@ function JobsDetails() {
       {[dataJobs].map((item) => (
         <JobSpecificDetail
           key={item.id}
-          titleGlobal={item.titleGlobal}
+          title={item.title}
           {...item}
         />
       ))}

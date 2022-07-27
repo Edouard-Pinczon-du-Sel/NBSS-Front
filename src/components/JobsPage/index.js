@@ -17,7 +17,7 @@ function JobsPage() {
           data.map((item) => (
             <JobsList
               key={item.id}
-              titleGlobal={item.titleGlobal}
+              title={item.title}
               weSearch={item.weSearch}
               id={item.id}
             />

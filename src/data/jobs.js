@@ -1,9 +1,9 @@
 export default
 [
   {
-    id: 1,
+    id: '1',
     title: 'AVS ou AMP ou Aide-soignante',
-    visibility: true,
+    // visibility: 'true',
     publishedOn: '2022-07-26T00:00:00+02:00',
     titleDescription: 'aide à la personne',
     description: "aide à la toilette, aide à l'habillage, aide au lever, aide aux déplacements, courses, préparation et aide à la prise de repas, accompagnement aux sorties",
@@ -15,7 +15,7 @@ export default
     avantage: "voiture de société selon disponibilité et planning, des plannings permettant d'équilibrer vie personnelle et professionnelle, entreprise à taille humaine, chèque cadeau.",
     licenceRequeried: "Être titulaire d'un diplôme ou titre de niveau V (auxiliaire de vie, aide médico psychologique, assistante de vie, aide-soignante, auxiliaire de gérontologie ) ou diplôme CAP petite enfance ou expérience dans la garde d'enfant",
     experienceRequeried: '2 ans',
-    driveLicense: true,
+    // driveLicense: 'true',
     typeContrat: 'CDI',
     salary: "à partir de 11,07 € brut de l'heure et valorisation selon profil et expérience",
     deplacementInfo: 'Frais kilométriques à 0,40 € si véhicule de société non disponible.Travail 1 WE sur 3',
@@ -23,7 +23,7 @@ export default
     opportunity: 'Prise de poste dès que possible, venez nous rejoindre!!',
     workingHour: '1 heure',
   },
-
+/*
    {
     id: '1',
     titleGlobal: 'AVS ou AMP ou Aide-soignante',
@@ -62,4 +62,5 @@ export default
     dayOff: 'pas de repos',
     opportunity: "Prise de poste dès que possible, venez nous rejoindre!! la légion n'attend pas ! ",
   },
+*/
 ];
