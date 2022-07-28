@@ -1,5 +1,6 @@
 // == Import
 // import PropTypesLib from 'prop-types';
+import { Link } from 'react-router-dom';
 import Service from './Service';
 import './styles.scss';
 import './stylesMediaQueries.scss';
@@ -19,7 +20,7 @@ function ServicesPage() {
             le puis validez le afin que votre demande soit
             prise en compte. Merci !
           </p>
-          <button className="services--page__container--btn" type="button">Formulaire Service</button>
+          <Link to="/test"><button className="services--page__container--btn" type="button">Formulaire Service</button></Link>
         </div>
       </div>
       {
