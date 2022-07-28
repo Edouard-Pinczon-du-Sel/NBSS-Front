@@ -3,9 +3,10 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import Carousel from 'nuka-carousel';
+import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { fetchCarousel } from '../../../actions/carousel';
+
 // import carouselApi from '../../../api/CarrouselApi';
 import './styles.scss';
 //? petit teste de mapping (simulation de reception de donnée en Json pour les image du carousel)
@@ -48,6 +49,10 @@ function MainCarousel() {
     dispatch(fetchCarousel());
   }, []);
 
+  const { list } = useSelector((state) => state.carousel);
+  const dataImages = list.hits;
+  console.log(dataImages);
+
   // const { list } = useSelector((state) => state.carousel);
   // console.log(list);
 
@@ -77,7 +82,9 @@ function MainCarousel() {
         prevButtonText: '<',
       }}
     >
-      {dataExempleImgCarousel.data.map((item) => <img key={item.id} className="test" src={item.link} alt={item.alt} />)}
+      {/*
+         dataImages.map((item) => <img key={item.id} className="test" src={item.pageURL} alt={item.id} />)
+      */}
     </Carousel>
   );
 }

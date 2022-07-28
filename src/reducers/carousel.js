@@ -2,7 +2,7 @@
 import { SAVE_CAROUSEL } from '../actions/carousel';
 
 export const initialState = {
-  list: [1,2,3,4],
+  list: ['toto', 'kiki'],
 };
 
 const reducer = (state = initialState, action = {}) => {

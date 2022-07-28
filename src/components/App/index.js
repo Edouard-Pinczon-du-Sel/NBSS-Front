@@ -2,7 +2,6 @@
 import 'src/styles/index.scss';
 import 'src/components/AppHeader/stylesMediaQueries.scss';
 import { Routes, Route } from 'react-router-dom';
-
 // == Composant
 import AppHeader from '../AppHeader';
 import AppMain from '../AppMain';
