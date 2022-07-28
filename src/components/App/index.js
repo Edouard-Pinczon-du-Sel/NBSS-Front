@@ -15,6 +15,7 @@ import LegacyPage from '../AppFooter/FooterLegacy/LegacyPage';
 import ChartePage from '../AppFooter/FooterLegacy/LegacySpecificPage/ChartePage';
 import ReglementPage from '../AppFooter/FooterLegacy/LegacySpecificPage/ReglementPage';
 import SocietyPage from '../AppFooter/FooterLegacy/LegacySpecificPage/SocietyPage';
+import FormInfos from '../FormInfos';
 
 import AppFooter from '../AppFooter';
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" element={<AppMain />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/service/:id" element={<ServiceDetails />} />
+        <Route path="/services/form" element={<FormInfos />} />
         <Route path="/emplois" element={<JobsPage />} />
         <Route path="/emplois/:id" element={<JobsDetails />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -33,7 +35,6 @@ function App() {
         <Route path="/mentions-legales/charte" element={<ChartePage />} />
         <Route path="/mentions-legales/reglement" element={<ReglementPage />} />
         <Route path="/mentions-legales/societe" element={<SocietyPage />} />
-
         {/* <Route path="/mentions-legal" element={<mentionsLegalPage />} /> */}
         {/* <Route path="/*" element={<Error />} /> */}
         {/* <Route path="/error" element={<FormError />} /> */}
