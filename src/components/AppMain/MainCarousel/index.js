@@ -51,42 +51,44 @@ function MainCarousel() {
 
   const { list } = useSelector((state) => state.carousel);
   const dataImages = list.hits;
-  console.log(dataImages);
+  if (dataImages != null) {
+    console.log(dataImages);
+    // const { list } = useSelector((state) => state.carousel);
+    // console.log(list);
 
-  // const { list } = useSelector((state) => state.carousel);
-  // console.log(list);
+    return (
+      <Carousel
+        pauseOnHover
+        autoplay
+        wrapAround
+        cellAlign="center"
+        className="test_v2"
+        adaptiveHeight
+        speed={1500}
+        autoplayInterval={4000}
+        renderBottomCenterControls={({ currentSlide }) => (
+          <div className="info">
+            <span className="info--title"> nb services et soins</span>
+            <span className="info--content">est une entreprise de services à la personne opérant dans plusieurs domaines. N’hésitez pas à faire appel à nous en bas de besoin !</span>
+          </div>
+        )}
+        defaultControlsConfig={{
+          pagingDotsStyle: {
+            fill: 'red',
+          },
+          nextButtonClassName: 'sliderBtn sliderBtn--Next',
+          nextButtonText: '>',
+          prevButtonClassName: 'sliderBtn sliderBtn--Prev',
+          prevButtonText: '<',
+        }}
+      >
+        {
+          dataImages.map((item) => <img key={item.id} className="test" src={item.pageURL} alt={item.id} />)
+        }
 
-  return (
-    <Carousel
-      pauseOnHover
-      autoplay
-      wrapAround
-      cellAlign="center"
-      className="test_v2"
-      adaptiveHeight
-      speed={1500}
-      autoplayInterval={4000}
-      renderBottomCenterControls={({ currentSlide }) => (
-        <div className="info">
-          <span className="info--title"> nb services et soins</span>
-          <span className="info--content">est une entreprise de services à la personne opérant dans plusieurs domaines. N’hésitez pas à faire appel à nous en bas de besoin !</span>
-        </div>
-      )}
-      defaultControlsConfig={{
-        pagingDotsStyle: {
-          fill: 'red',
-        },
-        nextButtonClassName: 'sliderBtn sliderBtn--Next',
-        nextButtonText: '>',
-        prevButtonClassName: 'sliderBtn sliderBtn--Prev',
-        prevButtonText: '<',
-      }}
-    >
-      {/*
-         dataImages.map((item) => <img key={item.id} className="test" src={item.pageURL} alt={item.id} />)
-      */}
-    </Carousel>
-  );
+      </Carousel>
+    );
+  }
 }
 
 // == Export
