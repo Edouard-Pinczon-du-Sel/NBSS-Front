@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable jsx-a11y/alt-text */
 // == Import
 // import PropTypesLib from 'prop-types';
 import Carousel from 'nuka-carousel';
@@ -19,11 +17,10 @@ function MainCarousel() {
   }, []);
 
   const { list } = useSelector((state) => state.carousel);
-  const dataImages = list.hits;
-  if (dataImages != null) {
-    console.log(dataImages);
-    // const { list } = useSelector((state) => state.carousel);
+  if (list != null) {
     // console.log(list);
+    // NOTE concernant la const dataImage je l'ai fait sauté car
+    //  au final nous la récupéront avec le useSelector .
 
     return (
       <Carousel
@@ -33,8 +30,8 @@ function MainCarousel() {
         cellAlign="center"
         className="test_v2"
         adaptiveHeight
-        speed={1500}
-        autoplayInterval={4000}
+        speed={500}
+        autoplayInterval={8000}
         renderBottomCenterControls={({ currentSlide }) => (
           <div className="info">
             <span className="info--title"> nb services et soins</span>
@@ -42,9 +39,6 @@ function MainCarousel() {
           </div>
         )}
         defaultControlsConfig={{
-          pagingDotsStyle: {
-            fill: 'red',
-          },
           nextButtonClassName: 'sliderBtn sliderBtn--Next',
           nextButtonText: '>',
           prevButtonClassName: 'sliderBtn sliderBtn--Prev',
@@ -52,7 +46,11 @@ function MainCarousel() {
         }}
       >
         {
-          dataImages.map((item) => <img key={item.id} className="test" src={item.pageURL} alt={item.id} />)
+          list.map((item) => <img key={item.id} className="test" src={item.largeImageURL} alt={item.id} />)
+          // NOTE : Comme tu peux le voire Ligne 23 nous avions un console.log
+          // de "list" et bien si tu ouvres un objet il y avait d'autre moyens
+          // de récupéré l'URL de l'image dont le "largeImageURL" qui est
+          // celon moi celui de meilleur qualité.
         }
 
       </Carousel>
