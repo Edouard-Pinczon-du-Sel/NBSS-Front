@@ -3,6 +3,10 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import Carousel from 'nuka-carousel';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchCarousel } from '../../../actions/carousel';
+// import carouselApi from '../../../api/CarrouselApi';
 import './styles.scss';
 //? petit teste de mapping (simulation de reception de donnée en Json pour les image du carousel)
 const dataExempleImgCarousel = {
@@ -35,8 +39,18 @@ const dataExempleImgCarousel = {
   ],
 };
 
+//test API AXIOS (API Gratuite testé = https://pixabay.com/api/docs/ )
+
 // == Composant
 function MainCarousel() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCarousel());
+  }, []);
+
+  // const { list } = useSelector((state) => state.carousel);
+  // console.log(list);
+
   return (
     <Carousel
       pauseOnHover
