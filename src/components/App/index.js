@@ -27,6 +27,7 @@ function App() {
         <Route path="/" element={<AppMain />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/service/:id" element={<ServiceDetails />} />
+        <Route path="/services/form" element={<FormInfos />} />
         <Route path="/emplois" element={<JobsPage />} />
         <Route path="/emplois/details" element={<JobsDetails />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -34,7 +35,6 @@ function App() {
         <Route path="/mentions-legales/charte" element={<ChartePage />} />
         <Route path="/mentions-legales/reglement" element={<ReglementPage />} />
         <Route path="/mentions-legales/societe" element={<SocietyPage />} />
-        <Route path="/test" element={<FormInfos />} />
         {/* <Route path="/mentions-legal" element={<mentionsLegalPage />} /> */}
         {/* <Route path="/*" element={<Error />} /> */}
         {/* <Route path="/error" element={<FormError />} /> */}

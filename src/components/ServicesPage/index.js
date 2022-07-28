@@ -20,7 +20,7 @@ function ServicesPage() {
             le puis validez le afin que votre demande soit
             prise en compte. Merci !
           </p>
-          <Link to="/test"><button className="services--page__container--btn" type="button">Formulaire Service</button></Link>
+          <Link to="/services/form"><button className="services--page__container--btn" type="button">Formulaire Service</button></Link>
         </div>
       </div>
       {
