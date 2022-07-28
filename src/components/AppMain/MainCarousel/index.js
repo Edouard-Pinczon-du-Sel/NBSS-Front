@@ -6,41 +6,10 @@ import Carousel from 'nuka-carousel';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchCarousel } from '../../../actions/carousel';
-
 // import carouselApi from '../../../api/CarrouselApi';
 import './styles.scss';
-//? petit teste de mapping (simulation de reception de donnée en Json pour les image du carousel)
-const dataExempleImgCarousel = {
-  data: [
-    {
-      id: '1',
-      link: 'https://fakeimg.pl/800x300/',
-      alt: 'fakeimg 800x300',
-    },
-    {
-      id: '2',
-      link: 'https://fakeimg.pl/800x250/',
-      alt: 'fakeimg 800x250',
-    },
-    {
-      id: '3',
-      link: 'https://fakeimg.pl/800x400/',
-      alt: 'fakeimg 800x400',
-    },
-    {
-      id: '4',
-      link: 'https://fakeimg.pl/1000x500/',
-      alt: 'fakeimg 1000x500',
-    },
-    {
-      id: '5',
-      link: 'https://fakeimg.pl/900x500/',
-      alt: 'fakeimg 900x500',
-    },
-  ],
-};
 
-//test API AXIOS (API Gratuite testé = https://pixabay.com/api/docs/ )
+// test API AXIOS (API Gratuite testé = https://pixabay.com/api/docs/ )
 
 // == Composant
 function MainCarousel() {

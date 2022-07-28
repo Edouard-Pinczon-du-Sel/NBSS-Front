@@ -1,6 +1,6 @@
 import { applyMiddleware, compose, createStore } from 'redux';
 import reducer from '../reducers';
-import carouselMiddleWare from '../api/CarrouselApi';
+import carouselMiddleWare from '../middlewares/CarouselApi';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const enhancers = composeEnhancers(
