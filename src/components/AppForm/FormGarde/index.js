@@ -37,22 +37,22 @@ function FormGarde() {
         </div>
         <h2 className="form--garde__subtitle">Moment d'intervention</h2>
         <div className="form--garde__container--checkbox">
-            <div className="form--garde__container--label">
-              <label htmlFor="day">Matin</label>
-              <input className="form--garde__checkbox" type="checkbox" name="day" />
-            </div>
-            <div className="form--garde__container--label">
-              <label htmlFor="day">Après-midi</label>
-              <input className="form--garde__checkbox" type="checkbox" name="day" />
-            </div>
-            <div className="form--garde__container--label">
-              <label htmlFor="day">Soir</label>
-              <input className="form--garde__checkbox" type="checkbox" name="day" />
-            </div>
-            <div className="form--garde__container--label">
-              <label htmlFor="day">Journée</label>
-              <input className="form--garde__checkbox" type="checkbox" name="day" />
-            </div>
+          <div className="form--garde__container--label">
+            <label htmlFor="day">Matin</label>
+            <input className="form--garde__checkbox" type="checkbox" name="day" />
+          </div>
+          <div className="form--garde__container--label">
+            <label htmlFor="day">Après-midi</label>
+            <input className="form--garde__checkbox" type="checkbox" name="day" />
+          </div>
+          <div className="form--garde__container--label">
+            <label htmlFor="day">Soir</label>
+            <input className="form--garde__checkbox" type="checkbox" name="day" />
+          </div>
+          <div className="form--garde__container--label">
+            <label htmlFor="day">Journée</label>
+            <input className="form--garde__checkbox" type="checkbox" name="day" />
+          </div>
         </div>
       </div>
       <button className="form--garde__btn" type="button">Suivant</button>

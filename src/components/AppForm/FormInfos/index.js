@@ -24,11 +24,11 @@ function FormInfos() {
         <option className="form--infos__otpion">Service 4</option>
       </select> */}
       <h1 className="form--infos__title--choice">Cliquez sur le service de votre choix</h1>
-      <div className="form--infos__container--btn">
-        <Link to="/services/form/menagers"><button className="form--infos__menagers--btn" type="button">Service ménagers</button></Link>
-        <Link to="/services/form/garde"><button className="form--infos__menagers--btn" type="button">Service garde enfants</button></Link>
-        <Link to="/services/form/aide"><button className="form--infos__menagers--btn" type="button">Service aide à la personne</button></Link>
-        <Link to="/services/form/administratif"><button className="form--infos__menagers--btn" type="button">Service aide administratif</button></Link>
+      <div className="form--infos__container--choice--btn">
+        <Link to="/services/form/menagers"><button className="form--infos__choice--btn" type="button">Service ménagers</button></Link>
+        <Link to="/services/form/garde"><button className="form--infos__choice--btn" type="button">Service garde enfants</button></Link>
+        <Link to="/services/form/aide"><button className="form--infos__choice--btn" type="button">Service aide à la personne</button></Link>
+        <Link to="/services/form/administratif"><button className="form--infos__choice--btn" type="button">Service aide administratif</button></Link>
       </div>
 
     </div>

@@ -14,7 +14,7 @@
   }
 
   &__title--choice {
-    margin: 0.5rem 0rem 1rem 0rem;
+    margin: 0.5rem 0rem 1.5rem 0rem;
     color: vars.$blue-color;
   }
 
@@ -28,7 +28,20 @@
     margin-bottom: 0.6rem;
   }
 
- 
+  &__container--choice--btn {
+    display: flex;
+    justify-content: space-between;
+    width: 50rem;
+  }
+
+  &__choice--btn {
+    color: #fff;
+    background-color: vars.$blue-color;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border:none; 
+    box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+  }
 
 
   // &__select {

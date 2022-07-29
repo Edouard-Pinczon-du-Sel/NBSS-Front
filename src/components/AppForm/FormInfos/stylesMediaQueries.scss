@@ -2,7 +2,7 @@
 
 @media screen and (max-width: 767px){
   .form--infos {
-    height: 70vh;
+    height: 95vh;
     margin-bottom: 1rem;
 
     &__title {
@@ -24,7 +24,18 @@
       font-size: 1.2rem;
     }
 
-    
+    &__container--choice--btn {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 12rem;
+    }
+
+    &__choice--btn {
+      padding: 0.6rem 0.7rem;
+    }
+
+
 
   
 
@@ -39,7 +50,7 @@
 
 @media screen and (min-width: 768px){
   .form--infos {
-    height: 75vh;
+    height: 85vh;
     margin-bottom: 1rem;
 
     &__title {
@@ -61,6 +72,14 @@
       font-size: 1.4rem;
     }
 
+    &__container--choice--btn {
+      width: 46rem;
+    }
+
+    &__choice--btn {
+      padding: 0.6rem 0.7rem;
+    }
+
     // &__select {
     //   font-size: 1.2rem;
     //   height: 2.5rem;
@@ -71,7 +90,7 @@
 
 @media screen and (min-width: 1024px){
   .form--infos {
-    height: 85vh;
+    height: 90vh;
     margin: 0 5rem 1rem 5rem;
 
     &__title {
@@ -97,7 +116,7 @@
 
 @media screen and (min-width: 1250px){
   .form--infos {
-    height: 80vh;
+    height: 85vh;
     margin: 0 0rem 1rem 0rem;
 
     &__title {
@@ -112,6 +131,15 @@
     &__input {
       width: 40rem;
       padding: 1rem 0.5rem;
+    }
+
+    &__container--choice--btn {
+      width: 70rem;
+    }
+
+    &__choice--btn {
+      padding: 1rem 1.2rem;
+      font-size: 1.1rem;
     }
     
     // &__select {
