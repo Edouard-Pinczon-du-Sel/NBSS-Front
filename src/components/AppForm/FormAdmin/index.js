@@ -25,7 +25,6 @@ function FormAdmin() {
         <input className="form--admin__input" type="text" placeholder="Adresse" />
       </div>
       <button className="form--menagers__btn" type="button">Suivant</button>
-
     </div>
   );
 }
