@@ -50,7 +50,7 @@
   }
 
   &__select {
-    
+    font-size: 1.5rem;
     color: #fff;
     background-color: vars.$blue-color;
     font-weight: bold;
@@ -58,5 +58,6 @@
     box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
     margin: 1rem 0;
     transition: box-shadow 500ms, border-radius 1s ease-in-out;
+    padding: 1rem 1rem;
   }
 }
