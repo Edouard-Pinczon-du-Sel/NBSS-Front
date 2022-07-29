@@ -1,0 +1,53 @@
+@use 'src/styles/vars';
+
+.form--garde {
+  background-color: rgba(255, 255, 255, 0.47);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  &__title {
+    text-align: center;
+    margin: 0.5rem 0rem 1rem 0rem;
+    color: vars.$blue-color;
+  }
+
+
+  &__subtitle {
+    text-align: center;
+    color: vars.$blue-color;
+    margin: 0.7rem 0 0.8rem 0;
+  }
+
+  &__container--input {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  &__input {
+    margin-bottom: 0.6rem;
+  }
+
+  &__btn {
+    color: #fff;
+    background-color: vars.$blue-color;
+    font-weight: bold;
+    border:none; 
+    box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
+    margin: 1rem 0;
+    transition: box-shadow 500ms, border-radius 1s ease-in-out;
+  }
+
+  &__container--label {
+    display: flex;
+  }
+
+  &__container--checkbox {
+    display: flex;
+    justify-content: space-around;
+  }
+
+}

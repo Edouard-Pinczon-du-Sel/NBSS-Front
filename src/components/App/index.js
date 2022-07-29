@@ -14,10 +14,14 @@ import LegacyPage from '../AppFooter/FooterLegacy/LegacyPage';
 import ChartePage from '../AppFooter/FooterLegacy/LegacySpecificPage/ChartePage';
 import ReglementPage from '../AppFooter/FooterLegacy/LegacySpecificPage/ReglementPage';
 import SocietyPage from '../AppFooter/FooterLegacy/LegacySpecificPage/SocietyPage';
-import FormInfos from '../FormInfos';
-
+import FormInfos from '../AppForm/FormInfos';
+import FormMenagers from '../AppForm/FormMenagers';
+import FormGarde from '../AppForm/FormGarde';
+import FormPersonne from '../AppForm/FormPersonne';
+import FormAdmin from '../AppForm/FormAdmin';
+import FormValidation from '../AppForm/FormValidation';
 import AppFooter from '../AppFooter';
-
+// TODO Faire des routes dynamiques avec reducers pour les forms (ce sont des routes de tests)
 function App() {
   return (
     <div className="app">
@@ -27,6 +31,11 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/service/:id" element={<ServiceDetails />} />
         <Route path="/services/form" element={<FormInfos />} />
+        <Route path="/services/form/menagers" element={<FormMenagers />} />
+        <Route path="/services/form/garde" element={<FormGarde />} />
+        <Route path="/services/form/personne" element={<FormPersonne />} />
+        <Route path="/services/form/admin" element={<FormAdmin />} />
+        <Route path="/services/form/validation" element={<FormValidation />} />
         <Route path="/emplois" element={<JobsPage />} />
         <Route path="/emplois/:id" element={<JobsDetails />} />
         <Route path="/contact" element={<ContactPage />} />

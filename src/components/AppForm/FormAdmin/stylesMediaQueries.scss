@@ -1,12 +1,16 @@
 // TODO Refacto avec em si nécessaire
 
 @media screen and (max-width: 767px){
-  .form--infos {
-    height: 70vh;
+  .form--admin {
+    height: 120vh;
     margin-bottom: 1rem;
 
     &__title {
       font-size: 1.3rem;
+    }
+
+    &__title--choice {
+      font-size: 1.05rem;
     }
 
     &__input {
@@ -18,24 +22,43 @@
 
     &__input::placeholder {
       font-size: 1.2rem;
-      
     }
 
-    &__select {
-      font-size: 1.2rem;
-      height: 2.5rem;
-      width: 20rem;
+    &__container--choice--btn {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 12rem;
     }
+
+    &__choice--btn {
+      padding: 0.6rem 0.7rem;
+    }
+
+
+
+  
+
+
+    // &__select {
+    //   font-size: 1.2rem;
+    //   height: 2.5rem;
+    //   width: 20rem;
+    // }
   } 
 }
 
 @media screen and (min-width: 768px){
-  .form--infos {
-    height: 75vh;
+  .form--admin {
+    height: 128vh;
     margin-bottom: 1rem;
 
     &__title {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
+    }
+
+    &__title--choice {
+      font-size: 1.5rem;
     }
 
     &__input {
@@ -49,22 +72,33 @@
       font-size: 1.4rem;
     }
 
-    &__select {
-      font-size: 1.2rem;
-      height: 2.5rem;
-      width: 35rem;
+    &__container--choice--btn {
+      width: 46rem;
     }
+
+    &__choice--btn {
+      padding: 0.6rem 0.7rem;
+    }
+
+    // &__select {
+    //   font-size: 1.2rem;
+    //   height: 2.5rem;
+    //   width: 35rem;
+    // }
   } 
 }
 
 @media screen and (min-width: 1024px){
-  .form--infos {
-    height: 75vh;
+  .form--admin {
+    height: 128vh;
     margin: 0 5rem 1rem 5rem;
 
     &__title {
-      font-size: 2.5rem;
       margin: 0.5rem 0rem 1.8rem 0rem;
+    }
+
+    &__title--choice {
+      font-size: 2rem;
     }
 
     &__input {
@@ -80,8 +114,8 @@
 }
 
 @media screen and (min-width: 1250px){
-  .form--infos {
-    height: 75vh;
+  .form--admin {
+    height: 110vh;
     margin: 0 0rem 1rem 0rem;
 
     &__title {
@@ -89,15 +123,13 @@
       margin: 0.5rem 0rem 1.8rem 0rem;
     }
 
+    &__title--choice {
+      font-size: 2rem;
+    }
+
     &__input {
       width: 40rem;
       padding: 1rem 0.5rem;
-    }
-    
-    &__select {
-      font-size: 1.2rem;
-      height: 3rem;
-      width: 40rem;
     }
   } 
 }

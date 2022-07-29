@@ -1,6 +1,7 @@
 // == Import
 import PropTypesLib from 'prop-types';
 import './styles.scss';
+import { Link } from 'react-router-dom';
 
 // == Composant
 function ServiceSpecificsDetails({
@@ -16,7 +17,7 @@ function ServiceSpecificsDetails({
       <p className="service--details__txt">
         {explications}
       </p>
-      <button className="service--details__btn" type="button">J'accède à ce service</button>
+      <Link to="/services/form"><button className="service--details__btn" type="button">J'accède à ce service</button></Link>
     </div>
   );
 }
