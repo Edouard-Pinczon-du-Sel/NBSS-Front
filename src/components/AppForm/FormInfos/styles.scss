@@ -43,6 +43,12 @@
     box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
   }
 
+  &__choice--btn:hover {
+    transition: box-shadow 500ms, border-radius 1s ease-in-out;
+    box-shadow: 1px 1px 6px 6px vars.$pink-color;
+    transform: scale(1.1);
+  }
+
 
   // &__select {
   //   color: #fff;
