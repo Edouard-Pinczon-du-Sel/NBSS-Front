@@ -14,7 +14,7 @@ import LegacyPage from '../AppFooter/FooterLegacy/LegacyPage';
 import ChartePage from '../AppFooter/FooterLegacy/LegacySpecificPage/ChartePage';
 import ReglementPage from '../AppFooter/FooterLegacy/LegacySpecificPage/ReglementPage';
 import SocietyPage from '../AppFooter/FooterLegacy/LegacySpecificPage/SocietyPage';
-import FormInfos from '../FormInfos';
+import FormInfos from '../AppForm/FormInfos';
 
 import AppFooter from '../AppFooter';
 
