@@ -16,13 +16,7 @@ function FormMenagers() {
           <option className="form--menagers__otpion--data">Une tous les 15 jours</option>
         </select>
       </div>
-      <select className="form--menagers__select">
-        <option className="form--menagers__otpion">------</option>
-        <option className="form--menagers__otpion">Service 1</option>
-        <option className="form--menagers__otpion">Service 2</option>
-        <option className="form--menagers__otpion">Service 3</option>
-        <option className="form--menagers__otpion">Service 4</option>
-      </select>
+      <button className="form--menagers__btn" type="button">Suivant</button>
     </div>
   );
 }
