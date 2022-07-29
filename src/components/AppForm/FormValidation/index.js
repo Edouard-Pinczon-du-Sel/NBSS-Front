@@ -7,13 +7,16 @@ import './stylesMediaQueries.scss';
 // == Composant
 function FormValidation() {
   return (
-    <div className="form--validation">
-      <h1 className="form--validation__title">Vos informations personnelles</h1>
-      <div className="form--validation__container--input">
-        <textarea className="form--validation__input" type="text" placeholder="Nom" />
-        <button type="submit">Valider et envoyer</button>
+    <form>
+      <div className="form--validation">
+        <h1 className="form--validation__title">Validation</h1>
+        <div className="form--validation__container--txtarea">
+          <label className="form--validation__label" htmlFor="precisions">Quelques choses à nous spécifier en plus ? Des détails, inquiétudes, questions ? </label>
+          <textarea className="form--validation__txtarea" type="text" placeholder="N'hésitez pas..." name="precisions" />
+          <button className="form--validation__btn" type="submit">Valider et envoyer</button>
+        </div>
       </div>
-    </div>
+    </form>
   );
 }
 

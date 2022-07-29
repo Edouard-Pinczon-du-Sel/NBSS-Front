@@ -1,0 +1,125 @@
+// TODO Refacto avec em si nécessaire
+
+@media screen and (max-width: 767px){
+ .form--validation {
+    height: 50vh;
+    margin-bottom: 1rem;
+
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__label {
+      font-size: 1.3rem;
+    }
+  
+    &__txtarea {
+      font-size: 1.1rem;
+      width: 20rem;
+      height: 6rem;
+    }
+
+    &__txtarea::placeholder {
+      font-size: 1.1rem;
+    }
+
+    &__btn {
+      font-size: 1.2rem;
+      height: 2.5rem;
+      width: 20rem;
+    }
+ }
+}
+
+@media screen and (min-width: 768px){
+  .form--validation {
+    height: 50vh;
+    margin-bottom: 1rem;
+
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__label {
+      font-size: 1.3rem;
+    }
+  
+    &__txtarea {
+      font-size: 1.2rem;
+      width: 35rem;
+      height: 7rem;
+    }
+
+    &__txtarea::placeholder {
+      font-size: 1.2rem;
+    }
+
+    &__btn {
+      font-size: 1.2rem;
+      height: 2.5rem;
+      width: 20rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .form--validation {
+    height: 50vh;
+    margin-bottom: 1rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__label {
+      font-size: 1.4rem;
+    }
+  
+    &__txtarea {
+      font-size: 1.2rem;
+      width: 45rem;
+      height: 10rem;
+    }
+
+    &__txtarea::placeholder {
+      font-size: 1.2rem;
+    }
+
+    &__btn {
+      font-size: 1.4rem;
+      height: 3rem;
+      width: 25rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1250px){
+  .form--validation {
+    height: 50vh;
+    margin-bottom: 1rem;
+
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__label {
+      font-size: 1.6rem;
+    }
+  
+    &__txtarea {
+      font-size: 1.2rem;
+      width: 50rem;
+      height: 12rem;
+    }
+
+    &__txtarea::placeholder {
+      font-size: 1.2rem;
+    }
+
+    &__btn {
+      font-size: 1.4rem;
+      height: 3rem;
+      width: 25rem;
+    }
+  }
+}
