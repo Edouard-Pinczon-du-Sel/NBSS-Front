@@ -69,6 +69,19 @@ function FormPersonne() {
           </div>
         </div>
       </div>
+      <input className="form--personne__input" type="number" placeholder="Nombre d'intervention(s) par semaine" />
+      <h2 className="form--personne__subtitle">Bénéficiez-vous d'une aide financière</h2>
+      <div className="form--personne__container--radio">
+        <div className="form--personne__container--label">
+          <label htmlFor="moment">Oui</label>
+          <input className="form--personne__checkbox" type="radio" name="moment" />
+        </div>
+        <div className="form--personne__container--label">
+          <label htmlFor="moment">Non</label>
+          <input className="form--personne__checkbox" type="radio" name="moment" />
+        </div>
+      </div>
+      <input className="form--personne__input selector" type="number" placeholder="Si oui par quel organisme ?" />
       <button className="form--personne__btn" type="button">Suivant</button>
     </div>
   );

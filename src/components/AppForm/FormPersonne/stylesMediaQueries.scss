@@ -2,7 +2,7 @@
 
 @media screen and (max-width: 767px){
   .form--personne {
-    height: 80vh;
+    height: 115vh;
     margin-bottom: 1rem;
 
     &__title {
@@ -11,6 +11,17 @@
 
     &__subtitle {
       font-size: 1.3rem;
+    }
+
+    &__input {
+      width: 15rem;
+      padding: 0.5rem 0.5rem;
+      width: 20rem;
+      font-size: 1.2em;
+    }
+
+    &__input::placeholder {
+      font-size: 1rem;
     }
 
 
@@ -29,7 +40,7 @@
 
 @media screen and (min-width: 768px){
   .form--personne {
-    height: 75vh;
+    height: 115vh;
     margin-bottom: 1rem;
 
     &__title {
@@ -38,6 +49,17 @@
 
     &__subtitle {
       font-size: 1.8rem;
+    }
+
+    &__input {
+      width: 25rem;
+      padding: 0.5rem 0.5rem;
+      width: 35rem;
+      font-size: 1.4rem;
+    }
+
+    &__input::placeholder {
+      font-size: 1.4rem;
     }
 
     &__btn {
@@ -54,19 +76,29 @@
 
 @media screen and (min-width: 1024px){
   .form--personne {
-    height: 90vh;
+    height: 120vh;
     margin: 0 5rem 1rem 5rem;
 
     &__title {
       font-size: 2.5rem;
       margin: 0.5rem 0rem 1.8rem 0rem;
     }
+
+    &__input {
+      width: 35rem;
+      width: 35rem;
+      font-size: 1.5em;
+    }
+
+    &__input::placeholder {
+      font-size: 1.5rem;
+    }
   } 
 }
 
 @media screen and (min-width: 1250px){
   .form--personne {
-    height: 75vh;
+    height: 100vh;
     margin: 0 0rem 1rem 0rem;
 
     &__title {
@@ -84,8 +116,13 @@
       font-size: 2rem;
     }
 
+    &__input {
+      width: 40rem;
+      padding: 0.5rem 0.5rem;
+    }
+
     &__btn {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       height: 3rem;
       width: 40rem;
     }

@@ -28,7 +28,7 @@
   }
 
   &__input {
-    margin-bottom: 0.6rem;
+    margin: 0.6rem 0 0.6rem 0;
   }
 
   &__btn {
@@ -52,11 +52,16 @@
     display: flex;
   }
 
- 
-
   &__container--checkbox--2 {
     display: flex;
     justify-content: space-between;
   }
 
+  &__container--radio {
+    display: flex;
+  }
+}
+
+.display {
+  display: none;
 }
