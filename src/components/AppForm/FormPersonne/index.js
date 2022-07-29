@@ -4,7 +4,6 @@
 import './styles.scss';
 import './stylesMediaQueries.scss';
 // TODO maper sur les checkbox depuis les donées de l'api du back
-// TODO mettre un onChange pour que si la personne à une aide on affiche le input par quel organisme
 // == Composant
 function FormPersonne() {
   function handleDisplayYes() {
