@@ -14,58 +14,58 @@ function FormPersonne() {
         <div className="form--personne__container--checkbox--1">
           <div className="form--personne__container--four--label">
             <div className="form--personne__container--label">
-              <label htmlFor="day">à la toilette</label>
-              <input className="form--personne__checkbox" type="checkbox" name="day" />
+              <label htmlFor="need">à la toilette</label>
+              <input className="form--personne__checkbox" type="checkbox" name="need" />
             </div>
             <div className="form--personne__container--label">
-              <label htmlFor="day">à la douche</label>
-              <input className="form--personne__checkbox" type="checkbox" name="day" />
+              <label htmlFor="need">à la douche</label>
+              <input className="form--personne__checkbox" type="checkbox" name="need" />
             </div>
             <div className="form--personne__container--label">
-              <label htmlFor="day">à la préparation des repas</label>
-              <input className="form--personne__checkbox" type="checkbox" name="day" />
+              <label htmlFor="need">à la préparation des repas</label>
+              <input className="form--personne__checkbox" type="checkbox" name="need" />
             </div>
             <div className="form--personne__container--label">
-              <label htmlFor="day">à la prise de repas</label>
-              <input className="form--personne__checkbox" type="checkbox" name="day" />
+              <label htmlFor="need">à la prise de repas</label>
+              <input className="form--personne__checkbox" type="checkbox" name="need" />
             </div>
           </div>
           <div className="form--personne__container--four--label">
           <div className="form--personne__container--label">
-            <label htmlFor="day">aux courses</label>
-            <input className="form--personne__checkbox" type="checkbox" name="day" />
+            <label htmlFor="need">aux courses</label>
+            <input className="form--personne__checkbox" type="checkbox" name="need" />
           </div>
             <div className="form--personne__container--label">
-              <label htmlFor="day">au lever</label>
-              <input className="form--personne__checkbox" type="checkbox" name="day" />
+              <label htmlFor="need">au lever</label>
+              <input className="form--personne__checkbox" type="checkbox" name="need" />
             </div>
             <div className="form--personne__container--label">
-              <label htmlFor="day">au coucher</label>
-              <input className="form--personne__checkbox" type="checkbox" name="day" />
+              <label htmlFor="need">au coucher</label>
+              <input className="form--personne__checkbox" type="checkbox" name="need" />
             </div>
             <div className="form--personne__container--label">
-              <label htmlFor="day">à l'entretien du logement</label>
-              <input className="form--personne__checkbox" type="checkbox" name="day" />
+              <label htmlFor="need">à l'entretien du logement</label>
+              <input className="form--personne__checkbox" type="checkbox" name="need" />
             </div>
           </div>
         </div>
         <h2 className="form--personne__subtitle">Moment d'intervention</h2>
         <div className="form--personne__container--checkbox--2">
           <div className="form--personne__container--label">
-            <label htmlFor="day">Matin</label>
-            <input className="form--personne__checkbox" type="checkbox" name="day" />
+            <label htmlFor="moment">Matin</label>
+            <input className="form--personne__checkbox" type="checkbox" name="moment" />
           </div>
           <div className="form--personne__container--label">
-            <label htmlFor="day">Midi</label>
-            <input className="form--personne__checkbox" type="checkbox" name="day" />
+            <label htmlFor="moment">Midi</label>
+            <input className="form--personne__checkbox" type="checkbox" name="moment" />
           </div>
           <div className="form--personne__container--label">
-            <label htmlFor="day">Après-midi</label>
-            <input className="form--personne__checkbox" type="checkbox" name="day" />
+            <label htmlFor="moment">Après-midi</label>
+            <input className="form--personne__checkbox" type="checkbox" name="moment" />
           </div>
           <div className="form--personne__container--label">
-            <label htmlFor="day">Soir</label>
-            <input className="form--personne__checkbox" type="checkbox" name="day" />
+            <label htmlFor="moment">Soir</label>
+            <input className="form--personne__checkbox" type="checkbox" name="moment" />
           </div>
         </div>
       </div>
