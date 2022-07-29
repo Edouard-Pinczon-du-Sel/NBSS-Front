@@ -92,7 +92,7 @@ function FormPersonne() {
           </div>
         </div>
         <input className="form--personne__input display--none selector" type="number" placeholder="Par quel organisme ?" />
-        <Link to="/services/form/validation"><button className="form--menagers__btn" type="button">Suivant</button></Link>
+        <Link to="/services/form/validation"><button className="form--menagers__btn" type="submit">Suivant</button></Link>
       </div>
     </form>
   );

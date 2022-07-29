@@ -25,7 +25,7 @@ function FormAdmin() {
           <input className="form--admin__input" type="text" placeholder="Prénom" />
           <input className="form--admin__input" type="text" placeholder="Adresse" />
         </div>
-        <Link to="/services/form/validation"><button className="form--menagers__btn" type="button">Suivant</button></Link>
+        <Link to="/services/form/validation"><button className="form--menagers__btn" type="submit">Suivant</button></Link>
       </div>
     </form>
   );
