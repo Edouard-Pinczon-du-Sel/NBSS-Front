@@ -26,7 +26,8 @@ export const initialState = {
     city: 'Ville',
     phoneNumber: 'Numéro de téléphone',
   },
-  serviceSelected: {
+  serviceSelected: '',
+  serviceList: {
     administrativeDepartment: {
       firstname: '',
       lastname: '',
@@ -56,6 +57,14 @@ export const initialState = {
     housekeeping: {
       content: '',
       frequency: '',
+      numberHour: '',
+    },
+    personalAssistanceService: {
+      content: '',
+      organization: '',
+      personalAssistance: '',
+      intervention: '',
+      financialHelp: true,
       numberHour: '',
     },
 
