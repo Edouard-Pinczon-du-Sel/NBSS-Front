@@ -1,21 +1,36 @@
+/* eslint-disable max-len */
 // == Import
 // import PropTypesLib from 'prop-types';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Input from './Input';
 import './styles.scss';
 import './stylesMediaQueries.scss';
 
 // == Composant
 function FormInfos() {
+  const value = useSelector((state) => state.form.contact);
   return (
     <form>
+      {
+        // ANCHOR Permet de map les clé d'un object tout en ayant son numéro d'index /
+        Object.keys(value).map((KeyObject, Placement) => console.log('KeyObject : ', KeyObject, 'Placement : ', Placement))
+      }
       <div className="form--infos">
         <h1 className="form--infos__title">Vos informations personnelles</h1>
         <div className="form--infos__container--input">
-          <input className="form--infos__input" type="text" placeholder="Nom" />
-          <input className="form--infos__input" type="text" placeholder="Prénom" />
-          <input className="form--infos__input" type="text" placeholder="Adresse" />
-          <input className="form--infos__input" type="text" placeholder="Téléphone" />
-          <input className="form--infos__input" type="text" placeholder="E-mail" />
+          {
+            Object.keys(value).map((index, key) => <Input key={key} inputName={index} />)
+          }
+
+          {/* <input className="form--infos__input" type="text" value={value} name={inputName} onChange={handleChange} placeholder="Nom" />
+          <input className="form--infos__input" type="text" value={value} name={inputName} onChange={handleChange} placeholder="Nom d'avant mariage (facultatif)" />
+          <input className="form--infos__input" type="text" value={value} name={inputName} onChange={handleChange} placeholder="Prénom" />
+          <input className="form--infos__input" type="text" value={value} name={inputName} onChange={handleChange} placeholder="Adresse" />
+          <input className="form--infos__input" type="text" value={value} name={inputName} onChange={handleChange} placeholder="Code postal" />
+          <input className="form--infos__input" type="text" value={value} name={inputName} onChange={handleChange} placeholder="Ville" />
+          <input className="form--infos__input" type="text" value={value} name={inputName} onChange={handleChange} placeholder="Téléphone" />
+          <input className="form--infos__input" type="text" value={value} name={inputName} onChange={handleChange} placeholder="E-mail" /> */}
         </div>
         {/* <select className="form--infos__select">
           <option className="form--infos__otpion">Choix du service</option>
