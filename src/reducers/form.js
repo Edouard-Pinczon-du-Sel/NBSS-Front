@@ -2,19 +2,63 @@ import { CHANGE_VALUE } from '../actions/form';
 
 export const initialState = {
   contact: {
+    firstname: '',
+    lastname: '',
+    maidenName: '',
+    // NOTE peut être null
+    mail: '',
+    adress: '',
+    zipCode: '',
+    city: '',
+    phoneNumber: '',
+    // content: '', // dans la dernière étape du formulaire
+    // preferency: true, // NOTE BOOLEEN concernant si le client souhaite être
+    // recontacter par mobile ou non
+    // createdAt: '', // info a envoyer dans le récap
+  },
+  contact_placeholder: {
     firstname: 'Prénom',
     lastname: 'Nom',
     maidenName: 'Nom de jeune fille',
-    // NOTE peut être null
     mail: 'E-Mail',
     adress: 'Adresse',
     zipCode: 'Code postale',
     city: 'Ville',
     phoneNumber: 'Numéro de téléphone',
-    // content: '',
-    // preferency: true, // NOTE BOOLEEN concernant si le client souhaite être
-    // recontacter par mobile ou non
-    // createdAt: '',
+  },
+  serviceSelected: {
+    administrativeDepartment: {
+      firstname: '',
+      lastname: '',
+      mail: '',
+      adress: '',
+      city: '',
+      content: '',
+      firstnameOfDeceased: '',
+      lastnameOfDeceased: '',
+      maidenNameOfDeceased: '',
+      adressDeceased: '',
+      zipCodeOfDeceased: '',
+      cityOfDeceased: '',
+      dateOfBirth: '',
+      placeOfBirth: '',
+      dateOfDeceased: '',
+      placeOfDeceased: '',
+      postalCode: '',
+    },
+    babysittingService: {
+      content: '',
+      days: '',
+      intervention: '',
+      numberChild: '',
+      numberHour: '',
+    },
+    housekeeping: {
+      content: '',
+      frequency: '',
+      numberHour: '',
+    },
+
   },
 };
 
@@ -23,7 +67,10 @@ const reducer = (state = initialState, action = {}) => {
     case CHANGE_VALUE:
       return {
         ...state,
-        [action.key]: action.value,
+        contact: {
+          ...state.contact,
+          [action.key]: action.value,
+        },
         // encore une fois la notation entre [] permet d'avoir une clé dynamique
       };
     default:
