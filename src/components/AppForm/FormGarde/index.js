@@ -8,7 +8,7 @@ import './stylesMediaQueries.scss';
 function FormGarde() {
   return (
     <div className="form--garde">
-      <h1 className="form--garde__title">Vos informations personnelles</h1>
+      <h1 className="form--garde__title">Service garde enfants</h1>
       <div className="form--garde__container--input">
         <input className="form--garde__input" type="number" placeholder="Nombre d'enfants" />
         <input className="form--garde__input" type="text" placeholder="Nombre d'heure par semaine" />
