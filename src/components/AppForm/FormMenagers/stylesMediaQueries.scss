@@ -1,0 +1,121 @@
+// TODO Refacto avec em si nécessaire
+
+@media screen and (max-width: 767px){
+  .form--menagers {
+    height: 70vh;
+    margin-bottom: 1rem;
+
+    &__title {
+      font-size: 1.3rem;
+    }
+
+    &__input {
+      width: 15rem;
+      padding: 0.6rem 0.5rem;
+      width: 20rem;
+      font-size: 1.2em;
+    }
+
+    &__input::placeholder {
+      font-size: 1.2rem;
+      
+    }
+
+    &__select {
+      font-size: 1.2rem;
+      height: 2.5rem;
+      width: 20rem;
+    }
+
+    &__select--data {
+      font-size: 1.2rem;
+      height: 2.5rem;
+      width: 20rem;
+    }
+  } 
+}
+
+@media screen and (min-width: 768px){
+  .form--menagers {
+    height: 75vh;
+    margin-bottom: 1rem;
+
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__input {
+      width: 25rem;
+      padding: 0.5rem 0.5rem;
+      width: 35rem;
+      font-size: 1.4rem;
+    }
+
+    &__input::placeholder {
+      font-size: 1.4rem;
+    }
+
+    &__select {
+      font-size: 1.2rem;
+      height: 2.5rem;
+      width: 35rem;
+    }
+
+    &__select--data {
+      font-size: 1.2rem;
+      height: 2.5rem;
+      width: 35rem;
+    }
+  } 
+}
+
+@media screen and (min-width: 1024px){
+  .form--menagers {
+    height: 75vh;
+    margin: 0 5rem 1rem 5rem;
+
+    &__title {
+      font-size: 2.5rem;
+      margin: 0.5rem 0rem 1.8rem 0rem;
+    }
+
+    &__input {
+      width: 35rem;
+      width: 35rem;
+      font-size: 1.5em;
+    }
+
+    &__input::placeholder {
+      font-size: 1.5rem;
+    }
+  } 
+}
+
+@media screen and (min-width: 1250px){
+  .form--menagers {
+    height: 75vh;
+    margin: 0 0rem 1rem 0rem;
+
+    &__title {
+      font-size: 3rem;
+      margin: 0.5rem 0rem 1.8rem 0rem;
+    }
+
+    &__input {
+      width: 40rem;
+      padding: 0.5rem 0.5rem;
+    }
+    
+    &__select {
+      font-size: 1.2rem;
+      height: 3rem;
+      width: 40rem;
+    }
+
+    &__select--data {
+      font-size: 1.2rem;
+      height: 3rem;
+      width: 40rem;
+    }
+  }
+}

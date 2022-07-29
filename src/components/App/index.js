@@ -14,8 +14,7 @@ import LegacyPage from '../AppFooter/FooterLegacy/LegacyPage';
 import ChartePage from '../AppFooter/FooterLegacy/LegacySpecificPage/ChartePage';
 import ReglementPage from '../AppFooter/FooterLegacy/LegacySpecificPage/ReglementPage';
 import SocietyPage from '../AppFooter/FooterLegacy/LegacySpecificPage/SocietyPage';
-import FormInfos from '../AppForm/FormInfos';
-
+import FormMenagers from '../AppForm/FormMenagers';
 import AppFooter from '../AppFooter';
 
 function App() {
@@ -26,7 +25,7 @@ function App() {
         <Route path="/" element={<AppMain />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/service/:id" element={<ServiceDetails />} />
-        <Route path="/services/form" element={<FormInfos />} />
+        <Route path="/services/form" element={<FormMenagers />} />
         <Route path="/emplois" element={<JobsPage />} />
         <Route path="/emplois/:id" element={<JobsDetails />} />
         <Route path="/contact" element={<ContactPage />} />
