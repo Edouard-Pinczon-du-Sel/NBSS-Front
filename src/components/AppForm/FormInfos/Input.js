@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { changeValue } from '../../../actions/form';
+import { changeContactValue } from '../../../actions/form';
 
 function Input({ inputName }) {
   // console.log('input de :', inputName);
@@ -9,7 +9,7 @@ function Input({ inputName }) {
   const value = useSelector((state) => state.form.contact[inputName]);
   const dispatch = useDispatch();
   const handleChange = (event) => {
-    dispatch(changeValue(event.target.name, event.target.value));
+    dispatch(changeContactValue(event.target.name, event.target.value));
   };
   return (
     <>

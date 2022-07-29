@@ -1,4 +1,4 @@
-import { CHANGE_VALUE } from '../actions/form';
+import { CHANGE_CONTACT_VALUE, SERVICE_SELECTED } from '../actions/form';
 
 export const initialState = {
   contact: {
@@ -26,7 +26,7 @@ export const initialState = {
     city: 'Ville',
     phoneNumber: 'Numéro de téléphone',
   },
-  serviceSelected: '',
+  serviceSelected: '--Choix du service--',
   serviceList: {
     administrativeDepartment: {
       firstname: '',
@@ -73,13 +73,19 @@ export const initialState = {
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case CHANGE_VALUE:
+    case CHANGE_CONTACT_VALUE:
       return {
         ...state,
         contact: {
           ...state.contact,
           [action.key]: action.value,
         },
+        // encore une fois la notation entre [] permet d'avoir une clé dynamique
+      };
+    case SERVICE_SELECTED:
+      return {
+        ...state,
+        [action.key]: action.selected,
         // encore une fois la notation entre [] permet d'avoir une clé dynamique
       };
     default:

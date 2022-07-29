@@ -2,16 +2,15 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Input from './Input';
-import Option from './Option';
+import SelectService from './SelectService';
 import './styles.scss';
 import './stylesMediaQueries.scss';
 
 // == Composant
 function FormInfos() {
   const contactForm = useSelector((state) => state.form.contact);
-  const serviceList = useSelector((state) => state.form.serviceList);
   // console.log(Object.keys(serviceList));
   return (
     <form>
@@ -27,18 +26,13 @@ function FormInfos() {
           }
         </div>
         <h1 className="form--infos__title--choice">Cliquez sur le service de votre choix</h1>
-        <select className="form--infos__select" onChange={(val) => console.log(val.target.value)}>
-          <option className="form--infos__option"> --Choix du service-- </option>
-          {
-            Object.keys(serviceList).map((index, key) => <Option key={key} value={index} />)
-          }
-        </select>
-        <div className="form--infos__container--choice--btn">
+        <SelectService />
+        {/* <div className="form--infos__container--choice--btn">
           <Link to="/services/form/menagers"><button className="form--infos__choice--btn" type="button">Service ménagers</button></Link>
           <Link to="/services/form/garde"><button className="form--infos__choice--btn" type="button">Service garde enfants</button></Link>
           <Link to="/services/form/personne"><button className="form--infos__choice--btn" type="button">Service aide à la personne</button></Link>
           <Link to="/services/form/admin"><button className="form--infos__choice--btn" type="submit">Service aide administratif</button></Link>
-        </div>
+        </div> */}
       </div>
     </form>
   );
