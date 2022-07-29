@@ -4,8 +4,18 @@
 import './styles.scss';
 import './stylesMediaQueries.scss';
 // TODO maper sur les checkbox depuis les donées de l'api du back
+// TODO mettre un onChange pour que si la personne à une aide on affiche le input par quel organisme
 // == Composant
 function FormPersonne() {
+  function handleDisplayYes() {
+    const messageInput = document.querySelector('.selector');
+    messageInput.classList.remove('display--none');
+  }
+
+  function handleDisplayNo() {
+    const messageInput = document.querySelector('.selector');
+    messageInput.classList.add('display--none');
+  }
   return (
     <div className="form--personne">
       <h1 className="form--personne__title">Service aide à la personne</h1>
@@ -74,14 +84,14 @@ function FormPersonne() {
       <div className="form--personne__container--radio">
         <div className="form--personne__container--label">
           <label htmlFor="moment">Oui</label>
-          <input className="form--personne__checkbox" type="radio" name="moment" />
+          <input className="form--personne__checkbox" type="radio" name="moment" onClick={handleDisplayYes} />
         </div>
         <div className="form--personne__container--label">
           <label htmlFor="moment">Non</label>
-          <input className="form--personne__checkbox" type="radio" name="moment" />
+          <input className="form--personne__checkbox" type="radio" name="moment" onClick={handleDisplayNo} />
         </div>
       </div>
-      <input className="form--personne__input selector" type="number" placeholder="Si oui par quel organisme ?" />
+      <input className="form--personne__input display--none selector" type="number" placeholder="Par quel organisme ?" />
       <button className="form--personne__btn" type="button">Suivant</button>
     </div>
   );

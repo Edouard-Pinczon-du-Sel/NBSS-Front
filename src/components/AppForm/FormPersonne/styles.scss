@@ -60,8 +60,21 @@
   &__container--radio {
     display: flex;
   }
+
+  &__display--none {
+    display: none;
+  }
+
+  &__display {
+    display: block;
+  }
+}
+
+.display--none {
+  display: none;
 }
 
 .display {
-  display: none;
+  display: block;
 }
+
