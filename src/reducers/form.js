@@ -32,11 +32,21 @@ export const initialState = {
   },
   serviceSelected: '--Choix du service--',
   servicesForm: [
-    { index: '--Choix du service--', form: null },
-    { index: 'administrativeDepartment', form: <FormAdmin /> },
-    { index: 'babysittingService', form: <FormGarde /> },
-    { index: 'housekeeping', form: <FormMenagers /> },
-    { index: 'personalAssistanceService', form: <FormPersonne /> },
+    {
+      id: 1, index: '--Choix du service--', form: null, text: '--Choix du service--',
+    },
+    {
+      id: 2, index: 'administrativeDepartment', form: <FormAdmin />, text: 'Aides administrative',
+    },
+    {
+      id: 3, index: 'babysittingService', form: <FormGarde />, text: 'Gardes d\'enfants',
+    },
+    {
+      id: 4, index: 'housekeeping', form: <FormMenagers />, text: 'Aides ménagères',
+    },
+    {
+      id: 5, index: 'personalAssistanceService', form: <FormPersonne />, text: 'Aides à la personne',
+    },
   ],
   serviceList: {
     administrativeDepartment: {

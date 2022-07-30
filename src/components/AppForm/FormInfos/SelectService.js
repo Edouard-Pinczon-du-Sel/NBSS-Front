@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { serviceSelected } from '../../../actions/form';
 
-function SelectService({ value }) {
-  const serviceList = useSelector((state) => state.form.serviceList);
+function SelectService() {
+  // const serviceList = useSelector((state) => state.form.serviceList);
   const selected = useSelector((state) => state.form.serviceSelected);
+  const serviceList = useSelector((state) => state.form.servicesForm);
   console.log(selected);
   const dispatch = useDispatch();
   const handleChange = (event) => {
@@ -13,9 +14,8 @@ function SelectService({ value }) {
   };
   return (
     <select className="form--infos__select" onChange={handleChange} value={selected} name="services">
-      <option className="form--infos__option"> --Choix du service-- </option>
       {
-        Object.keys(serviceList).map((index, key) => <option key={key} className="form--infos__option" id={key} value={index} name={index}>{index}</option>)
+        serviceList.map((item) => <option key={item.id} className="form--infos__option" id={item.id} value={item.index} name={item.index}>{item.text}</option>)
       }
     </select>
 
