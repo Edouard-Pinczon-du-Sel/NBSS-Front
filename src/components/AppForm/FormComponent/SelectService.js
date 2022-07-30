@@ -5,10 +5,10 @@ function SelectService() {
   // const serviceList = useSelector((state) => state.form.serviceList);
   const selected = useSelector((state) => state.form.serviceSelected);
   const serviceList = useSelector((state) => state.form.servicesForm);
-  console.log(selected);
+  // console.log(selected);
   const dispatch = useDispatch();
   const handleChange = (event) => {
-    console.log(event.currentTarget);
+    // console.log(event.currentTarget);
     const valueSelecteed = event.target.value;
     dispatch(serviceSelected('serviceSelected', valueSelecteed));
   };

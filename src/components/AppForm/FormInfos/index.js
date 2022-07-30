@@ -2,9 +2,9 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import { useSelector } from 'react-redux';
+import Input from '../FormComponent/Input';
+import SelectService from '../FormComponent/SelectService';
 // import { Link } from 'react-router-dom';
-import Input from './Input';
-import SelectService from './SelectService';
 import './styles.scss';
 import './stylesMediaQueries.scss';
 

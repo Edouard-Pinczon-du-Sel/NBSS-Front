@@ -1,4 +1,6 @@
-import { CHANGE_CONTACT_VALUE, SERVICE_SELECTED } from '../actions/form';
+import {
+  changeinfChargePerson, CHANGE_CONTACT_VALUE, CHANGE_IN_CHARGE_PERSON, SERVICE_SELECTED,
+} from '../actions/form';
 import FormAdmin from '../components/AppForm/FormAdmin';
 import FormGarde from '../components/AppForm/FormGarde';
 import FormMenagers from '../components/AppForm/FormMenagers';
@@ -49,25 +51,34 @@ export const initialState = {
     },
   ],
   serviceList: {
-    administrativeDepartment: {
-      firstname: '',
-      lastname: '',
-      mail: '',
-      adress: '',
-      city: '',
-      content: '',
-      firstnameOfDeceased: '',
-      lastnameOfDeceased: '',
-      maidenNameOfDeceased: '',
-      adressDeceased: '',
-      zipCodeOfDeceased: '',
-      cityOfDeceased: '',
-      dateOfBirth: '',
-      placeOfBirth: '',
-      dateOfDeceased: '',
-      placeOfDeceased: '',
-      postalCode: '',
-    },
+    administrativeDepartment: [
+      [
+        { id: 'fistname', fistname: '', placeholder: 'Prénom' },
+        { id: 'lastname', lastname: '', placeholder: 'nom' },
+        { id: 'mail', value: '', placeholder: 'E-mail' },
+        { id: 'adress', value: '', placeholder: 'adress' },
+        { id: 'city', value: '', placeholder: 'ville' },
+        { id: 'content', value: '', placeholder: 'information suplémentaire' },
+      ],
+
+      [
+        { id: 'firstnameOfDeceased', firstnameOfDeceased: '', placeholder: 'firstnameOfDeceased' },
+        { id: 'lastnameOfDeceased', lastnameOfDeceased: '', placeholder: 'lastnameOfDeceased' },
+        { id: 'maidenNameOfDeceased', maidenNameOfDeceased: '', placeholder: 'maidenNameOfDeceased' },
+        { id: 'adressDeceased', adressDeceased: '', placeholder: 'adressDeceased' },
+        { id: 'zipCodeOfDeceased', zipCodeOfDeceased: '', placeholder: 'zipCodeOfDeceased' },
+        { id: 'cityOfDeceased', cityOfDeceased: '', placeholder: 'cityOfDeceased' },
+        { id: 'dateOfBirth', dateOfBirth: '', placeholder: 'dateOfBirth' },
+        { id: 'placeOfBirth', placeOfBirth: '', placeholder: 'placeOfBirth' },
+        { id: 'dateOfDeceased', dateOfDeceased: '', placeholder: 'dateOfDeceased' },
+        { id: 'placeOfDeceased', placeOfDeceased: '', placeholder: 'placeOfDeceased' },
+        { id: 'postalCode', postalCode: '', placeholder: 'postalCode' },
+      ],
+      [
+        { func: changeinfChargePerson },
+        { func2: 'changeInfDeceasedPerson' },
+      ],
+    ],
     babysittingService: {
       content: '',
       days: '',
@@ -162,6 +173,23 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         [action.key]: action.selected,
+        // encore une fois la notation entre [] permet d'avoir une clé dynamique
+      };
+    case CHANGE_IN_CHARGE_PERSON:
+      return {
+        ...state,
+        serviceList: {
+          ...state.serviceList,
+          administrativeDepartment: [
+            ...state.serviceList.administrativeDepartment,
+
+            // ...state.serviceList.administrativeDepartment[0],
+
+            { [action.key]: action.selected },
+
+            // [administrativeDepartment[0].[action.key]: action.selected],
+          ],
+        },
         // encore une fois la notation entre [] permet d'avoir une clé dynamique
       };
     default:

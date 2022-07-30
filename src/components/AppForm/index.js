@@ -2,9 +2,9 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import { useSelector } from 'react-redux';
+import Input from './FormComponent/Input';
+import SelectService from './FormComponent/SelectService';
 // import { Link } from 'react-router-dom';
-import Input from './FormInfos/Input';
-import SelectService from './FormInfos/SelectService';
 import './styles.scss';
 import './stylesMediaQueries.scss';
 
@@ -14,11 +14,11 @@ function AppForm() {
   const contactForm = useSelector((state) => state.form.contact);
   const currentSelectService = useSelector((state) => state.form.serviceSelected);
   const formSelectService = useSelector((state) => state.form.servicesForm);
-  console.log('Liste des Services menant au JSX : ', formSelectService);
+  // console.log('Liste des Services menant au JSX : ', formSelectService);
   const filterForm = formSelectService.find((obj) => obj.index === currentSelectService);
-  console.log('filterForm => ', filterForm);
-  const { formName, indexForm, valueForm } = { formName: filterForm.form, indexForm: filterForm.index, valueForm: filterForm.text };
-  console.log('filterForm => Form = ', formName, 'index = ', indexForm);
+  // console.log('filterForm => ', filterForm);
+  const { formName } = { formName: filterForm.form };
+  // console.log('filterForm => Form = ', formName, 'index = ', indexForm);
 
   return (
     <form>
