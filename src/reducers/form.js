@@ -1,4 +1,8 @@
 import { CHANGE_CONTACT_VALUE, SERVICE_SELECTED } from '../actions/form';
+import FormAdmin from '../components/AppForm/FormAdmin';
+import FormGarde from '../components/AppForm/FormGarde';
+import FormMenagers from '../components/AppForm/FormMenagers';
+import FormPersonne from '../components/AppForm/FormPersonne';
 
 export const initialState = {
   contact: {
@@ -28,10 +32,11 @@ export const initialState = {
   },
   serviceSelected: '--Choix du service--',
   servicesForm: [
-    { index: 'administrativeDepartment', form: 'FormAdmin' },
-    { index: 'babysittingService', form: 'FormGarde' },
-    { index: 'housekeeping', form: 'FormMenagers' },
-    { index: 'personalAssistanceService', form: 'FormPersonne' },
+    { index: '--Choix du service--', form: null },
+    { index: 'administrativeDepartment', form: <FormAdmin /> },
+    { index: 'babysittingService', form: <FormGarde /> },
+    { index: 'housekeeping', form: <FormMenagers /> },
+    { index: 'personalAssistanceService', form: <FormPersonne /> },
   ],
   serviceList: {
     administrativeDepartment: {

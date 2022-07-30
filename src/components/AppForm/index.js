@@ -9,10 +9,6 @@ import './styles.scss';
 import './stylesMediaQueries.scss';
 
 // == Composant
-import FormAdmin from './FormAdmin';
-import FormGarde from './FormGarde';
-import FormMenagers from './FormMenagers';
-import FormPersonne from './FormPersonne';
 
 function AppForm() {
   const contactForm = useSelector((state) => state.form.contact);
@@ -21,6 +17,8 @@ function AppForm() {
   console.log('Liste des Services menant au JSX : ', formSelectService);
   const filterForm = formSelectService.find((obj) => obj.index === currentSelectService);
   console.log('filterForm => ', filterForm);
+  const { formName, indexForm } = { formName: filterForm.form, indexForm: filterForm.index };
+  console.log('filterForm => Form = ', formName, 'index = ', indexForm);
   // console.log(filterForm != undefined ? 'filterForm Value => '.filterForm.form : 'non-définit');
   return (
     <form>
@@ -45,9 +43,8 @@ function AppForm() {
           * Mettre en forme un dernier state "Recapitulatif" dans la mise en forme du back souhaiter.
           */
         }
-        <p>{currentSelectService}</p>
         <p>
-          {currentSelectService !== '--Choix du service--' ? <filterForm.form /> : ' veuillez choisir un service' }
+          {currentSelectService !== '--Choix du service--' ? formName : ' veuillez choisir un service' }
         </p>
         <p>Recapitulatif</p>
         <p>info suplémentaire</p>
