@@ -80,6 +80,61 @@ export const initialState = {
     },
 
   },
+  recap: {
+    contact: {
+      firstname: '',
+      lastname: '',
+      maidenName: '', // NOTE peut être null
+      mail: '',
+      adress: '',
+      zipCode: '',
+      city: '',
+      phoneNumber: '',
+      content: '', // dans la dernière étape du formulaire
+      preferency: true, // NOTE BOOLEEN concernant si le client souhaite être
+      // recontacter par mobile ou non
+      createdAt: '', // info a envoyer dans le récap
+    },
+    administrativeDepartment: {
+      firstname: '',
+      lastname: '',
+      mail: '',
+      adress: '',
+      city: '',
+      content: '',
+      firstnameOfDeceased: '',
+      lastnameOfDeceased: '',
+      maidenNameOfDeceased: '',
+      adressDeceased: '',
+      zipCodeOfDeceased: '',
+      cityOfDeceased: '',
+      dateOfBirth: '',
+      placeOfBirth: '',
+      dateOfDeceased: '',
+      placeOfDeceased: '',
+      postalCode: '',
+    },
+    babysittingService: {
+      content: '',
+      days: '',
+      intervention: '',
+      numberChild: '',
+      numberHour: '',
+    },
+    housekeeping: {
+      content: '',
+      frequency: '',
+      numberHour: '',
+    },
+    personalAssistanceService: {
+      content: '',
+      organization: '',
+      personalAssistance: '',
+      intervention: '',
+      financialHelp: true,
+      numberHour: '',
+    },
+  },
 };
 
 const reducer = (state = initialState, action = {}) => {

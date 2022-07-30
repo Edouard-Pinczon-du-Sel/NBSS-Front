@@ -29,8 +29,6 @@ function AppForm() {
             Object.keys(contactForm).map((index, key) => <Input key={key} inputName={index} />)
           }
         </div>
-        <h1 className="form--infos__title--choice">Cliquez sur le service de votre choix</h1>
-        <SelectService />
 
         {
           /*  TODO Version final dynamique / responsive en full Déclaratif via le state.
@@ -38,17 +36,17 @@ function AppForm() {
           *
           * Première étape : Contact (information communes entre chaque Services) Déclaratif //? DONE
           * Deuxième étapes : Menu déroulant avec state permettant de faire le choix entre les différent service proposé. //? DONE
-          * Troisième étapes : Au choix du service faire apparaitre la suite du Formulaire lié //! IN PROGRESSE
-          * Géré la page Récapitulatif et y ajouter la dernière étape Content (=> information complémentaire + Propostion rappel mobile Oui/Non)
+          * Troisième étapes : Au choix du service faire apparaitre la suite du Formulaire lié //? DONE
+          * Géré la page Récapitulatif et y ajouter la dernière étape Content (=> information complémentaire + Propostion rappel mobile Oui/Non) //! IN PROGRESS
           * Mettre en forme un dernier state "Recapitulatif" dans la mise en forme du back souhaiter.
           */
         }
-        <p>
-          {currentSelectService !== '--Choix du service--' ? formName : ' veuillez choisir un service' }
-        </p>
-        <p>Recapitulatif</p>
-        <p>info suplémentaire</p>
-        <p>submit</p>
+        <h1 className="form--infos__title--choice">Cliquez sur le service de votre choix</h1>
+        <SelectService />
+        {currentSelectService !== '--Choix du service--' ? formName : <p className="form--infos__title--choice">veuillez choisir un service</p> }
+        <p>Recapitulatif =&gt; Next step</p>
+        <p>info suplémentaire =&gt; Next step</p>
+        <p>submit =&gt; Last step</p>
       </div>
     </form>
   );
