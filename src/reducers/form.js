@@ -27,6 +27,12 @@ export const initialState = {
     phoneNumber: 'Numéro de téléphone',
   },
   serviceSelected: '--Choix du service--',
+  servicesForm: [
+    { index: 'administrativeDepartment', form: 'FormAdmin' },
+    { index: 'babysittingService', form: 'FormGarde' },
+    { index: 'housekeeping', form: 'FormMenagers' },
+    { index: 'personalAssistanceService', form: 'FormPersonne' },
+  ],
   serviceList: {
     administrativeDepartment: {
       firstname: '',

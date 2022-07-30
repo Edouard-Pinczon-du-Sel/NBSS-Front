@@ -27,12 +27,6 @@ function FormInfos() {
         </div>
         <h1 className="form--infos__title--choice">Cliquez sur le service de votre choix</h1>
         <SelectService />
-        {/* <div className="form--infos__container--choice--btn">
-          <Link to="/services/form/menagers"><button className="form--infos__choice--btn" type="button">Service ménagers</button></Link>
-          <Link to="/services/form/garde"><button className="form--infos__choice--btn" type="button">Service garde enfants</button></Link>
-          <Link to="/services/form/personne"><button className="form--infos__choice--btn" type="button">Service aide à la personne</button></Link>
-          <Link to="/services/form/admin"><button className="form--infos__choice--btn" type="submit">Service aide administratif</button></Link>
-        </div> */}
       </div>
     </form>
   );
