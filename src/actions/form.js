@@ -3,6 +3,7 @@ export const SERVICE_SELECTED = 'SERVICE_SELECTED';
 export const CHANGE_ADMINISTRATIVE_DEPARTMENT = 'CHANGE_ADMINISTRATIVE_DEPARTMENT';
 export const CHANGE_BABYSITTING = 'CHANGE_BABYSITTING';
 export const CHANGE_BABYSITTING_CHECK = 'CHANGE_BABYSITTING_CHECK';
+export const CHANGE_BABYSITTING_UNCHECK = 'CHANGE_BABYSITTING_UNCHECK';
 
 export const changeContactValue = (key, value) => ({
   type: CHANGE_CONTACT_VALUE,
@@ -31,6 +32,14 @@ export const changeBabySitting = (key, selected) => ({
 export function changeBabySittingCheck(key, selected) {
   return {
     type: CHANGE_BABYSITTING_CHECK,
+    key: key,
+    selected: selected,
+  };
+}
+
+export function changeBabySittingUnCheck(key, selected) {
+  return {
+    type: CHANGE_BABYSITTING_UNCHECK,
     key: key,
     selected: selected,
   };

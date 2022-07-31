@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { changeBabySittingCheck } from '../../../actions/form';
+import { changeBabySittingCheck, changeBabySittingUnCheck } from '../../../actions/form';
 
 function Checkboxs({ name, data }) {
   const dispatch = useDispatch();
@@ -36,7 +36,15 @@ function Checkboxs({ name, data }) {
     else {
       console.log(Object.prototype.hasOwnProperty.call(days, newValue));
       console.log(Object.prototype.hasOwnProperty.call(intervention, newValue));
-      console.log('data unChecked is =>', event.target.value);
+      console.log('event.target.value is checked =>', event.target.value);
+      console.log('event.target.name is checked =>', event.target.name);
+      if (Object.prototype.hasOwnProperty.call(days, newValue)) {
+        console.log(days[newValue]);
+        dispatch(changeBabySittingUnCheck(event.target.name, days[newValue]));
+      }
+      else {
+        dispatch(changeBabySittingUnCheck(event.target.name, intervention[newValue]));
+      }
     }
   };
   return (
