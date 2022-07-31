@@ -31,11 +31,11 @@ function FormGarde() {
         />
         <h2 className="form--garde__subtitle">Jours d'intervention</h2>
         <div className="form--garde__container--checkbox">
-          {babysittingService.days.map((data) => <Checkboxs key={data} data={data} />)}
+          {babysittingService.days.map((data) => <Checkboxs key={data} name="days" data={data} />)}
         </div>
         <h2 className="form--garde__subtitle">Moment d'intervention</h2>
         <div className="form--garde__container--checkbox">
-          {babysittingService.intervention.map((data) => <Checkboxs key={data} data={data} />)}
+          {babysittingService.intervention.map((data) => <Checkboxs key={data} name="intervention" data={data} />)}
         </div>
         <h2 className="form--garde__subtitle">Information complémentaire</h2>
         <TextArea />
