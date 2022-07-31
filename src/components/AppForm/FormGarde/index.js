@@ -8,8 +8,7 @@ import InputNumber from '../FormComponent/InputNumber';
 import TextArea from '../FormComponent/TextArea';
 import './styles.scss';
 import './stylesMediaQueries.scss';
-// TODO maper sur les checkbox depuis les donées de l'api du back
-// == Composant
+
 function FormGarde() {
   const babysittingService = useSelector((state) => state.form.miseEnPage.babysittingService);
   const babysittingServiceRecap = useSelector((state) => state.form.recap.babysittingService);
