@@ -60,11 +60,11 @@ export const initialState = {
       },
     },
     babysittingService: {
-      days: 'Les jours d\'intervention',
-      intervention: 'a quel moment de la journée',
+      content: 'information suplémentaire',
+      days: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi'],
+      intervention: ['Matin', 'Déjeuner', 'Après-midi', 'Diner', 'Soir'],
       numberChild: 'Nombre d\'enfant',
       numberHour: 'Nombre d\'heure de garde souhaité',
-      content: 'information suplémentaire',
     },
     housekeeping: {
       frequency: 'Fréquence de passage',
@@ -80,55 +80,6 @@ export const initialState = {
       content: 'information suplémentaire',
     },
   },
-  // serviceList: {
-  //   administrativeDepartment: {
-  //     contactInCharge: [
-  //       { id: 'fistname', fistname: '', placeholder: 'Prénom' },
-  //       { id: 'lastname', lastname: '', placeholder: 'nom' },
-  //       { id: 'mail', mail: '', placeholder: 'E-mail' },
-  //       { id: 'adress', adress: '', placeholder: 'adress' },
-  //       { id: 'city', city: '', placeholder: 'ville' },
-  //       { id: 'content', content: '', placeholder: 'information suplémentaire' },
-  //     ],
-
-  //     infoDeceased: [
-  //       { id: 'firstnameOfDeceased', firstnameOfDeceased: '', placeholder: 'firstnameOfDeceased' },
-  //       { id: 'lastnameOfDeceased', lastnameOfDeceased: '', placeholder: 'lastnameOfDeceased' },
-  //       { id: 'maidenNameOfDeceased', maidenNameOfDeceased: '', placeholder: 'maidenNameOfDeceased' },
-  //       { id: 'adressDeceased', adressDeceased: '', placeholder: 'adressDeceased' },
-  //       { id: 'zipCodeOfDeceased', zipCodeOfDeceased: '', placeholder: 'zipCodeOfDeceased' },
-  //       { id: 'cityOfDeceased', cityOfDeceased: '', placeholder: 'cityOfDeceased' },
-  //       { id: 'dateOfBirth', dateOfBirth: '', placeholder: 'dateOfBirth' },
-  //       { id: 'placeOfBirth', placeOfBirth: '', placeholder: 'placeOfBirth' },
-  //       { id: 'dateOfDeceased', dateOfDeceased: '', placeholder: 'dateOfDeceased' },
-  //       { id: 'placeOfDeceased', placeOfDeceased: '', placeholder: 'placeOfDeceased' },
-  //       { id: 'postalCode', postalCode: '', placeholder: 'postalCode' },
-  //     ],
-  //     // funcList:
-  //     //   { func: changeinfChargePerson, func2: changeInfDeceasedPerson },
-  //   },
-  //   babysittingService: {
-  //     content: '',
-  //     days: '',
-  //     intervention: '',
-  //     numberChild: '',
-  //     numberHour: '',
-  //   },
-  //   housekeeping: {
-  //     content: '',
-  //     frequency: '',
-  //     numberHour: '',
-  //   },
-  //   personalAssistanceService: {
-  //     content: '',
-  //     organization: '',
-  //     personalAssistance: '',
-  //     intervention: '',
-  //     financialHelp: true,
-  //     numberHour: '',
-  //   },
-
-  // },
   recap: {
     contact: {
       firstname: '',
@@ -165,10 +116,10 @@ export const initialState = {
     },
     babysittingService: {
       content: '',
-      days: '',
-      intervention: '',
-      numberChild: '',
-      numberHour: '',
+      days: [], // d'après le back 1 = lundi, 2 = mardi donc on doit leur envoyer days: [1,2] dans le cas ou les deux premier jour de la semaine sont selectionner.
+      intervention: [], // idem que pour les jours
+      numberChild: '', // renvoie d'un INT
+      numberHour: '', // renvoie d'un INT
     },
     housekeeping: {
       content: '',
@@ -205,42 +156,16 @@ const reducer = (state = initialState, action = {}) => {
         [action.key]: action.selected,
       };
     case CHANGE_ADMINISTRATIVE_DEPARTMENT:
-      // const newArrayOfInChargePerson = state.serviceList.administrativeDepartment.contactInCharge.map(
-      //   (element) => (element.id === action.key ? { ...element, [action.key]: action.selected }
-      //     : element),
-      // );
       return {
         ...state,
         recap: {
           ...state.recap,
           administrativeDepartment: {
             ...state.recap.administrativeDepartment,
-            [action.key]: action.value,
+            [action.key]: action.selected,
           },
         },
-      //   serviceList: {
-      //     ...state.serviceList,
-      //     administrativeDepartment: {
-      //       ...state.serviceList.administrativeDepartment,
-      //       infoDeceased: newArrayOfInChargePerson,
-      //     },
-      //   },
       };
-    // case CHANGE_INF_DECEASED_PERSON:
-      // const newArrayOfInfosDeceasedPerson = state.serviceList.administrativeDepartment.contactInCharge.map(
-      //   (element) => (element.id === action.key ? { ...element, [action.key]: action.selected }
-      //     : element),
-      // );
-      // return {
-      // ...state,
-      // serviceList: {
-      //   ...state.serviceList,
-      //   administrativeDepartment: {
-      //     ...state.serviceList.administrativeDepartment,
-      //     contactInCharge: newArrayOfInfosDeceasedPerson,
-      //   },
-      // },
-      // };
     default:
       return state;
   }

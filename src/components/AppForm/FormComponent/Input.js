@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-function Input({ inputName, action, placeHolderValue }) {
-  const value = useSelector((state) => state.form.recap.contact[inputName]);
+function Input({ inputName, action, placeHolderValue ,value }) {
   const dispatch = useDispatch();
   const handleChange = (event) => {
     dispatch(action(event.target.name, event.target.value));
