@@ -5,6 +5,7 @@ export const CHANGE_BABYSITTING = 'CHANGE_BABYSITTING';
 export const CHANGE_BABYSITTING_CHECK = 'CHANGE_BABYSITTING_CHECK';
 export const CHANGE_BABYSITTING_UNCHECK = 'CHANGE_BABYSITTING_UNCHECK';
 export const CHANGE_BABYSITTING_TEXTAREA = 'CHANGE_BABYSITTING_TEXTAREA';
+export const CHANGE_HOUSEKEEPING_NUMBER_HOUR = 'CHANGE_HOUSEKEEPING_NUMBER_HOUR';
 
 export const changeContactValue = (key, value) => ({
   type: CHANGE_CONTACT_VALUE,
@@ -45,9 +46,18 @@ export function changeBabySittingUnCheck(key, selected) {
     selected: selected,
   };
 }
+
 export function changeBabySittingTextArea(key, selected) {
   return {
     type: CHANGE_BABYSITTING_TEXTAREA,
+    key: key,
+    selected: selected,
+  };
+}
+
+export function changeHouseKeepingNumberHour(key, selected) {
+  return {
+    type: CHANGE_HOUSEKEEPING_NUMBER_HOUR,
     key: key,
     selected: selected,
   };

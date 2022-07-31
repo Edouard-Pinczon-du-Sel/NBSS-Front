@@ -7,6 +7,7 @@ import {
   CHANGE_BABYSITTING_TEXTAREA,
   CHANGE_BABYSITTING_UNCHECK,
   CHANGE_CONTACT_VALUE,
+  CHANGE_HOUSEKEEPING_NUMBER_HOUR,
   SERVICE_SELECTED,
 } from '../actions/form';
 import FormAdmin from '../components/AppForm/FormAdmin';
@@ -131,8 +132,8 @@ export const initialState = {
     },
     housekeeping: {
       content: '',
-      frequency: '',
-      numberHour: '',
+      frequency: [], // Hebdomadaire = 1 , Une fois par semaine = 2, Deux fois par mois = 3, Une fois par mois = 4, Ponctuellement = 5
+      numberHour: 0, // INT
     },
     personalAssistanceService: {
       content: '',
@@ -214,6 +215,17 @@ const reducer = (state = initialState, action = {}) => {
           ...state.recap,
           babysittingService: {
             ...state.recap.babysittingService,
+            [action.key]: action.selected,
+          },
+        },
+      };
+    case CHANGE_HOUSEKEEPING_NUMBER_HOUR:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          housekeeping: {
+            ...state.recap.housekeeping,
             [action.key]: action.selected,
           },
         },
