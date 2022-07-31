@@ -2,8 +2,8 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import { useSelector } from 'react-redux';
-import Input from './FormComponent/Input';
 import SelectService from './FormComponent/SelectService';
+import FormContact from './FormContact';
 // import { Link } from 'react-router-dom';
 import './styles.scss';
 import './stylesMediaQueries.scss';
@@ -11,7 +11,6 @@ import './stylesMediaQueries.scss';
 // == Composant
 
 function AppForm() {
-  const contactForm = useSelector((state) => state.form.contact);
   const currentSelectService = useSelector((state) => state.form.serviceSelected);
   const formSelectService = useSelector((state) => state.form.servicesForm);
   // console.log('Liste des Services menant au JSX : ', formSelectService);
@@ -25,9 +24,7 @@ function AppForm() {
       <div className="form--infos">
         <h1 className="form--infos__title">Vos informations personnelles</h1>
         <div className="form--infos__container--input">
-          {
-            Object.keys(contactForm).map((index, key) => <Input key={key} inputName={index} />)
-          }
+          <FormContact />
         </div>
         <h1 className="form--infos__title--choice">Cliquez sur le service de votre choix</h1>
         <SelectService />

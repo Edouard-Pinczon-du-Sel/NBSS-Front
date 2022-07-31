@@ -3,42 +3,31 @@
 // import PropTypesLib from 'prop-types';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import InputFinalVersion from '../FormComponent/InputFinalVersion';
+import { changeAdministrativeDepartment } from '../../../actions/form';
+import Input from '../FormComponent/Input';
 import './styles.scss';
 import './stylesMediaQueries.scss';
 
 // == Composant
 function FormAdmin() {
-  const adminForm = useSelector((state) => state.form.serviceList.administrativeDepartment[0]);
-  const adminFuncForm = useSelector((state) => state.form.serviceList.administrativeDepartment[2]);
-  console.log(adminFuncForm[0].func);
-  console.log(adminFuncForm[1].func);
-  
+  const adminPatern = useSelector((state) => state.form.miseEnPage.administrativeDepartment);
   return (
-    <form>
-      <div className="form--admin">
-        <h1 className="form--admin__title">Renseignements sur la personne décédée</h1>
-        <div className="form--admin__container--input">
-          {
-            adminForm.map((item) => <InputFinalVersion key={item.id} inputName={item} func={adminFuncForm[0].func} />)
-          }
-          {/* <input className="form--admin__input" type="text" placeholder="Nom" />
-          <input className="form--admin__input" type="text" placeholder="Nom de jeune fille" />
-          <input className="form--admin__input" type="text" placeholder="Prénom" />
-          <input className="form--admin__input" type="text" placeholder="Adresse" />
-          <input className="form--admin__input" type="text" placeholder="Date et lieu de naissance" />
-          <input className="form--admin__input" type="text" placeholder="Date et lieu de décès" /> */}
-        </div>
-
-        <h1 className="form--admin__title">Coordonnées de la personne en charge du décès</h1>
-        <div className="form--admin__container--input">
-          <input className="form--admin__input" type="text" placeholder="Nom" />
-          <input className="form--admin__input" type="text" placeholder="Prénom" />
-          <input className="form--admin__input" type="text" placeholder="Adresse" />
-        </div>
-        <Link to="/services/form/validation"><button className="form--menagers__btn" type="submit">Suivant</button></Link>
+    <div className="form--admin">
+      <h1 className="form--admin__title">Renseignements sur la personne décédée</h1>
+      <div className="form--admin__container--input">
+        {
+          Object.keys(adminPatern.aboutDeceasedPerson).map((element, index) => <Input key={element + index} inputName={element} action={changeAdministrativeDepartment} placeHolderValue={adminPatern.aboutDeceasedPerson[element]} />)
+        }
       </div>
-    </form>
+      <h1 className="form--admin__title">Coordonnées de la personne en charge du décès</h1>
+      <div className="form--admin__container--input">
+        {
+          Object.keys(adminPatern.contactInCharge).map((element, index) => <Input key={element + index} inputName={element} action={changeAdministrativeDepartment} placeHolderValue={adminPatern.contactInCharge[element]} />)
+        }
+      </div>
+      <Link to="/services/form/validation"><button className="form--menagers__btn" type="submit">Suivant</button></Link>
+    </div>
+
   );
 }
 
