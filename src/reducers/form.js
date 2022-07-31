@@ -7,7 +7,9 @@ import {
   CHANGE_BABYSITTING_TEXTAREA,
   CHANGE_BABYSITTING_UNCHECK,
   CHANGE_CONTACT_VALUE,
+  CHANGE_HOUSEKEEPING_FREQUENCY,
   CHANGE_HOUSEKEEPING_NUMBER_HOUR,
+  CHANGE_HOUSEKEEPING_TEXTEAREA,
   SERVICE_SELECTED,
 } from '../actions/form';
 import FormAdmin from '../components/AppForm/FormAdmin';
@@ -76,7 +78,7 @@ export const initialState = {
       numberHour: 'Nombre d\'heure de garde souhaité',
     },
     housekeeping: {
-      frequency: 'Fréquence de passage',
+      frequency: ['Choix de la fréquence du service', 'Hebdomadaire', 'Fréquence de passage', 'Une fois par semaine', 'Une fois par quinzaine', 'Une fois par mois', 'Ponctuel'],
       numberHour: 'Nombre d\'heure souhaité',
       content: 'information suplémentaire',
     },
@@ -220,6 +222,28 @@ const reducer = (state = initialState, action = {}) => {
         },
       };
     case CHANGE_HOUSEKEEPING_NUMBER_HOUR:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          housekeeping: {
+            ...state.recap.housekeeping,
+            [action.key]: action.selected,
+          },
+        },
+      };
+    case CHANGE_HOUSEKEEPING_FREQUENCY:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          housekeeping: {
+            ...state.recap.housekeeping,
+            [action.key]: action.selected,
+          },
+        },
+      };
+    case CHANGE_HOUSEKEEPING_TEXTEAREA:
       return {
         ...state,
         recap: {
