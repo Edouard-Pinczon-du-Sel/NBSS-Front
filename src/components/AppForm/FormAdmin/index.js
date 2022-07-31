@@ -17,7 +17,15 @@ function FormAdmin() {
       <h1 className="form--admin__title">Renseignements sur la personne décédée</h1>
       <div className="form--admin__container--input">
         {
-          Object.keys(adminPatern.aboutDeceasedPerson).map((element, index) => <Input key={element + index} inputName={element} action={changeAdministrativeDepartment} placeHolderValue={adminPatern.aboutDeceasedPerson[element]} value={value[element]} />)
+          Object.keys(adminPatern.aboutDeceasedPerson).map((element, index) => (
+            <Input
+              key={element + index}
+              inputName={element}
+              action={changeAdministrativeDepartment}
+              placeHolderValue={adminPatern.aboutDeceasedPerson[element]}
+              value={value[element]}
+            />
+          ))
         }
       </div>
       <h1 className="form--admin__title">Coordonnées de la personne en charge du décès</h1>

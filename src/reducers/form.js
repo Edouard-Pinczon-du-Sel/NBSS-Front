@@ -1,6 +1,11 @@
 /* eslint-disable no-case-declarations */
 /* eslint-disable max-len */
-import { CHANGE_ADMINISTRATIVE_DEPARTMENT, CHANGE_CONTACT_VALUE, SERVICE_SELECTED } from '../actions/form';
+import {
+  CHANGE_ADMINISTRATIVE_DEPARTMENT,
+  CHANGE_BABYSITTING,
+  CHANGE_CONTACT_VALUE,
+  SERVICE_SELECTED,
+} from '../actions/form';
 import FormAdmin from '../components/AppForm/FormAdmin';
 import FormGarde from '../components/AppForm/FormGarde';
 import FormMenagers from '../components/AppForm/FormMenagers';
@@ -118,8 +123,8 @@ export const initialState = {
       content: '',
       days: [], // d'après le back 1 = lundi, 2 = mardi donc on doit leur envoyer days: [1,2] dans le cas ou les deux premier jour de la semaine sont selectionner.
       intervention: [], // idem que pour les jours
-      numberChild: '', // renvoie d'un INT
-      numberHour: '', // renvoie d'un INT
+      numberChild: 0, // renvoie d'un INT
+      numberHour: 0, // renvoie d'un INT
     },
     housekeeping: {
       content: '',
@@ -162,6 +167,17 @@ const reducer = (state = initialState, action = {}) => {
           ...state.recap,
           administrativeDepartment: {
             ...state.recap.administrativeDepartment,
+            [action.key]: action.selected,
+          },
+        },
+      };
+    case CHANGE_BABYSITTING:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          babysittingService: {
+            ...state.recap.babysittingService,
             [action.key]: action.selected,
           },
         },
