@@ -2,7 +2,7 @@
 // import PropTypesLib from 'prop-types';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { changeBabySitting } from '../../../actions/form';
+import { changeBabySitting, changeBabySittingTextArea } from '../../../actions/form';
 import Checkboxs from '../FormComponent/CheckBoxs';
 import InputNumber from '../FormComponent/InputNumber';
 import TextArea from '../FormComponent/TextArea';
@@ -38,7 +38,12 @@ function FormGarde() {
           {babysittingService.intervention.map((data) => <Checkboxs key={data} name="intervention" data={data} />)}
         </div>
         <h2 className="form--garde__subtitle">Information complémentaire</h2>
-        <TextArea />
+        <TextArea
+          name="content"
+          value={babysittingServiceRecap.content}
+          placeHolderValue={babysittingService.content}
+          action={changeBabySittingTextArea}
+        />
       </div>
       <Link to="/services/form/validation"><button className="form--menagers__btn" type="submit">Suivant</button></Link>
     </div>

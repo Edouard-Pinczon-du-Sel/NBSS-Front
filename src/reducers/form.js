@@ -4,6 +4,7 @@ import {
   CHANGE_ADMINISTRATIVE_DEPARTMENT,
   CHANGE_BABYSITTING,
   CHANGE_BABYSITTING_CHECK,
+  CHANGE_BABYSITTING_TEXTAREA,
   CHANGE_BABYSITTING_UNCHECK,
   CHANGE_CONTACT_VALUE,
   SERVICE_SELECTED,
@@ -203,6 +204,17 @@ const reducer = (state = initialState, action = {}) => {
           babysittingService: {
             ...state.recap.babysittingService,
             [action.key]: [...state.recap.babysittingService[action.key]].filter((item) => item !== action.selected),
+          },
+        },
+      };
+    case CHANGE_BABYSITTING_TEXTAREA:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          babysittingService: {
+            ...state.recap.babysittingService,
+            [action.key]: action.selected,
           },
         },
       };

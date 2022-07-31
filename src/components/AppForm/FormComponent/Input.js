@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 function Input({ inputName, action, placeHolderValue ,value }) {
   const dispatch = useDispatch();
