@@ -7,11 +7,11 @@ const carouselMiddleWare = (store) => (next) => (action) => {
     case FETCH_CAROUSEL: {
       // const { carousel: list } = store.getState(); // ANCHOR console.log à supprimer
 
-      axios.get('https://pixabay.com/api/?key=28894609-e1f1514f1960c2fc6912f278f&image_type=photo&orientation=horizontal&category=health~hospital&per_page=5')
+      axios.get('http://gatechien-server.eddi.cloud/NB-services-et-soin/current/public/api/picture')
         .then(
           (response) => {
-            // console.log('reponse de l\'API :', response.data);
-            store.dispatch(saveCarousel(response.data.hits));
+            console.log('reponse de l\'API :', response.data);
+            store.dispatch(saveCarousel(response.data));
           },
         )
         .catch(
@@ -27,4 +27,3 @@ const carouselMiddleWare = (store) => (next) => (action) => {
 };
 
 export default carouselMiddleWare;
-// ''
