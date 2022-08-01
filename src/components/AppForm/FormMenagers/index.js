@@ -3,6 +3,11 @@
 import './styles.scss';
 import './stylesMediaQueries.scss';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import InputNumber from '../FormComponent/InputNumber';
+import { changeHouseKeepingFrequency, changeHouseKeepingNumberHour, changeHouseKeepingTextArea } from '../../../actions/form';
+import Select from '../FormComponent/Select';
+import TextArea from '../FormComponent/TextArea';
 
 // == Composant
 function FormMenagers() {
@@ -17,21 +22,35 @@ function FormMenagers() {
   //   console.log(frequancy.value);
   //   e.preventDefault();
   // }
+  const housekeeping = useSelector((state) => state.form.miseEnPage.housekeeping);
+  const housekeepingRecap = useSelector((state) => state.form.recap.housekeeping);
   return (
-    <form>
-      <div className="form--menagers">
-        <h1 className="form--menagers__title">Services ménagers</h1>
-        <div className="form--menagers__container--input">
-          <input className="form--menagers__input" type="number" placeholder="Nombre d'heure(s) souhaitée(s)" />
-          <select className="form--menagers__select--data">
-            <option className="form--menagers__otpion--data">Choix de la fréquence du service</option>
-            <option className="form--menagers__otpion--data">Une fois par semaine</option>
-            <option className="form--menagers__otpion--data">Une tous les 15 jours</option>
-          </select>
-        </div>
-        <Link to="/services/form/validation"><button className="form--menagers__btn" type="submit" /*</Link>onClick={handleFormVerification}*/>Suivant</button></Link>
+    <div className="form--menagers">
+      <h1 className="form--menagers__title">Services ménagers</h1>
+      <div className="form--menagers__container--input">
+        <InputNumber
+          name="numberHour"
+          value={housekeepingRecap.numberHour}
+          placeHolderValue={housekeeping.numberHour}
+          action={changeHouseKeepingNumberHour}
+          classNameValue="form--garde__input"
+        />
+        <Select
+          action={changeHouseKeepingFrequency}
+          defaultValue={housekeeping.frequency[0]}
+          name="frequency"
+          options={housekeeping.frequency}
+        />
+        <h2 className="form--garde__subtitle">Information complémentaire</h2>
+        <TextArea
+          name="content"
+          value={housekeepingRecap.content}
+          placeHolderValue={housekeeping.content}
+          action={changeHouseKeepingTextArea}
+        />
       </div>
-    </form>
+      <Link to="/services/form/validation"><button className="form--menagers__btn" type="submit">Suivant</button></Link>
+    </div>
   );
 }
 

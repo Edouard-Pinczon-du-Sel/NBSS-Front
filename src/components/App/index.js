@@ -14,7 +14,7 @@ import LegacyPage from '../AppFooter/FooterLegacy/LegacyPage';
 import ChartePage from '../AppFooter/FooterLegacy/LegacySpecificPage/ChartePage';
 import ReglementPage from '../AppFooter/FooterLegacy/LegacySpecificPage/ReglementPage';
 import SocietyPage from '../AppFooter/FooterLegacy/LegacySpecificPage/SocietyPage';
-import FormInfos from '../AppForm/FormInfos';
+import AppForm from '../AppForm';
 import FormMenagers from '../AppForm/FormMenagers';
 import FormGarde from '../AppForm/FormGarde';
 import FormPersonne from '../AppForm/FormPersonne';
@@ -30,7 +30,7 @@ function App() {
         <Route path="/" element={<AppMain />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/service/:id" element={<ServiceDetails />} />
-        <Route path="/services/form" element={<FormInfos />} />
+        <Route path="/services/form" element={<AppForm />} />
         <Route path="/services/form/menagers" element={<FormMenagers />} />
         <Route path="/services/form/garde" element={<FormGarde />} />
         <Route path="/services/form/personne" element={<FormPersonne />} />
