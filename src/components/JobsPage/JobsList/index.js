@@ -2,9 +2,6 @@
 import PropTypesLib from 'prop-types';
 import './styles.scss';
 import { Link } from 'react-router-dom';
-// import { useDispatch } from 'react-redux';
-// import { useEffect } from 'react';
-// import { fetchJobs } from '../../../actions/jobs';
 
 // == Composant
 function JobsList({

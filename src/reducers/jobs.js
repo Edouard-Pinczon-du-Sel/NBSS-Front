@@ -10,7 +10,7 @@ const reducer = (state = initialState, action = {}) => {
     case SAVE_JOBS:
       return {
         ...state,
-        list: action.listJobs,
+        list: action.list,
       };
     default:
       return state;
