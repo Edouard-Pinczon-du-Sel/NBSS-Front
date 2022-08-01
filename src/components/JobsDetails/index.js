@@ -11,11 +11,11 @@ import './stylesMediaQueries.scss';
 function JobsDetails() {
   const param = useParams();
   const dataJobs = useSelector(
-    (state) => state.jobs.list.find((jobs) => jobs.id === param.id),
+    (state) => state.jobs.list.find((jobs) => jobs.id == param.id),
   );
 
-  console.log(dataJobs);
   if (dataJobs != null) {
+    // console.log(dataJobs);
     return (
       <main className="main">
         {[dataJobs].map((item) => (

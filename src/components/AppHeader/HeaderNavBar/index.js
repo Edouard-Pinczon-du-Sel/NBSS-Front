@@ -2,7 +2,6 @@
 // import PropTypesLib from 'prop-types';
 import './styles.scss';
 import { NavLink } from 'react-router-dom';
-
 // == Composant
 function HeaderNavBar() {
   return (

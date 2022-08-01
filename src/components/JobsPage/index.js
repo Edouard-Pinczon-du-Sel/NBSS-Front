@@ -8,20 +8,20 @@ import './stylesMediaQueries.scss';
 
 // == Composant
 function JobsPage() {
-  const { dataJobs } = useSelector((state) => state.jobs);
-  console.log(dataJobs);
-  if (dataJobs != null) {
+  const { list } = useSelector((state) => state.jobs);
+  console.log(list);
+  if (list != null) {
     return (
       <main className="main">
         <div className="preview">
           <SpontaneousApplication />
           <div className="job__list">
             {
-            [dataJobs].map((item) => (
+            list.map((item) => (
               <JobsList
                 key={item.id}
                 title={item.title}
-                weSearch={item.weSearch}
+                weSearch={item.we_search}
                 id={item.id}
               />
             ))

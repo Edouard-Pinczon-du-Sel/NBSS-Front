@@ -6,22 +6,22 @@ import './stylesMediaQueries.scss';
 function JobSpecificDetail({
   title,
   /* visibility, */
-  publishedOn,
-  titleDescription,
+  published_on,
+  title_description,
   description,
-  titleDescription2,
+  title_description2,
   description2,
-  titleDescription3,
+  title_description3,
   description3,
   weSearch,
   avantage,
-  licenceRequeried,
-  experienceRequeried,
+  licence_requeried,
+  experience_requeried,
   /* driveLicense, */
-  typeContrat,
+  type_contrat,
   salary,
-  deplacementInfo,
-  dayOff,
+  deplacement_info,
+  day_off,
   opportunity,
   workingHour,
 }) {
@@ -48,43 +48,43 @@ function JobSpecificDetail({
           <p className="job__text">
             <span className="job__text--date">
               <time dateTime="2022-11-18">
-                {publishedOn}
+                {published_on}
               </time>
             </span>
             {weSearch}
           </p>
           <p className="job__text">
-            <span className="job__text--title">{titleDescription}</span>
+            <span className="job__text--title">{title_description}</span>
             {description}
           </p>
           <p className="job__text">
-            <span className="job__text--title">{titleDescription2}</span>
+            <span className="job__text--title">{title_description2}</span>
             {description2}
           </p>
           <p className="job__text">
-            <span className="job__text--title">{titleDescription3}</span>
+            <span className="job__text--title">{title_description3}</span>
             {description3}
           </p>
           <p className="job__text">
             {avantage}
           </p>
           <p className="job__text">
-            Type de contrat : {typeContrat}
+            Type de contrat : {type_contrat}
           </p>
           <p className="job__text">
             Salaire : {salary}
           </p>
           <p className="job__text">
-            Deplacement : {deplacementInfo}
+            Deplacement : {deplacement_info}
           </p>
           <p className="job__text">
-            {licenceRequeried}
+            {licence_requeried}
           </p>
           <p className="job__text">
-            Expérience requise : {experienceRequeried}
+            Expérience requise : {experience_requeried}
           </p>
           <p className="job__text">
-            Congé : {dayOff}
+            Congé : {day_off}
           </p>
           <p className="job__text">
             {opportunity}
@@ -104,27 +104,27 @@ function JobSpecificDetail({
   );
 }
 
-JobSpecificDetail.propTypes = {
-  title: PropTypesLib.string.isRequired,
-  /* visibility: PropTypesLib.string.isRequired, */
-  publishedOn: PropTypesLib.string.isRequired,
-  titleDescription: PropTypesLib.string.isRequired,
-  description: PropTypesLib.string.isRequired,
-  titleDescription2: PropTypesLib.string.isRequired,
-  description2: PropTypesLib.string.isRequired,
-  titleDescription3: PropTypesLib.string.isRequired,
-  description3: PropTypesLib.string.isRequired,
-  weSearch: PropTypesLib.string.isRequired,
-  avantage: PropTypesLib.string.isRequired,
-  licenceRequeried: PropTypesLib.string.isRequired,
-  experienceRequeried: PropTypesLib.string.isRequired,
-  /* driveLicense: PropTypesLib.string.isRequired, */
-  typeContrat: PropTypesLib.string.isRequired,
-  salary: PropTypesLib.string.isRequired,
-  deplacementInfo: PropTypesLib.string.isRequired,
-  dayOff: PropTypesLib.string.isRequired,
-  opportunity: PropTypesLib.string.isRequired,
-  workingHour: PropTypesLib.string.isRequired,
-};
+// JobSpecificDetail.propTypes = {
+//   title: PropTypesLib.string.isRequired,
+//   /* visibility: PropTypesLib.string.isRequired, */
+//   published_on: PropTypesLib.string.isRequired,
+//   title_description: PropTypesLib.string.isRequired,
+//   description: PropTypesLib.string.isRequired,
+//   title_description2: PropTypesLib.string.isRequired,
+//   description2: PropTypesLib.string.isRequired,
+//   title_description3: PropTypesLib.string.isRequired,
+//   description3: PropTypesLib.string.isRequired,
+//   weSearch: PropTypesLib.string.isRequired,
+//   avantage: PropTypesLib.string.isRequired,
+//   licence_requeried: PropTypesLib.string.isRequired,
+//   experience_requeried: PropTypesLib.string.isRequired,
+//   /* driveLicense: PropTypesLib.string.isRequired, */
+//   type_contrat: PropTypesLib.string.isRequired,
+//   salary: PropTypesLib.string.isRequired,
+//   deplacement_info: PropTypesLib.string.isRequired,
+//   day_off: PropTypesLib.string.isRequired,
+//   opportunity: PropTypesLib.string.isRequired,
+//   workingHour: PropTypesLib.string.isRequired,
+// };
 // == Export
 export default JobSpecificDetail;

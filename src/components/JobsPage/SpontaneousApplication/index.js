@@ -9,14 +9,14 @@ function SpontaneousApplication() {
       <div className="Annoucement__container">
         <h1 className="Annoucement__title">
           <span className="Annoucement__title--name">
-            En recherche d'un Emploie ?
+            En recherche d'un Emploi ?
           </span>
           <span className="Annoucement__title--disponibility">
-            Déposez notre votre candidature spontanément.
+            Déposez nous votre candidature spontanément.
           </span>
         </h1>
         <p className="Annoucement__text">
-          Vous souhaitez déposer votre candidateure spontannément ?<br />
+          Vous souhaitez déposer votre candidature spontanément ?<br />
           Envoyer nous :
           <ul className="Annoucement__text--list">
             <li>

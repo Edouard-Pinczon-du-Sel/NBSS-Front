@@ -8,8 +8,8 @@ const jobsMiddleWare = (store) => (next) => (action) => {
       axios.get('http://virginieboissiere-server.eddi.cloud/NB-services-et-soin/current/public/api/recruitment')
         .then(
           (response) => {
-            console.log('reponse de l\'API :', response);
-            store.dispatch(saveJobs(response));
+            console.log('reponse de l\'API :', response.data);
+            store.dispatch(saveJobs(response.data));
           },
         )
         .catch(
