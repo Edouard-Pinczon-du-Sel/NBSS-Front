@@ -6,7 +6,13 @@ function TextArea({ name, value, placeholder, action }) {
     dispatch(action(event.target.name, event.target.value));
   };
   return (
-    <textarea className="form--garde__input" value={value} name={name} placeholder={placeholder} onChange={handleChange} />
+    <textarea
+      className="form--garde__input"
+      value={value}
+      name={name}
+      placeholder={placeholder}
+      onChange={handleChange}
+    />
   );
 }
 

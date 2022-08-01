@@ -1,18 +1,19 @@
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useDispatch } from 'react-redux';
 
-function Radio() {
-  // const dispatch = useDispatch();
+function Radio({ action }) {
+  const dispatch = useDispatch();
 
   const handleChange = (event) => {
     const newValue = event.target.value;
-    if (event.target.checked) {
-      console.log(newValue);
-    }
+    const { checked } = event.target;
+    // console.log(`value = ${newValue}`, newValue === 'non' ? `isChecked = ${!checked}` : `isChecked = ${checked}`);
+    const value = newValue === 'non' ? !checked : checked;
+    dispatch(action('financialHelp', value));
   };
   return (
     <fieldset>
-      <legend />
       <div className="form--personne__container--radio">
         <div className="form--personne__container--label">
           <label htmlFor="moment">Oui</label>
@@ -20,7 +21,7 @@ function Radio() {
         </div>
         <div className="form--personne__container--label">
           <label htmlFor="moment">Non</label>
-          <input className="form--personne__checkbox" type="radio" value="non" name="moment" onClick={handleChange} checked />
+          <input className="form--personne__checkbox" type="radio" defaultChecked value="non" name="moment" onClick={handleChange} />
         </div>
       </div>
     </fieldset>

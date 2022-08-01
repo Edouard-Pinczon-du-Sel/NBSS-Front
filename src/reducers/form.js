@@ -11,7 +11,9 @@ import {
   CHANGE_HOUSEKEEPING_NUMBER_HOUR,
   CHANGE_HOUSEKEEPING_TEXTEAREA,
   CHANGE_PERSONNAL_ASSISTANCE_CHECK,
+  CHANGE_PERSONNAL_ASSISTANCE_FINANCIAL_HELP,
   CHANGE_PERSONNAL_ASSISTANCE_NUMBER_HOUR,
+  CHANGE_PERSONNAL_ASSISTANCE_ORGANIZATION,
   CHANGE_PERSONNAL_ASSISTANCE_UN_CHECK,
   SERVICE_SELECTED,
 } from '../actions/form';
@@ -146,7 +148,7 @@ export const initialState = {
       personalAssistance: [],
       days: [],
       intervention: [],
-      financialHelp: true,
+      financialHelp: false,
       numberHour: '',
     },
   },
@@ -280,7 +282,29 @@ const reducer = (state = initialState, action = {}) => {
           },
         },
       };
+    case CHANGE_PERSONNAL_ASSISTANCE_ORGANIZATION:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          personalAssistanceService: {
+            ...state.recap.personalAssistanceService,
+            [action.key]: action.selected,
+          },
+        },
+      };
     case CHANGE_PERSONNAL_ASSISTANCE_NUMBER_HOUR:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          personalAssistanceService: {
+            ...state.recap.personalAssistanceService,
+            [action.key]: action.selected,
+          },
+        },
+      };
+    case CHANGE_PERSONNAL_ASSISTANCE_FINANCIAL_HELP:
       return {
         ...state,
         recap: {

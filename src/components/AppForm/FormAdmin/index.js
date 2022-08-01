@@ -12,6 +12,8 @@ import './stylesMediaQueries.scss';
 function FormAdmin() {
   const value = useSelector((state) => state.form.recap.administrativeDepartment);
   const adminPatern = useSelector((state) => state.form.miseEnPage.administrativeDepartment);
+  const recap = useSelector((state) => state.form.recap);
+  console.log(recap);
   return (
     <div className="form--admin">
       <h1 className="form--admin__title">Renseignements sur la personne décédée</h1>

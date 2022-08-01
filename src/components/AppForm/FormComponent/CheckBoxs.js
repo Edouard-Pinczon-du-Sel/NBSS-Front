@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 function Checkboxs({ name, data ,checkAction, unCheckAction }) {
   const dispatch = useDispatch();
-
+  // console.log(data);
   const handleChange = (event) => {
     const days = {
       Lundi: 1,

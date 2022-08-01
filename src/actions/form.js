@@ -12,6 +12,7 @@ export const CHANGE_PERSONNAL_ASSISTANCE_CHECK = 'CHANGE_PERSONNAL_ASSISTANCE_CH
 export const CHANGE_PERSONNAL_ASSISTANCE_UN_CHECK = 'CHANGE_PERSONNAL_ASSISTANCE_UN_CHECK';
 export const CHANGE_PERSONNAL_ASSISTANCE_NUMBER_HOUR = 'CHANGE_PERSONNAL_ASSISTANCE_NUMBER_HOUR';
 export const CHANGE_PERSONNAL_ASSISTANCE_ORGANIZATION = 'CHANGE_PERSONNAL_ASSISTANCE_ORGANIZATION';
+export const CHANGE_PERSONNAL_ASSISTANCE_FINANCIAL_HELP = 'CHANGE_PERSONNAL_ASSISTANCE_FINANCIAL_HELP';
 
 export const changeContactValue = (key, value) => ({
   type: CHANGE_CONTACT_VALUE,
@@ -112,6 +113,14 @@ export function changePersonnalAssistanceNumberHour(key, selected) {
 export function changePersonnalAssistanceOrganization(key, selected) {
   return {
     type: CHANGE_PERSONNAL_ASSISTANCE_ORGANIZATION,
+    key: key,
+    selected: selected,
+  };
+}
+
+export function changePersonnalAssistanceFinancialHelp(key, selected) {
+  return {
+    type: CHANGE_PERSONNAL_ASSISTANCE_FINANCIAL_HELP,
     key: key,
     selected: selected,
   };
