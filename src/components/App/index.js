@@ -1,7 +1,10 @@
 // == Import
 import 'src/styles/index.scss';
 import 'src/components/AppHeader/stylesMediaQueries.scss';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { fetchJobs } from '../../actions/jobs';
 // == Composant
 import AppHeader from '../AppHeader';
 import AppMain from '../AppMain';
@@ -23,6 +26,10 @@ import FormValidation from '../AppForm/FormValidation';
 import AppFooter from '../AppFooter';
 // TODO Faire des routes dynamiques avec reducers pour les forms (ce sont des routes de tests)
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchJobs());
+  }, []);
   return (
     <div className="app">
       <AppHeader />

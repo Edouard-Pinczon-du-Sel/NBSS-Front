@@ -9,7 +9,7 @@ function JobsList({
   weSearch,
   id,
 }) {
-  console.log(id);
+  // console.log(id);
   return (
     <div className="job">
       <div className="job__container">
