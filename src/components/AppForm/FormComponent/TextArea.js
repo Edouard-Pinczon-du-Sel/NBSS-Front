@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 
-function TextArea({ name, value, placeholder, action }) {
+function TextArea({ name, value, placeHolderValue, action }) {
   const dispatch = useDispatch();
   const handleChange = (event) => {
     dispatch(action(event.target.name, event.target.value));
@@ -10,7 +10,7 @@ function TextArea({ name, value, placeholder, action }) {
       className="form--garde__input"
       value={value}
       name={name}
-      placeholder={placeholder}
+      placeholder={placeHolderValue}
       onChange={handleChange}
     />
   );

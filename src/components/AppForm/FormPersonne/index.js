@@ -4,7 +4,7 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import {
-  changePersonnalAssistanceCheck, changePersonnalAssistanceFinancialHelp, changePersonnalAssistanceNumberHour, changePersonnalAssistanceOrganization, changePersonnalAssistanceUnCheck,
+  changePersonnalAssistanceCheck, changePersonnalAssistanceFinancialHelp, changePersonnalAssistanceNumberHour, changePersonnalAssistanceOrganization, changePersonnalAssistanceTexteArea, changePersonnalAssistanceUnCheck,
 } from '../../../actions/form';
 import Checkboxs from '../FormComponent/CheckBoxs';
 import Input from '../FormComponent/Input';
@@ -12,6 +12,7 @@ import InputNumber from '../FormComponent/InputNumber';
 import './styles.scss';
 import './stylesMediaQueries.scss';
 import Radio from '../FormComponent/Radio';
+import TextArea from '../FormComponent/TextArea';
 // TODO maper sur les checkbox depuis les donées de l'api du back
 // == Composant
 function FormPersonne() {
@@ -55,6 +56,13 @@ function FormPersonne() {
             />
           ))}
         </div>
+        <h2 className="form--garde__subtitle">Information complémentaire</h2>
+        <TextArea
+          name="content"
+          value={personalAssistanceServiceRecap.content}
+          placeHolderValue={personalAssistanceService.content}
+          action={changePersonnalAssistanceTexteArea}
+        />
       </div>
       <h2 className="form--personne__subtitle">Bénéficiez-vous d'une aide financière</h2>
       <Radio action={changePersonnalAssistanceFinancialHelp} />

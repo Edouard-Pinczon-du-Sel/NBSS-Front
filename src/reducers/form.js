@@ -14,6 +14,7 @@ import {
   CHANGE_PERSONNAL_ASSISTANCE_FINANCIAL_HELP,
   CHANGE_PERSONNAL_ASSISTANCE_NUMBER_HOUR,
   CHANGE_PERSONNAL_ASSISTANCE_ORGANIZATION,
+  CHANGE_PERSONNAL_ASSISTANCE_TEXTAREA,
   CHANGE_PERSONNAL_ASSISTANCE_UN_CHECK,
   SERVICE_SELECTED,
 } from '../actions/form';
@@ -51,6 +52,7 @@ export const initialState = {
       zipCode: 'Code postale',
       city: 'Ville',
       phoneNumber: 'Numéro de téléphone',
+      content: "N'hésitez pas...",
     },
     administrativeDepartment: {
       contactInCharge: {
@@ -305,6 +307,17 @@ const reducer = (state = initialState, action = {}) => {
         },
       };
     case CHANGE_PERSONNAL_ASSISTANCE_FINANCIAL_HELP:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          personalAssistanceService: {
+            ...state.recap.personalAssistanceService,
+            [action.key]: action.selected,
+          },
+        },
+      };
+    case CHANGE_PERSONNAL_ASSISTANCE_TEXTAREA:
       return {
         ...state,
         recap: {
