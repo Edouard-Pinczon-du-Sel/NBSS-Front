@@ -2,7 +2,9 @@
 // import PropTypesLib from 'prop-types';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { changeBabySitting, changeBabySittingTextArea } from '../../../actions/form';
+import {
+  changeBabySitting, changeBabySittingCheck, changeBabySittingTextArea, changeBabySittingUnCheck,
+} from '../../../actions/form';
 import Checkboxs from '../FormComponent/CheckBoxs';
 import InputNumber from '../FormComponent/InputNumber';
 import TextArea from '../FormComponent/TextArea';
@@ -22,20 +24,30 @@ function FormGarde() {
           value={babysittingServiceRecap.numberHour}
           placeHolderValue={babysittingService.numberHour}
           action={changeBabySitting}
+          classNameValue="form--garde__input"
         />
         <InputNumber
           name="numberChild"
           value={babysittingServiceRecap.numberChild}
           placeHolderValue={babysittingService.numberChild}
           action={changeBabySitting}
+          classNameValue="form--garde__input"
         />
         <h2 className="form--garde__subtitle">Jours d'intervention</h2>
         <div className="form--garde__container--checkbox">
-          {babysittingService.days.map((data) => <Checkboxs key={data} name="days" data={data} />)}
+          {babysittingService.days.map((data) => (
+            <Checkboxs
+              key={data}
+              name="days"
+              data={data}
+              checkAction={changeBabySittingCheck}
+              unCheckAction={changeBabySittingUnCheck}
+            />
+          ))}
         </div>
         <h2 className="form--garde__subtitle">Moment d'intervention</h2>
         <div className="form--garde__container--checkbox">
-          {babysittingService.intervention.map((data) => <Checkboxs key={data} name="intervention" data={data} />)}
+          {babysittingService.intervention.map((data) => <Checkboxs key={data} name="intervention" data={data} checkAction={changeBabySittingCheck} unCheckAction={changeBabySittingUnCheck} />)}
         </div>
         <h2 className="form--garde__subtitle">Information complémentaire</h2>
         <TextArea

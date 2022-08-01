@@ -28,12 +28,12 @@ function FormMenagers() {
     <div className="form--menagers">
       <h1 className="form--menagers__title">Services ménagers</h1>
       <div className="form--menagers__container--input">
-        {/* <input className="form--menagers__input" type="number" placeholder="Nombre d'heure(s) souhaitée(s)" /> */}
         <InputNumber
           name="numberHour"
           value={housekeepingRecap.numberHour}
           placeHolderValue={housekeeping.numberHour}
           action={changeHouseKeepingNumberHour}
+          classNameValue="form--garde__input"
         />
         <Select
           action={changeHouseKeepingFrequency}

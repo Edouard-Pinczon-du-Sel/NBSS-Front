@@ -1,7 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { changeBabySittingCheck, changeBabySittingUnCheck } from '../../../actions/form';
-
-function Checkboxs({ name, data }) {
+function Checkboxs({ name, data ,checkAction, unCheckAction }) {
   const dispatch = useDispatch();
 
   const handleChange = (event) => {
@@ -19,7 +17,17 @@ function Checkboxs({ name, data }) {
       Diner: 4,
       Soir: 5,
     };
+    const personalAssistance = {
+      'à la toilette': 1,
+      'à la douche': 2,
+      'à la préparation des repas': 3,
+      'à la prise de repas': 4,
+      'aux courses': 5,
+      'au lever': 6,
+      'à l\'entretien du logement': 7,
+    };
     const newValue = event.target.value;
+    // TODO transformer le if en Switch
     if (event.target.checked) {
       console.log(Object.prototype.hasOwnProperty.call(days, newValue));
       console.log(Object.prototype.hasOwnProperty.call(intervention, newValue));
@@ -27,23 +35,27 @@ function Checkboxs({ name, data }) {
       console.log('event.target.name is checked =>', event.target.name);
       if (Object.prototype.hasOwnProperty.call(days, newValue)) {
         console.log(days[newValue]);
-        dispatch(changeBabySittingCheck(event.target.name, days[newValue]));
+        dispatch(checkAction(event.target.name, days[newValue]));
       }
-      else {
-        dispatch(changeBabySittingCheck(event.target.name, intervention[newValue]));
+      else if (Object.prototype.hasOwnProperty.call(intervention, newValue)) {
+        dispatch(checkAction(event.target.name, intervention[newValue]));
+      } else {
+        dispatch(checkAction(event.target.name, personalAssistance[newValue]));
       }
     }
-    else {
+    if (!event.target.checked) {
       console.log(Object.prototype.hasOwnProperty.call(days, newValue));
       console.log(Object.prototype.hasOwnProperty.call(intervention, newValue));
       console.log('event.target.value is checked =>', event.target.value);
       console.log('event.target.name is checked =>', event.target.name);
       if (Object.prototype.hasOwnProperty.call(days, newValue)) {
         console.log(days[newValue]);
-        dispatch(changeBabySittingUnCheck(event.target.name, days[newValue]));
+        dispatch(unCheckAction(event.target.name, days[newValue]));
       }
-      else {
-        dispatch(changeBabySittingUnCheck(event.target.name, intervention[newValue]));
+      else if (Object.prototype.hasOwnProperty.call(intervention, newValue)) {
+        dispatch(unCheckAction(event.target.name, intervention[newValue]));
+      } else {
+        dispatch(unCheckAction(event.target.name, personalAssistance[newValue]));
       }
     }
   };

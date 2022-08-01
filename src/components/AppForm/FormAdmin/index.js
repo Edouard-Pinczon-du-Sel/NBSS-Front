@@ -24,6 +24,7 @@ function FormAdmin() {
               action={changeAdministrativeDepartment}
               placeHolderValue={adminPatern.aboutDeceasedPerson[element]}
               value={value[element]}
+              classNameValue="form--infos__input"
             />
           ))
         }
@@ -31,7 +32,18 @@ function FormAdmin() {
       <h1 className="form--admin__title">Coordonnées de la personne en charge du décès</h1>
       <div className="form--admin__container--input">
         {
-          Object.keys(adminPatern.contactInCharge).map((element, index) => <Input key={element + index} inputName={element} action={changeAdministrativeDepartment} placeHolderValue={adminPatern.contactInCharge[element]} value={value[element]} />)
+          Object.keys(adminPatern.contactInCharge).map(
+            (element, index) => (
+              <Input
+                key={element + index}
+                inputName={element}
+                action={changeAdministrativeDepartment}
+                placeHolderValue={adminPatern.contactInCharge[element]}
+                value={value[element]}
+                classNameValue="form--infos__input"
+              />
+            ),
+          )
         }
       </div>
       <Link to="/services/form/validation"><button className="form--menagers__btn" type="submit">Suivant</button></Link>

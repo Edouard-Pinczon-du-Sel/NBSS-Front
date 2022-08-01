@@ -8,6 +8,10 @@ export const CHANGE_BABYSITTING_TEXTAREA = 'CHANGE_BABYSITTING_TEXTAREA';
 export const CHANGE_HOUSEKEEPING_NUMBER_HOUR = 'CHANGE_HOUSEKEEPING_NUMBER_HOUR';
 export const CHANGE_HOUSEKEEPING_FREQUENCY = 'CHANGE_HOUSEKEEPING_FREQUENCY';
 export const CHANGE_HOUSEKEEPING_TEXTEAREA = 'CHANGE_HOUSEKEEPING_TEXTEAREA';
+export const CHANGE_PERSONNAL_ASSISTANCE_CHECK = 'CHANGE_PERSONNAL_ASSISTANCE_CHECK';
+export const CHANGE_PERSONNAL_ASSISTANCE_UN_CHECK = 'CHANGE_PERSONNAL_ASSISTANCE_UN_CHECK';
+export const CHANGE_PERSONNAL_ASSISTANCE_NUMBER_HOUR = 'CHANGE_PERSONNAL_ASSISTANCE_NUMBER_HOUR';
+export const CHANGE_PERSONNAL_ASSISTANCE_ORGANIZATION = 'CHANGE_PERSONNAL_ASSISTANCE_ORGANIZATION';
 
 export const changeContactValue = (key, value) => ({
   type: CHANGE_CONTACT_VALUE,
@@ -76,6 +80,38 @@ export function changeHouseKeepingFrequency(key, selected) {
 export function changeHouseKeepingTextArea(key, selected) {
   return {
     type: CHANGE_HOUSEKEEPING_TEXTEAREA,
+    key: key,
+    selected: selected,
+  };
+}
+
+export function changePersonnalAssistanceCheck(key, selected) {
+  return {
+    type: CHANGE_PERSONNAL_ASSISTANCE_CHECK,
+    key: key,
+    selected: selected,
+  };
+}
+
+export function changePersonnalAssistanceUnCheck(key, selected) {
+  return {
+    type: CHANGE_PERSONNAL_ASSISTANCE_UN_CHECK,
+    key: key,
+    selected: selected,
+  };
+}
+
+export function changePersonnalAssistanceNumberHour(key, selected) {
+  return {
+    type: CHANGE_PERSONNAL_ASSISTANCE_NUMBER_HOUR,
+    key: key,
+    selected: selected,
+  };
+}
+
+export function changePersonnalAssistanceOrganization(key, selected) {
+  return {
+    type: CHANGE_PERSONNAL_ASSISTANCE_ORGANIZATION,
     key: key,
     selected: selected,
   };

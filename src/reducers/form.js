@@ -10,6 +10,9 @@ import {
   CHANGE_HOUSEKEEPING_FREQUENCY,
   CHANGE_HOUSEKEEPING_NUMBER_HOUR,
   CHANGE_HOUSEKEEPING_TEXTEAREA,
+  CHANGE_PERSONNAL_ASSISTANCE_CHECK,
+  CHANGE_PERSONNAL_ASSISTANCE_NUMBER_HOUR,
+  CHANGE_PERSONNAL_ASSISTANCE_UN_CHECK,
   SERVICE_SELECTED,
 } from '../actions/form';
 import FormAdmin from '../components/AppForm/FormAdmin';
@@ -83,11 +86,11 @@ export const initialState = {
       content: 'information suplémentaire',
     },
     personalAssistanceService: {
-      organization: 'Êtes-vous rattachez à une organisation ?',
-      personalAssistance: 'Bénéficiez vous déja d\'une Assistance',
-      intervention: 'à quel moment souhaitez une intervention',
-      financialHelp: 'bénéficiez vous d\'une aide ',
-      numberHour: 'Nombre d\'heure souhaiter',
+      organization: 'Nom de organisme',
+      personalAssistance: ['à la toilette', 'à la douche', 'à la préparation des repas', 'à la prise de repas', 'aux courses', 'au lever', 'à l\'entretien du logement'],
+      intervention: ['Matin', 'Déjeuner', 'Après-midi', 'Diner', 'Soir'],
+      financialHelp: false,
+      numberHour: 'Nombre d\'heure que vous bénéficier',
       content: 'information suplémentaire',
     },
   },
@@ -140,8 +143,9 @@ export const initialState = {
     personalAssistanceService: {
       content: '',
       organization: '',
-      personalAssistance: '',
-      intervention: '',
+      personalAssistance: [],
+      days: [],
+      intervention: [],
       financialHelp: true,
       numberHour: '',
     },
@@ -250,6 +254,39 @@ const reducer = (state = initialState, action = {}) => {
           ...state.recap,
           housekeeping: {
             ...state.recap.housekeeping,
+            [action.key]: action.selected,
+          },
+        },
+      };
+    case CHANGE_PERSONNAL_ASSISTANCE_CHECK:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          personalAssistanceService: {
+            ...state.recap.personalAssistanceService,
+            [action.key]: [...state.recap.personalAssistanceService[action.key], action.selected],
+          },
+        },
+      };
+    case CHANGE_PERSONNAL_ASSISTANCE_UN_CHECK:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          personalAssistanceService: {
+            ...state.recap.personalAssistanceService,
+            [action.key]: [...state.recap.personalAssistanceService[action.key]].filter((item) => item !== action.selected),
+          },
+        },
+      };
+    case CHANGE_PERSONNAL_ASSISTANCE_NUMBER_HOUR:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          personalAssistanceService: {
+            ...state.recap.personalAssistanceService,
             [action.key]: action.selected,
           },
         },
