@@ -1,17 +1,17 @@
 import axios from 'axios';
 // import { useSelector } from 'react-redux';
-import { FETCH_CAROUSEL, saveCarousel } from '../actions/carousel';
+import { FETCH_JOBS, saveJobs } from '../actions/jobs';
 
-const carouselMiddleWare = (store) => (next) => (action) => {
+const jobsMiddleWare = (store) => (next) => (action) => {
   switch (action.type) {
-    case FETCH_CAROUSEL: {
+    case FETCH_JOBS: {
       // const { carousel: list } = store.getState(); // ANCHOR console.log à supprimer
 
-      axios.get('http://virginieboissiere-server.eddi.cloud/NB-services-et-soin/current/public/api/picture')
+      axios.get('http://virginieboissiere-server.eddi.cloud/NB-services-et-soin/current/public/api/')
         .then(
           (response) => {
             console.log('reponse de l\'API :', response.data);
-            store.dispatch(saveCarousel(response.data));
+            store.dispatch(saveJobs(response.data));
           },
         )
         .catch(
@@ -26,4 +26,4 @@ const carouselMiddleWare = (store) => (next) => (action) => {
   }
 };
 
-export default carouselMiddleWare;
+export default jobsMiddleWare;

@@ -46,7 +46,7 @@ function MainCarousel() {
         }}
       >
         {
-          list.map((item) => <img key={item.id} className="test" src={item.largeImageURL} alt={item.id} />)
+          list.map((item) => <img key={item.id} className="test" src={item.urlPicture} alt={item.id} />)
           // NOTE : Comme tu peux le voire Ligne 23 nous avions un console.log
           // de "list" et bien si tu ouvres un objet il y avait d'autre moyens
           // de récupéré l'URL de l'image dont le "largeImageURL" qui est
