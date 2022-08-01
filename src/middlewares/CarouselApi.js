@@ -10,7 +10,7 @@ const carouselMiddleWare = (store) => (next) => (action) => {
       axios.get('http://virginieboissiere-server.eddi.cloud/NB-services-et-soin/current/public/api/picture')
         .then(
           (response) => {
-            console.log('reponse de l\'API :', response.data);
+            // console.log('reponse de l\'API :', response);
             store.dispatch(saveCarousel(response.data));
           },
         )

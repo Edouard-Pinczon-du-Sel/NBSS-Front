@@ -1,7 +1,9 @@
 // == Import
 // import PropTypesLib from 'prop-types';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { fetchJobs } from '../../actions/jobs';
 import JobSpecificDetail from './JobSpecificDetail';
 import './stylesMediaQueries.scss';
 
@@ -11,18 +13,26 @@ function JobsDetails() {
   const dataJobs = useSelector(
     (state) => state.jobs.list.find((jobs) => jobs.id === param.id),
   );
-  // console.log(dataService);
-  return (
-    <main className="main">
-      {[dataJobs].map((item) => (
-        <JobSpecificDetail
-          key={item.id}
-          title={item.title}
-          {...item}
-        />
-      ))}
-    </main>
-  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchJobs());
+  }, []);
+
+  const { data } = useSelector((state) => state.jobs);
+  console.log(data);
+  if (data != null) {
+    return (
+      <main className="main">
+        {[dataJobs].map((item) => (
+          <JobSpecificDetail
+            key={item.id}
+            title={item.title}
+            {...item}
+          />
+        ))}
+      </main>
+    );
+  }
 }
 
 // == Export
