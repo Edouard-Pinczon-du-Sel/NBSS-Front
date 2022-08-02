@@ -14,6 +14,8 @@ export const CHANGE_PERSONNAL_ASSISTANCE_NUMBER_HOUR = 'CHANGE_PERSONNAL_ASSISTA
 export const CHANGE_PERSONNAL_ASSISTANCE_ORGANIZATION = 'CHANGE_PERSONNAL_ASSISTANCE_ORGANIZATION';
 export const CHANGE_PERSONNAL_ASSISTANCE_FINANCIAL_HELP = 'CHANGE_PERSONNAL_ASSISTANCE_FINANCIAL_HELP';
 export const CHANGE_PERSONNAL_ASSISTANCE_TEXTAREA = 'CHANGE_PERSONNAL_ASSISTANCE_TEXTAREA';
+export const CHANGE_CONTACT_CREATED_AT = 'CHANGE_CONTACT_CREATED_AT';
+export const ACTION_NEW_DATE_FOR = 'ACTION_NEW_DATE_FOR';
 
 export const changeContactValue = (key, value) => ({
   type: CHANGE_CONTACT_VALUE,
@@ -130,6 +132,22 @@ export function changePersonnalAssistanceFinancialHelp(key, selected) {
 export function changePersonnalAssistanceTexteArea(key, selected) {
   return {
     type: CHANGE_PERSONNAL_ASSISTANCE_TEXTAREA,
+    key: key,
+    selected: selected,
+  };
+}
+
+export function changeContactCreatedAt(key, selected) {
+  return {
+    type: CHANGE_CONTACT_CREATED_AT,
+    key: key,
+    selected: selected,
+  };
+}
+
+export function actionNewDateFor(key, selected) {
+  return {
+    type: ACTION_NEW_DATE_FOR,
     key: key,
     selected: selected,
   };

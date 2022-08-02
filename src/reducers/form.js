@@ -1,11 +1,13 @@
 /* eslint-disable no-case-declarations */
 /* eslint-disable max-len */
 import {
+  ACTION_NEW_DATE_FOR,
   CHANGE_ADMINISTRATIVE_DEPARTMENT,
   CHANGE_BABYSITTING,
   CHANGE_BABYSITTING_CHECK,
   CHANGE_BABYSITTING_TEXTAREA,
   CHANGE_BABYSITTING_UNCHECK,
+  CHANGE_CONTACT_CREATED_AT,
   CHANGE_CONTACT_VALUE,
   CHANGE_HOUSEKEEPING_FREQUENCY,
   CHANGE_HOUSEKEEPING_NUMBER_HOUR,
@@ -52,7 +54,6 @@ export const initialState = {
       zipCode: 'Code postale',
       city: 'Ville',
       phoneNumber: 'Numéro de téléphone',
-      content: "N'hésitez pas...",
     },
     administrativeDepartment: {
       contactInCharge: {
@@ -60,7 +61,7 @@ export const initialState = {
         lastname: 'Nom',
         mail: 'E-mail',
         adress: 'Adress',
-        city: 'Ville test',
+        city: 'Ville',
         content: 'Information suplémentaire',
       },
       aboutDeceasedPerson: {
@@ -73,7 +74,7 @@ export const initialState = {
         dateOfBirth: 'Date de naissance',
         placeOfBirth: 'Lieu de naissance',
         dateOfDeceased: 'Date de décès',
-        placeOfDeceased: 'Lieu de cécès',
+        placeOfDeceased: 'Lieu de décès',
         zipCodeOfDeceased: 'Code postale du lieu de décès',
       },
     },
@@ -105,7 +106,7 @@ export const initialState = {
       maidenName: '', // NOTE peut être null
       mail: '',
       adress: '',
-      zipCode: '',
+      zipCode: 0,
       city: '',
       phoneNumber: '',
       content: '', // dans la dernière étape du formulaire
@@ -124,13 +125,13 @@ export const initialState = {
       lastnameOfDeceased: '',
       maidenNameOfDeceased: '',
       adressDeceased: '',
-      zipCodeOfDeceased: '',
+      zipCodeOfDeceased: 0,
       cityOfDeceased: '',
       dateOfBirth: '',
       placeOfBirth: '',
       dateOfDeceased: '',
       placeOfDeceased: '',
-      postalCode: '',
+      postalCode: 0,
     },
     babysittingService: {
       content: '',
@@ -148,7 +149,6 @@ export const initialState = {
       content: '',
       organization: '',
       personalAssistance: [],
-      days: [],
       intervention: [],
       financialHelp: false,
       numberHour: '',
@@ -159,13 +159,25 @@ export const initialState = {
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case CHANGE_CONTACT_VALUE:
+      // On cherche à convertir la valeur du zipCode en type number si c'est un string
+      const resultKey = action.key;
+      let resultValue = action.value;
+      console.log('resultKey', resultKey);
+      console.log('resultValue', resultValue);
+      if (resultKey === 'zipCode') {
+        const IntValue = parseInt(resultValue, 10);
+        resultValue = IntValue;
+        console.log(typeof resultValue);
+      }
+
       return {
         ...state,
         recap: {
           ...state.recap,
           contact: {
             ...state.recap.contact,
-            [action.key]: action.value,
+            // [action.key]: action.value,
+            [resultKey]: resultValue,
           },
         },
       };
@@ -173,15 +185,33 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         [action.key]: action.selected,
+        recap: {
+          contact: {
+            ...state.recap.contact,
+          },
+          [action.selected]: {
+            ...state.recap[action.selected],
+          },
+        },
       };
     case CHANGE_ADMINISTRATIVE_DEPARTMENT:
+      // On cherche à convertir la valeur du zipCode en type number si c'est un string
+      const resultKeyAdmin = action.key;
+      let resultValueAdmin = action.selected;
+      console.log('resultKeyAdmin', resultKeyAdmin);
+      console.log('resultValueAmdin', resultValueAdmin);
+      if (resultKeyAdmin === 'postalCode' || resultKeyAdmin === 'zipCodeOfDeceased') {
+        const IntValue = parseInt(resultValueAdmin, 10);
+        resultValueAdmin = IntValue;
+        console.log(typeof resultValueAdmin);
+      }
       return {
         ...state,
         recap: {
           ...state.recap,
           administrativeDepartment: {
             ...state.recap.administrativeDepartment,
-            [action.key]: action.selected,
+            [resultKeyAdmin]: resultValueAdmin,
           },
         },
       };
@@ -247,7 +277,7 @@ const reducer = (state = initialState, action = {}) => {
           ...state.recap,
           housekeeping: {
             ...state.recap.housekeeping,
-            [action.key]: action.selected,
+            [action.key]: [action.selected],
           },
         },
       };
@@ -324,6 +354,28 @@ const reducer = (state = initialState, action = {}) => {
           ...state.recap,
           personalAssistanceService: {
             ...state.recap.personalAssistanceService,
+            [action.key]: action.selected,
+          },
+        },
+      };
+    case CHANGE_CONTACT_CREATED_AT:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          contact: {
+            ...state.recap.contact,
+            [action.key]: action.selected,
+          },
+        },
+      };
+    case ACTION_NEW_DATE_FOR:
+      return {
+        ...state,
+        recap: {
+          ...state.recap,
+          administrativeDepartment: {
+            ...state.recap.administrativeDepartment,
             [action.key]: action.selected,
           },
         },

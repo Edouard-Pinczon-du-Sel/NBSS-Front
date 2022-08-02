@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import DatePicker from 'react-datepicker';
 import SelectService from './FormComponent/SelectService';
 import FormContact from './FormContact';
 import './styles.scss';
@@ -9,7 +10,6 @@ function AppForm() {
   const formSelectService = useSelector((state) => state.form.servicesForm);
   const filterForm = formSelectService.find((obj) => obj.index === currentSelectService);
   const { formName } = { formName: filterForm.form };
-
   return (
     <form>
       <div className="form--infos">

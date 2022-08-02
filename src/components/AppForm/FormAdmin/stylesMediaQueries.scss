@@ -35,7 +35,13 @@
       padding: 0.6rem 0.7rem;
     }
 
-
+    &__date {
+      font-size: 1.1rem;
+      padding: 0.2rem 0.5rem;
+      height: 2.6rem;
+      width: 100%;
+      border: none
+    }
 
   
 
@@ -78,6 +84,14 @@
 
     &__choice--btn {
       padding: 0.6rem 0.7rem;
+    }
+
+    &__date {
+      font-size: 1.1rem;
+      padding: 0.2rem 0.5rem;
+      height: 2.9rem;
+      width: 100%;
+      border: none
     }
 
     // &__select {
@@ -130,6 +144,14 @@
     &__input {
       width: 40rem;
       padding: 1rem 0.5rem;
+    }
+
+    &__date {
+      font-size: 1.2rem;
+      padding: 0.2rem 0.5rem;
+      height: 3.5rem;
+      width: 100%;
+      border: none
     }
   } 
 }
