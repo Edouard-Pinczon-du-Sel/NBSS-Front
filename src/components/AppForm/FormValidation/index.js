@@ -20,7 +20,7 @@ function FormValidation() {
           <TextArea
             name="content"
             value={contactRecap.content}
-            placeHolderValue={contactForm.content}
+            placeHolderValue="N'hésitez pas..."
             action={changeContactValue}
         />
           <button className="form--validation__btn" type="submit">Valider et envoyer</button>

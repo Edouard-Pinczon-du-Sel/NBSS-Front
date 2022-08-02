@@ -52,7 +52,6 @@ export const initialState = {
       zipCode: 'Code postale',
       city: 'Ville',
       phoneNumber: 'Numéro de téléphone',
-      content: "N'hésitez pas...",
     },
     administrativeDepartment: {
       contactInCharge: {
