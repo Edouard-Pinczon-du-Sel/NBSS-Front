@@ -11,7 +11,7 @@ import './stylesMediaQueries.scss';
 function JobsDetails() {
   const param = useParams();
   const dataJobs = useSelector(
-    (state) => state.jobs.list.find((jobs) => jobs.id == param.id),
+    (state) => state.jobs.list.find((jobs) => jobs.id === parseInt(param.id, 10)),
   );
 
   if (dataJobs != null) {
