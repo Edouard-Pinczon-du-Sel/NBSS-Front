@@ -13,11 +13,14 @@ function FormValidation() {
   const contactRecap = useSelector((state) => state.form.recap.contact);
   const data = useSelector((state) => state.form.recap);
   const dispatch = useDispatch();
+  const key = Object.keys(data);
+  console.log('array of key =>', key);
+  console.log('index 1 of key array =>', key[1]);
   const handler = (evt) => {
     evt.preventDefault();
     console.log('on à cliquer sur Valider & envoyer');
     console.log('les data qu\'on envoie sont => ', data);
-    dispatch(fetchFormPost(data));
+    dispatch(fetchFormPost(data, key[1]));
   };
   return (
     <form action="" method="post">
