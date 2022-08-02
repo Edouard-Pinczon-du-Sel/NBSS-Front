@@ -48,8 +48,8 @@ function FormPersonne() {
         <div className="form--garde__container--checkbox">
           {personalAssistanceService.intervention.map((data) => (
             <Checkboxs
-              key={`days${data}`}
-              name="days"
+              key={`intervention${data}`}
+              name="intervention"
               data={data}
               checkAction={changePersonnalAssistanceCheck}
               unCheckAction={changePersonnalAssistanceUnCheck}

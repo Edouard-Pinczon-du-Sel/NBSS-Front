@@ -7,10 +7,10 @@ const carouselMiddleWare = (store) => (next) => (action) => {
     case FETCH_CAROUSEL: {
       // const { carousel: list } = store.getState(); // ANCHOR console.log à supprimer
 
-      axios.get('http://virginieboissiere-server.eddi.cloud/NB-services-et-soin/current/public/api/picture')
+      axios.get('http://gatechien-server.eddi.cloud/NB-services-et-soin/current/public/api/picture')
         .then(
           (response) => {
-            // console.log('reponse de l\'API :', response);
+            console.log('reponse de l\'API :', response);
             store.dispatch(saveCarousel(response.data));
           },
         )

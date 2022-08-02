@@ -1,8 +1,9 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 // import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { changeContactValue } from '../../../actions/form';
+import { fetchFormPost } from '../../../actions/formPost';
 import TextArea from '../FormComponent/TextArea';
 import './styles.scss';
 import './stylesMediaQueries.scss';
@@ -10,8 +11,16 @@ import './stylesMediaQueries.scss';
 // == Composant
 function FormValidation() {
   const contactRecap = useSelector((state) => state.form.recap.contact);
+  const data = useSelector((state) => state.form.recap);
+  const dispatch = useDispatch();
+  const handler = (evt) => {
+    evt.preventDefault();
+    console.log('on à cliquer sur Valider & envoyer');
+    console.log('les data qu\'on envoie sont => ', data);
+    dispatch(fetchFormPost(data));
+  };
   return (
-    <form>
+    <form action="" method="post">
       <div className="form--validation">
         <h1 className="form--validation__title">Validation</h1>
         <div className="form--validation__container--txtarea">
@@ -21,8 +30,8 @@ function FormValidation() {
             value={contactRecap.content}
             placeHolderValue="N'hésitez pas..."
             action={changeContactValue}
-        />
-          <button className="form--validation__btn" type="submit">Valider et envoyer</button>
+          />
+          <button className="form--validation__btn" type="submit" onClick={handler}>Valider et envoyer</button>
         </div>
       </div>
     </form>

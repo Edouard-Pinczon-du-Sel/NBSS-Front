@@ -43,6 +43,17 @@
     box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
   }
 
+  &__date {
+    font-weight: bold;
+    color: #fff;
+    background-color: vars.$blue-color;
+  }
+
+  &__date::placeholder {
+    color: white;
+    font-weight: bold;
+  }
+
 
   // &__select {
   //   color: #fff;
