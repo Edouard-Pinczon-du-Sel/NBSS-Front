@@ -10,7 +10,6 @@ import './stylesMediaQueries.scss';
 // == Composant
 function FormValidation() {
   const contactRecap = useSelector((state) => state.form.recap.contact);
-  const contactForm = useSelector((state) => state.form.miseEnPage.contact);
   return (
     <form>
       <div className="form--validation">
