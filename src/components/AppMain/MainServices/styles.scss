@@ -9,11 +9,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 0.2s ease-in;
+    transition: 0.8s ease-out;
+
+  }
+
+  &__container:hover {
+    transform: scale(1.4);
   }
 
   &__title {
     font-weight: 500;
     padding: 0.5rem;
+    transition: 0.2s ease-in;
+    transition: 0.8s ease-out;
+  }
+
+  &__title:hover {
+    transform: scale(1.1);
+
   }
 
   &__img {
@@ -40,5 +54,9 @@
     border-top-right-radius: 800px;
     border-bottom-right-radius: 8000px;
     border-bottom-left-radius: 800px;
+    transform: scale(1.1);
+    transition:0.5s ease-in;
+    transition: 1s ease-out;
+
   }
 }
