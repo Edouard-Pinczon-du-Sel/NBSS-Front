@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: zoom-in;
+
 
   &__img {
     box-shadow: 2px 5px 15px 0px rgba(0, 0, 0,0.3);
