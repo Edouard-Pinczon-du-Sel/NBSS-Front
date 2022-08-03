@@ -9,7 +9,6 @@ import './stylesMediaQueries.scss';
 // == Composant
 function JobsPage() {
   const { list } = useSelector((state) => state.jobs);
-  console.log(list);
   if (list != null) {
     return (
       <main className="main">

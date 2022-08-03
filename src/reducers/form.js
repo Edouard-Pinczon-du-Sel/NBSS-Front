@@ -1,5 +1,5 @@
-/* eslint-disable no-case-declarations */
 /* eslint-disable max-len */
+/* eslint-disable no-case-declarations */
 import {
   ACTION_NEW_DATE_FOR,
   CHANGE_ADMINISTRATIVE_DEPARTMENT,
@@ -103,16 +103,15 @@ export const initialState = {
     contact: {
       firstname: '',
       lastname: '',
-      maidenName: '', // NOTE peut être null
+      maidenName: '',
       mail: '',
       adress: '',
       zipCode: 0,
       city: '',
       phoneNumber: '',
-      content: '', // dans la dernière étape du formulaire
-      preferency: true, // NOTE BOOLEEN concernant si le client souhaite être
-      // recontacter par mobile ou non
-      createdAt: '', // info a envoyer dans le récap
+      content: '',
+      preferency: true,
+      createdAt: '',
     },
     administrativeDepartment: {
       firstname: '',
@@ -135,15 +134,15 @@ export const initialState = {
     },
     babysittingService: {
       content: '',
-      days: [], // d'après le back 1 = lundi, 2 = mardi donc on doit leur envoyer days: [1,2] dans le cas ou les deux premier jour de la semaine sont selectionner.
-      intervention: [], // idem que pour les jours
-      numberChild: 0, // renvoie d'un INT
-      numberHour: 0, // renvoie d'un INT
+      days: [],
+      intervention: [],
+      numberChild: 0,
+      numberHour: 0,
     },
     housekeeping: {
       content: '',
-      frequency: [], // Hebdomadaire = 1 , Une fois par semaine = 2, Deux fois par mois = 3, Une fois par mois = 4, Ponctuellement = 5
-      numberHour: 0, // INT
+      frequency: [],
+      numberHour: 0,
     },
     personalAssistanceService: {
       content: '',
@@ -159,15 +158,11 @@ export const initialState = {
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case CHANGE_CONTACT_VALUE:
-      // On cherche à convertir la valeur du zipCode en type number si c'est un string
       const resultKey = action.key;
       let resultValue = action.value;
-      console.log('resultKey', resultKey);
-      console.log('resultValue', resultValue);
       if (resultKey === 'zipCode') {
         const IntValue = parseInt(resultValue, 10);
         resultValue = IntValue;
-        console.log(typeof resultValue);
       }
 
       return {
@@ -176,7 +171,6 @@ const reducer = (state = initialState, action = {}) => {
           ...state.recap,
           contact: {
             ...state.recap.contact,
-            // [action.key]: action.value,
             [resultKey]: resultValue,
           },
         },
@@ -195,15 +189,11 @@ const reducer = (state = initialState, action = {}) => {
         },
       };
     case CHANGE_ADMINISTRATIVE_DEPARTMENT:
-      // On cherche à convertir la valeur du zipCode en type number si c'est un string
       const resultKeyAdmin = action.key;
       let resultValueAdmin = action.selected;
-      console.log('resultKeyAdmin', resultKeyAdmin);
-      console.log('resultValueAmdin', resultValueAdmin);
       if (resultKeyAdmin === 'postalCode' || resultKeyAdmin === 'zipCodeOfDeceased') {
         const IntValue = parseInt(resultValueAdmin, 10);
         resultValueAdmin = IntValue;
-        console.log(typeof resultValueAdmin);
       }
       return {
         ...state,

@@ -11,17 +11,6 @@ import TextArea from '../FormComponent/TextArea';
 
 // == Composant
 function FormMenagers() {
-  // TODO Faire les vérifs de formulaire en vanilla ou en champ contrôlés
-  // function handleFormVerification(e) {
-  //   const hours = document.querySelector('.form--menagers__input');
-  //   if (hours.value === '') {
-  //     alert("Veuillez remplir tous les champs s'il vous plaît");
-  //     e.preventDefault();
-  //   }
-  //   const frequancy = document.querySelector('.form--menagers__select--data');
-  //   console.log(frequancy.value);
-  //   e.preventDefault();
-  // }
   const housekeeping = useSelector((state) => state.form.miseEnPage.housekeeping);
   const housekeepingRecap = useSelector((state) => state.form.recap.housekeeping);
   return (

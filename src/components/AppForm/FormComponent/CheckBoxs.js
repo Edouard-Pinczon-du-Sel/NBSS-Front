@@ -1,7 +1,8 @@
 import { useDispatch } from 'react-redux';
-function Checkboxs({ name, data ,checkAction, unCheckAction }) {
+import PropTypes from 'prop-types';
+
+function Checkboxs({ name, data, checkAction, unCheckAction}) {
   const dispatch = useDispatch();
-  // console.log(data);
   const handleChange = (event) => {
     const days = {
       Lundi: 1,
@@ -68,5 +69,13 @@ function Checkboxs({ name, data ,checkAction, unCheckAction }) {
     </div>
   );
 }
+
+// name, data ,checkAction, unCheckAction
+Checkboxs.propTypes = {
+  name: PropTypes.string.isRequired,
+  data: PropTypes.string.isRequired,
+  checkAction: PropTypes.func.isRequired,
+  unCheckAction: PropTypes.func.isRequired,
+};
 
 export default Checkboxs;

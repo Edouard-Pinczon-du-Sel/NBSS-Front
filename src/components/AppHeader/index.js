@@ -1,6 +1,3 @@
-// == Import
-// import PropTypesLib from 'prop-types';
-// == Composant
 import HeaderTop from './HeaderTop';
 import HeaderNavBar from './HeaderNavBar';
 

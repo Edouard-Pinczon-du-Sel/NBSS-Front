@@ -13,8 +13,7 @@ import './styles.scss';
 import './stylesMediaQueries.scss';
 import Radio from '../FormComponent/Radio';
 import TextArea from '../FormComponent/TextArea';
-// TODO maper sur les checkbox depuis les donées de l'api du back
-// == Composant
+
 function FormPersonne() {
   const personalAssistanceService = useSelector(
     (state) => state.form.miseEnPage.personalAssistanceService,
@@ -66,7 +65,6 @@ function FormPersonne() {
       </div>
       <h2 className="form--personne__subtitle">Bénéficiez-vous d'une aide financière</h2>
       <Radio action={changePersonnalAssistanceFinancialHelp} />
-      {/* <input className="form--personne__input display--none selector" type="number" placeholder="Par quel organisme ?" /> */}
       {
         personalAssistanceServiceRecap.financialHelp
           ? (

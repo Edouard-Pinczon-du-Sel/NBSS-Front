@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import DatePicker from 'react-datepicker';
 import SelectService from './FormComponent/SelectService';
 import FormContact from './FormContact';
 import './styles.scss';
