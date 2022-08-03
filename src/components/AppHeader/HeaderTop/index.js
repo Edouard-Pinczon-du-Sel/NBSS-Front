@@ -1,7 +1,7 @@
 // == Import
 // import PropTypesLib from 'prop-types';
-import logo from 'src/assets/images/LOGO-NBSS-blanc.png';
-import titreImg from 'src/assets/images/titreImg.png';
+import logo from 'src/assets/images/img-logo/LOGO-NBSS-blanc.png';
+import titreImg from 'src/assets/images/img-logo/titreImg.png';
 import './styles.scss';
 import './burger.scss';
 
