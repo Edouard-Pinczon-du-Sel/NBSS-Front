@@ -1,10 +1,14 @@
 // == Import
+import { useEffect } from 'react';
 import './styles.scss';
 import './stylesMediaQueries.scss';
 import img from '../../assets/images/img-logo/logoContact.png';
 
 // == Composant
 function ContactPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="contact--page">
       <img className="contact--page__img" src={img} alt="logo" />

@@ -2,6 +2,7 @@
 import PropTypesLib from 'prop-types';
 import './styles.scss';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 // == Composant
 function JobsList({
@@ -9,6 +10,9 @@ function JobsList({
   weSearch,
   id,
 }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   // console.log(id);
   return (
     <div className="job">

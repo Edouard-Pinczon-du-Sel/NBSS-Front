@@ -1,6 +1,7 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import Service from './Service';
 import './styles.scss';
 import './stylesMediaQueries.scss';
@@ -8,6 +9,9 @@ import data from '../../data/services';
 
 // == Composant
 function ServicesPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="page--services">
       <div className="services--page">

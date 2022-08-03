@@ -2,6 +2,7 @@
 import PropTypesLib from 'prop-types';
 import './styles.scss';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 // == Composant
 function ServiceSpecificsDetails({
@@ -10,6 +11,9 @@ function ServiceSpecificsDetails({
   name,
   explications,
 }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="service--details">
       <img className="service--details__img" src={link} alt={alt} />

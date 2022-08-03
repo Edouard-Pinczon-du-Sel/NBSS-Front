@@ -11,6 +11,9 @@ import './stylesMediaQueries.scss';
 
 // == Composant
 function FormContact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const value = useSelector((state) => state.form.recap.contact);
   const contactForm = useSelector((state) => state.form.miseEnPage.contact);
   const current = new Date();

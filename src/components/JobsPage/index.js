@@ -1,5 +1,6 @@
 // == Import
 // import PropTypesLib from 'prop-types';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import JobsList from './JobsList';
 import SpontaneousApplication from './SpontaneousApplication';
@@ -9,6 +10,9 @@ import './stylesMediaQueries.scss';
 // == Composant
 function JobsPage() {
   const { list } = useSelector((state) => state.jobs);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   if (list != null) {
     return (
       <main className="main">
