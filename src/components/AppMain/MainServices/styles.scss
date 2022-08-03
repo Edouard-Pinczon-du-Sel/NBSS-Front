@@ -9,6 +9,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 0.2s ease-in;
+    transition: 0.8s ease-out;
+
+  }
+
+  &__container:hover {
+    transform: scale(1.4);
   }
 
   &__title {
