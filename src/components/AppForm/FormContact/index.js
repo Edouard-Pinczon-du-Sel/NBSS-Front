@@ -3,7 +3,6 @@
 // import PropTypesLib from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-
 import Input from '../FormComponent/Input';
 import { changeContactValue, changeContactCreatedAt } from '../../../actions/form';
 import './styles.scss';
@@ -11,9 +10,6 @@ import './stylesMediaQueries.scss';
 
 // == Composant
 function FormContact() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const value = useSelector((state) => state.form.recap.contact);
   const contactForm = useSelector((state) => state.form.miseEnPage.contact);
   const current = new Date();
@@ -21,6 +17,7 @@ function FormContact() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(changeContactCreatedAt('createdAt', date));
+    window.scrollTo(0, 0);
   }, []);
   return Object.keys(contactForm).map(
     (element, index) => (
