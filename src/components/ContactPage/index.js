@@ -2,7 +2,7 @@
 // import PropTypesLib from 'prop-types';
 import './styles.scss';
 import './stylesMediaQueries.scss';
-import img from '../../assets/images/logoContact.png';
+import img from '../../assets/images/img-logo/logoContact.png';
 
 // == Composant
 function ContactPage() {

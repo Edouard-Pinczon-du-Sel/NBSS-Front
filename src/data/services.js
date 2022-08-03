@@ -1,7 +1,7 @@
-import menageImg from '../assets/images/menage.jpg';
-import enfantsImg from '../assets/images/enfants.jpg';
-import doucheImg from '../assets/images/douche.jpg';
-import administratifImg from '../assets/images/administratif.jpg';
+import menageImg from '../assets/images/img-services/menage.jpg';
+import enfantsImg from '../assets/images/img-services/enfants.jpg';
+import personneImg from '../assets/images/img-services/personne.jpg';
+import administratifImg from '../assets/images/img-services/admin.jpg';
 
 export default
 [
@@ -24,7 +24,7 @@ export default
   {
     id: '3',
     name: 'Aides à la personne',
-    link: doucheImg,
+    link: personneImg,
     alt: 'service d\'aide à la personne',
     description: "Le service d'aide à la personne propose : Aide partielle ou totale à la toilette, Aide partielle ou totale à l’habillageAide aux transferts et aux déplacementsAide à la préparation et à la prise des repasAccompagnement lors des sortiesAide aux courses",
     explications: "Le service d'aide à la personne consiste à aider une personne âgée ou en situation de handicap dans les actes de la vie quotidienne. Nous aidons la personne pour sa toilette, l’habillage, la mise des bas de contention. Nous pouvons l'aider pour se lever et se coucher ainsi que pour les transférer. Notre équipe est formée pour utiliser le lève personne, le verticalisateur et le disque de transfert. Nous nous occupons également des préparations de repas à votre domicile et de l'aide à la prise des repas. Nous pouvons également vous accompagner lors d'une sortie ou pour vos courses. Nos interventions sont personnalisées et nous nous adaptons à chaque situation.",
