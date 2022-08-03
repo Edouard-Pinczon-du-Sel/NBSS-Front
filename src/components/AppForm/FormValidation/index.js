@@ -1,6 +1,4 @@
 // == Import
-// import PropTypesLib from 'prop-types';
-// import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeContactValue } from '../../../actions/form';
 import { fetchFormPost } from '../../../actions/formPost';

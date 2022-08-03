@@ -15,6 +15,4 @@ function AppMain() {
     </main>
   );
 }
-
-// == Export
 export default AppMain;

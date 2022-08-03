@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 
 function Radio({ action }) {
   const dispatch = useDispatch();
@@ -27,5 +28,9 @@ function Radio({ action }) {
     </fieldset>
   );
 }
+
+Radio.propTypes = {
+  action: PropTypes.func.isRequired,
+};
 
 export default Radio;

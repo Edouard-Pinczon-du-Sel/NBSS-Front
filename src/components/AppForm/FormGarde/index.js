@@ -14,7 +14,6 @@ import './stylesMediaQueries.scss';
 function FormGarde() {
   const babysittingService = useSelector((state) => state.form.miseEnPage.babysittingService);
   const babysittingServiceRecap = useSelector((state) => state.form.recap.babysittingService);
-  // console.log(babysittingServiceRecap);
   return (
     <div className="form--garde">
       <h1 className="form--garde__title">Service garde enfants</h1>
@@ -62,5 +61,4 @@ function FormGarde() {
   );
 }
 
-// == Export
 export default FormGarde;

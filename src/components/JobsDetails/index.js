@@ -1,9 +1,6 @@
 // == Import
-// import PropTypesLib from 'prop-types';
-import { useSelector /*useDispatch*/ } from 'react-redux';
-// import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-// import { fetchJobs } from '../../actions/jobs';
 import JobSpecificDetail from './JobSpecificDetail';
 import './stylesMediaQueries.scss';
 

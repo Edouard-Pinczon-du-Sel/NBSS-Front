@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 // == Import
 import PropTypesLib from 'prop-types';
 import './stylesMediaQueries.scss';
@@ -104,27 +105,34 @@ function JobSpecificDetail({
   );
 }
 
-// JobSpecificDetail.propTypes = {
-//   title: PropTypesLib.string.isRequired,
-//   /* visibility: PropTypesLib.string.isRequired, */
-//   published_on: PropTypesLib.string.isRequired,
-//   title_description: PropTypesLib.string.isRequired,
-//   description: PropTypesLib.string.isRequired,
-//   title_description2: PropTypesLib.string.isRequired,
-//   description2: PropTypesLib.string.isRequired,
-//   title_description3: PropTypesLib.string.isRequired,
-//   description3: PropTypesLib.string.isRequired,
-//   weSearch: PropTypesLib.string.isRequired,
-//   avantage: PropTypesLib.string.isRequired,
-//   licence_requeried: PropTypesLib.string.isRequired,
-//   experience_requeried: PropTypesLib.string.isRequired,
-//   /* driveLicense: PropTypesLib.string.isRequired, */
-//   type_contrat: PropTypesLib.string.isRequired,
-//   salary: PropTypesLib.string.isRequired,
-//   deplacement_info: PropTypesLib.string.isRequired,
-//   day_off: PropTypesLib.string.isRequired,
-//   opportunity: PropTypesLib.string.isRequired,
-//   workingHour: PropTypesLib.string.isRequired,
-// };
+JobSpecificDetail.defaultProps = {
+  title_description2: '',
+  description2: '',
+  title_description3: '',
+  description3: '',
+};
+
+JobSpecificDetail.propTypes = {
+  title: PropTypesLib.string.isRequired,
+  /* visibility: PropTypesLib.string.isRequired, */
+  published_on: PropTypesLib.string.isRequired,
+  title_description: PropTypesLib.string.isRequired,
+  description: PropTypesLib.string.isRequired,
+  title_description2: PropTypesLib.string,
+  description2: PropTypesLib.string,
+  title_description3: PropTypesLib.string,
+  description3: PropTypesLib.string,
+  weSearch: PropTypesLib.string.isRequired,
+  avantage: PropTypesLib.string.isRequired,
+  licence_requeried: PropTypesLib.string.isRequired,
+  experience_requeried: PropTypesLib.string.isRequired,
+  /* driveLicense: PropTypesLib.string.isRequired, */
+  type_contrat: PropTypesLib.string.isRequired,
+  salary: PropTypesLib.string.isRequired,
+  deplacement_info: PropTypesLib.string.isRequired,
+  day_off: PropTypesLib.string.isRequired,
+  opportunity: PropTypesLib.string.isRequired,
+  workingHour: PropTypesLib.string.isRequired,
+};
 // == Export
 export default JobSpecificDetail;

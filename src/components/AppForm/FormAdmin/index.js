@@ -14,18 +14,11 @@ import './stylesMediaQueries.scss';
 function FormAdmin() {
   const value = useSelector((state) => state.form.recap.administrativeDepartment);
   const adminPatern = useSelector((state) => state.form.miseEnPage.administrativeDepartment);
-  const recap = useSelector((state) => state.form.recap);
-  const currentDate = useSelector((state) => state.form.recap.contact.createdAt);
   const dispatch = useDispatch();
 
   const dateOfBirth = (e) => {
     // toISOSTring permet de convertir notre event avec le bon format et substring permet de limiter l'affichafge des 10 premiers caractères
     dispatch(actionNewDateFor('dateOfBirth', e.toISOString().substring(0, 10)));
-
-    // console.log('event avec Date.parse(e) => ', e.toISOString().substring(0, 10));
-    console.log(e);
-    const test = document.querySelector('.form--admin__date');
-    console.log(test.name);
   };
 
   const dateOfDeceased = (e) => {
@@ -85,9 +78,7 @@ function FormAdmin() {
       </div>
       <Link to="/services/form/validation"><button className="form--menagers__btn" type="submit">Suivant</button></Link>
     </div>
-
   );
 }
 
-// == Export
 export default FormAdmin;

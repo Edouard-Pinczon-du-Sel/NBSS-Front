@@ -1,6 +1,9 @@
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 
-function Input({ inputName, action, placeHolderValue ,value, classNameValue }) {
+function Input({
+  inputName, action, placeHolderValue, value, classNameValue,
+}) {
   const dispatch = useDispatch();
   const handleChange = (event) => {
     dispatch(action(event.target.name, event.target.value));
@@ -12,5 +15,18 @@ function Input({ inputName, action, placeHolderValue ,value, classNameValue }) {
     </>
   );
 }
+Input.defaultProps = {
+  value: undefined,
+};
+Input.propTypes = {
+  inputName: PropTypes.string.isRequired,
+  placeHolderValue: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
+  action: PropTypes.func.isRequired,
+  classNameValue: PropTypes.string.isRequired,
+};
 
 export default Input;

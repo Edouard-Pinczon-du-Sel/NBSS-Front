@@ -1,4 +1,5 @@
-// == Composant
+import PropTypes from 'prop-types';
+
 function Option({ data, classNameValue }) {
   return (
     <option
@@ -11,6 +12,9 @@ function Option({ data, classNameValue }) {
     </option>
   );
 }
-
+Option.propTypes = {
+  data: PropTypes.string.isRequired,
+  classNameValue: PropTypes.string.isRequired,
+};
 // == Export
 export default Option;

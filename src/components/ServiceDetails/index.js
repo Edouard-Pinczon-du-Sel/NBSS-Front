@@ -12,12 +12,10 @@ function ServiceDetails() {
   const dataService = useSelector(
     (state) => state.services.list.find((service) => service.id === param.id),
   );
-  console.log(dataService);
   return (
     <>
       {
-        // Il faut rajouter des crochets pour convertir dataService qui est un objet en tableau
-        // Et pouvoir effectuer le map
+
         [dataService].map((item) => (
           <ServiceSpecificsDetails
             key={item.id}

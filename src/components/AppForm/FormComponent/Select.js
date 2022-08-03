@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import Option from './Option';
 
 function Select({
@@ -37,5 +38,11 @@ function Select({
 
   );
 }
-
+// action, defaultValue, name, options
+Select.propTypes = {
+  action: PropTypes.func.isRequired,
+  defaultValue: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  options: PropTypes.array.isRequired,
+};
 export default Select;

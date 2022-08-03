@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 
 function TextArea({ name, value, placeHolderValue, action }) {
   const dispatch = useDispatch();
@@ -15,5 +16,10 @@ function TextArea({ name, value, placeHolderValue, action }) {
     />
   );
 }
-
+TextArea.propTypes = {
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  placeHolderValue: PropTypes.string.isRequired,
+  action: PropTypes.func.isRequired,
+};
 export default TextArea;

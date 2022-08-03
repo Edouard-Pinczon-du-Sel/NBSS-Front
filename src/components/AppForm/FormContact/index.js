@@ -15,7 +15,6 @@ function FormContact() {
   const contactForm = useSelector((state) => state.form.miseEnPage.contact);
   const current = new Date();
   const date = `${current.getFullYear()}-${(`0${current.getMonth() + 1}`).slice(-2)}-${(`0${current.getDate()}`).slice(-2)}`;
-  console.log(date);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(changeContactCreatedAt('createdAt', date));

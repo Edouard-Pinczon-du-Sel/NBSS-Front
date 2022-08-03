@@ -8,7 +8,7 @@ const jobsMiddleWare = (store) => (next) => (action) => {
       axios.get('http://gatechien-server.eddi.cloud/NB-services-et-soin/current/public/api/recruitment')
         .then(
           (response) => {
-            console.log('reponse de l\'API :', response.data);
+            console.log('reponse de l\'API :', response.data); // NOTE //! A SUPPRIMER AVANT BUILD
             store.dispatch(saveJobs(response.data));
           },
         )

@@ -18,10 +18,6 @@ function MainCarousel() {
 
   const { list } = useSelector((state) => state.carousel);
   if (list != null) {
-    // console.log(list);
-    // NOTE concernant la const dataImage je l'ai fait sauté car
-    //  au final nous la récupéront avec le useSelector .
-
     return (
       <Carousel
         pauseOnHover
@@ -47,10 +43,6 @@ function MainCarousel() {
       >
         {
           list.map((item) => <img key={item.id} className="test" src={item.urlPicture} alt={item.id} />)
-          // NOTE : Comme tu peux le voire Ligne 23 nous avions un console.log
-          // de "list" et bien si tu ouvres un objet il y avait d'autre moyens
-          // de récupéré l'URL de l'image dont le "largeImageURL" qui est
-          // celon moi celui de meilleur qualité.
         }
 
       </Carousel>

@@ -50,7 +50,6 @@ function App() {
         <Route path="/mentions-legales/charte" element={<ChartePage />} />
         <Route path="/mentions-legales/reglement" element={<ReglementPage />} />
         <Route path="/mentions-legales/societe" element={<SocietyPage />} />
-        {/* <Route path="/mentions-legal" element={<mentionsLegalPage />} /> */}
         {/* <Route path="/*" element={<Error />} /> */}
         {/* <Route path="/error" element={<FormError />} /> */}
       </Routes>

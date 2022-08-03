@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 
 function InputNumber({ name, value, placeHolderValue, action, classNameValue }) {
   const dispatch = useDispatch();
@@ -13,5 +14,16 @@ function InputNumber({ name, value, placeHolderValue, action, classNameValue }) 
     </>
   );
 }
+
+InputNumber.defaultProps = {
+  value: undefined,
+};
+InputNumber.propTypes = {
+  name: PropTypes.string.isRequired,
+  value: PropTypes.number,
+  placeHolderValue: PropTypes.string.isRequired,
+  action: PropTypes.func.isRequired,
+  classNameValue: PropTypes.string.isRequired,
+};
 
 export default InputNumber;

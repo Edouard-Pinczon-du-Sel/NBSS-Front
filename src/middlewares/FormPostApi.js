@@ -11,7 +11,7 @@ const formMiddleWare = (store) => (next) => (action) => {
       axios.post('http://gatechien-server.eddi.cloud/NB-services-et-soin/current/public/api/contact', encodedContact)
         .then(
           (response) => {
-            console.log('reponse de l\'API :', response);
+            console.log('reponse de l\'API :', response); // NOTE //! A SUPPRIMER AVANT BUILD
           },
         )
         .catch(
