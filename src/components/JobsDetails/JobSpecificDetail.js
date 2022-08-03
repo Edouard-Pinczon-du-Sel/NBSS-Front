@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 // == Import
-import { useEffect } from 'react';
 import PropTypesLib from 'prop-types';
 import './stylesMediaQueries.scss';
 
@@ -27,9 +26,6 @@ function JobSpecificDetail({
   opportunity,
   workingHour,
 }) {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <div className="preview">
       <div className="job job--details">
