@@ -15,8 +15,8 @@ function MainCarousel() {
   useEffect(() => {
     dispatch(fetchCarousel());
   }, []);
-
   const { list } = useSelector((state) => state.carousel);
+  const carouselFiltered = list.filter((img) => img.placeOrder !== null);
   if (list != null) {
     return (
       <Carousel
@@ -42,7 +42,7 @@ function MainCarousel() {
         }}
       >
         {
-          list.map((item) => <img key={item.id} className="test" src={item.urlPicture} alt={item.id} />)
+          carouselFiltered.map((item) => <img key={item.id} className="test" src={item.urlPicture} alt={item.id} />)
         }
 
       </Carousel>
