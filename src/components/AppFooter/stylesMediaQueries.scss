@@ -4,7 +4,7 @@
 
 //! max-width == jusqu'à 375px ! ! !
 @media screen and (max-width:1024px) {
-
+  
   .footer {
     display: flex;
     flex-direction: column;
@@ -71,6 +71,10 @@
 }
 
 @media screen and (min-width: 1024px){
+  .map__L:hover {
+    transition: 0.7s ease-out;
+    transform: scale(1.7);
+  }
 
   footer {
     background-color: vars.$pink-color;
