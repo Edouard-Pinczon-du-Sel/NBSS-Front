@@ -12,15 +12,19 @@ function JobsDetails() {
   );
 
   if (dataJobs != null) {
-    // console.log(dataJobs);
     return (
       <main className="main">
         {[dataJobs].map((item) => (
-          <JobSpecificDetail
-            key={item.id}
-            title={item.title}
-            {...item}
-          />
+          item.visibility === true
+            ? (
+              <JobSpecificDetail
+                key={item.id}
+                title={item.title}
+                {...item}
+              />
+            )
+            : ''
+
         ))}
       </main>
     );

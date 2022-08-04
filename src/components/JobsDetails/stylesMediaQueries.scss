@@ -1,19 +1,42 @@
 @use 'src/styles/vars';
 
-
+@media screen and (min-width: 320px) {
+ .jobView {
+  &--main_title {
+    font-size: 2rem;
+  }
+  &__text {
+    &--title {
+      font-size: 1.3rem;
+    }
+  }
+ }
+}
+@media screen and (min-width: 768px) {
+  .jobView {
+    &--main_title {
+      font-size: 2rem;
+    }
+    &__text {
+      &--title {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
 // LAPTOP 
 @media screen and (min-width: 1024px) {
   
-  .job__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 2rem;
+  .jobView {
+    &--main_title {
+      font-size: 4rem;
+    }
+    &__text {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      &--title {
+      font-size: 2rem;
+      }
+    }
   }
-
-  .job--details {
-   width: 90%;
-   margin: 0 auto 1rem
-  }  
 }

@@ -26,7 +26,7 @@ function SpontaneousApplication() {
               Lettre de Motivation
             </li>
             <li>
-              Réference(optionnel)
+              Réferences (optionnel)
             </li>
           </ul>
         </p>

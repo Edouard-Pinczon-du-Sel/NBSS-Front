@@ -21,12 +21,18 @@ function JobsPage() {
           <div className="job__list">
             {
             list.map((item) => (
-              <JobsList
-                key={item.id}
-                title={item.title}
-                weSearch={item.we_search}
-                id={item.id}
-              />
+              item.visibility === true
+                ? (
+                  <JobsList
+                    key={item.id}
+                    title={item.title}
+                    weSearch={item.we_search}
+                    id={item.id}
+                    opportunity={item.opportunity}
+                    date={item.published_on}
+                  />
+                )
+                : ''
             ))
           }
           </div>
