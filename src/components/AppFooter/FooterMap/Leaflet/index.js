@@ -19,7 +19,7 @@ function LeafletMapFooter() {
       />
       <Marker position={NBpos}>
         <Popup>
-          Nous sommes ICI <br />NB SOINS ET SERVICES
+          Nous sommes ICI : <br />NB SERVICES ET SOINS
         </Popup>
       </Marker>
     </MapContainer>
