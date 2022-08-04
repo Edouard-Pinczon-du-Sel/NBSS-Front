@@ -1,24 +1,7 @@
 @use 'src/styles/vars';
 
-// Format Native en min 0 max 375 px
-
-//! max-width == jusqu'à 375px ! ! ! 
 
 // MOBILE
-@media screen and (min-width: 0px) and (max-width: 425px) {
-  .service--details {
-    &__img {
-      width: 17rem;
-    }
-
-    &__title {
-      font-size: 1.5rem;
-      margin: 1rem 0 0.5rem 0;
-    }
-  }
-}
-
-// TABLET 
 @media screen and (min-width: 426px) {
   .service--details {
     &__img {

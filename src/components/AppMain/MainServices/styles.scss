@@ -12,6 +12,7 @@
     transition: 0.2s ease-in;
     transition: 0.8s ease-out;
 
+
   }
 
   &__title {
@@ -20,6 +21,10 @@
     transition: 0.2s ease-in;
     transition: 0.8s ease-out;
     cursor: zoom-in;
+    color: vars.$blue-color;
+    opacity: 0.85;
+    font-weight: 700;
+
   }
 
   &__img {
