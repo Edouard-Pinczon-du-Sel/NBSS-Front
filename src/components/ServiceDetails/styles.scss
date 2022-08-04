@@ -38,7 +38,6 @@
     max-width: 60%;
   }
 
-
   &__btn {
     color: #fff;
     background-color: vars.$blue-color;
@@ -54,13 +53,5 @@
     border-bottom-left-radius: 8000px;
     margin: 1rem 0;
     transition: box-shadow 500ms, border-radius 1s ease-in-out;
-  }
-
-  &__btn:hover{
-    box-shadow: 2px 5px 20px 3px rgba(0, 0, 0, 0.5);
-    border-top-left-radius: 5000px;
-    border-top-right-radius: 800px;
-    border-bottom-right-radius: 8000px;
-    border-bottom-left-radius: 800px;
   }
 }

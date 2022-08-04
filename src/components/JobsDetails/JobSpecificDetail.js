@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 // == Import
-import { useEffect } from 'react';
 import PropTypesLib from 'prop-types';
 import './styles.scss';
 import './stylesMediaQueries.scss';
@@ -29,9 +28,6 @@ function JobSpecificDetail({
   working_hour,
   drive_license,
 }) {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <acticle className="JobView">
 
