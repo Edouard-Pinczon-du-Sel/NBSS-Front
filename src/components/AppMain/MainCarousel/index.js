@@ -20,13 +20,15 @@ function MainCarousel() {
   if (list != null) {
     return (
       <Carousel
+        animation="zoom"
+        zoomScale="0.5"
         pauseOnHover
         autoplay
         wrapAround
         cellAlign="center"
-        className="test_v2"
-        adaptiveHeight
-        speed={500}
+        className="carouselNuka"
+        adaptiveHeightAnimation
+        speed={800}
         autoplayInterval={8000}
         renderBottomCenterControls={({ currentSlide }) => (
           <div className="info">
@@ -42,7 +44,7 @@ function MainCarousel() {
         }}
       >
         {
-          carouselFiltered.map((item) => <img key={item.id} className="test" src={item.urlPicture} alt={item.id} />)
+          carouselFiltered.map((item) => <img key={item.id} className="imgDisplayed" src={item.urlPicture} alt={item.id} />)
         }
 
       </Carousel>
