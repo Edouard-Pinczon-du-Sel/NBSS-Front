@@ -1,5 +1,6 @@
 // == Import
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { changeContactValue } from '../../../actions/form';
 import { fetchFormPost } from '../../../actions/formPost';
 import TextArea from '../FormComponent/TextArea';
@@ -14,11 +15,12 @@ function FormValidation() {
   const key = Object.keys(data);
   console.log('array of key =>', key);
   console.log('index 1 of key array =>', key[1]);
-  const handler = (evt) => {
-    evt.preventDefault();
+  const handler = () => {
     console.log('on à cliquer sur Valider & envoyer');
     console.log('les data qu\'on envoie sont => ', data);
     dispatch(fetchFormPost(data, key[1]));
+    // eslint-disable-next-line no-alert
+    alert('Nous vous remercions ! Votre demande à bien été envoyée.');
   };
   return (
     <form action="" method="post">
@@ -32,7 +34,7 @@ function FormValidation() {
             placeHolderValue="N'hésitez pas..."
             action={changeContactValue}
           />
-          <button className="form--validation__btn" type="submit" onClick={handler}>Valider et envoyer</button>
+          <Link to="/"><button className="form--validation__btn" type="submit" onClick={handler}>Valider et envoyer</button></Link>
         </div>
       </div>
     </form>
