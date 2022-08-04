@@ -6,114 +6,14 @@
 //! max-width == jusqu'à 375px ! ! ! 
 
 // MOBILE
-@media screen and (min-width: 0px) and (max-width: 410px) {
+@media screen and (min-width: 426px) {
   .services--page {
-    margin: 0rem 2.5rem 1rem 2.5rem;
-
-    &__title {
-      font-size: 2rem;
-    }
-
-    &__container--title {
-    font-size: 1.69rem;
-    }
-
-    &__container--txt {
-      font-size: 1.15rem;
-    }
-
-    &__container--btn {
-      font-size: 1.1rem;
-      height: 2.2rem;
-      width: 12.5rem; 
-    }
-
-    &__service {
-      height: 19.5rem;
-      margin: 0rem 2.5rem 10rem 2.5rem;
-    }
-
+    margin: 0rem 1.5rem 1rem 1.5rem;
     &__service--container {
-      display: flex;
-      flex-direction: column;
-      align-items:center;
-
-    }
-
-    &__service--title {
-      font-size: 1.5rem;
-    }
-
-    &__service--img {
-      width: 12rem;
-    }
-
-    &__service--btn {
-      font-size: 1.1rem;
-      height: 2.2rem;
-      width: 12.5rem;
-      margin-top: 2rem; 
-      
-    }
-  }
-}
-
-// TABLET 
-@media screen and (min-width: 411px) {
-
-  .services--page {
-    margin: 0rem 2.5rem 1rem 2.5rem;
-
-    &__title {
-      font-size: 2rem;
-    }
-
-    &__container--title {
-      font-size: 2rem;
-      }
-
-    &__container--txt {
-      font-size: 1.15rem;
-    }
-
-    &__container--btn {
-      font-size: 1.3rem;
-      height: 2.6rem;
-      width: 15.5rem; 
-    }
-
-    &__service {
-      margin: 0rem 2.5rem 1rem 2.5rem;
-    }
-
-    &__service--container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    &__service--title {
-      font-size: 1.5rem;
-    }
-
-    // &__service--txt {
-    //   margin-bottom: 1.5rem;
-    // }
-
-    &__service--img {
-      width: 20rem;
-    }
-
-    &__service--btn {
-      font-size: 1.3rem;
-      height: 2.6rem;
-      width: 15.5rem; 
-      margin-top: 2rem;
+      margin: 0rem 1.5rem 1rem 1.5rem;
 
     }
   }
- 
-     
 }
 
 // TABLET 
@@ -139,12 +39,18 @@
       width: 20rem; 
     }
 
+    //! Service map
+
     &__service {
-      margin: 0rem 2.5rem 1rem 2.5rem;
+      margin: 0rem 1rem 1rem 1rem;
+    }
+
+    &__service--container {
+      padding-bottom: 3rem;
     }
 
     &__service--title {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
 
     &__service--txt {
@@ -152,7 +58,7 @@
     }
 
     &__service--img {
-      width: 35rem;
+      width: 80%;
     }
 
     &__service--btn {
@@ -186,10 +92,17 @@
       width: 20rem; 
     }
 
-    &__service {
-      margin: 0rem 2.5rem 1rem 2.5rem;
+    &__container--btn:hover{
+      box-shadow: 2px 5px 20px 3px rgba(0, 0, 0, 0.5);
+      border-top-left-radius: 5000px;
+      border-top-right-radius: 800px;
+      border-bottom-right-radius: 8000px;
+      border-bottom-left-radius: 800px;
     }
 
+    //! Service map
+
+    
     &__service--container {
       padding-left: 2rem;
       display: flex;
@@ -197,9 +110,13 @@
       align-items: flex-start;
     }
 
+    &__service--container:hover {
+      transform: scale(0.985);
+    }
+
     &__service--container--content {
       margin-left: 3rem;
-      height: 17rem;
+      height: 22rem;
       align-items: flex-start;
       justify-content: space-around;
     }
@@ -224,6 +141,14 @@
       font-size: 1.4rem;
       height: 2.9rem;
       width: 20rem; 
+    }
+
+    &__service--btn:hover{
+      box-shadow: 2px 5px 20px 3px rgba(0, 0, 0, 0.5);
+      border-top-left-radius: 5000px;
+      border-top-right-radius: 800px;
+      border-bottom-right-radius: 8000px;
+      border-bottom-left-radius: 800px;
     }
   }
   
