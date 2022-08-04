@@ -1,48 +1,24 @@
 @use 'src/styles/vars';
 
-// Format Native en min 0 max 375 px
 
-//! max-width == jusqu'à 375px ! ! ! 
+
 
 // MOBILE
-@media screen and (min-width: 0px) and (max-width: 425px) {
-  
-  .services {
-    background-color: vars.$pink-color;
-    margin: 0rem 2.5rem 1rem 2.5rem;
-    height: 11rem;
-    color: white;
-
-    &__img {
-      width: 13.5rem;
-    }
-
-    &__btn {
-      margin-top: -0.42rem;
-      height: 1.8rem;
-      width: 6.9rem;
-    }
-  }
-}
-
-// TABLET 
 @media screen and (min-width: 426px) {
   
   .services {
     background-color: vars.$pink-color;
     margin: 0rem 3.5rem 1rem 3.5rem;
-    color: white;
-
-
+    height: 11.35rem;
 
     &__img {
-      width: 18.8rem;
+      width: 14rem;
     }
 
     &__btn {
       margin-top: -0.9rem;
       height: 1.8rem;
-      width: 6.9rem;
+      width: 8.5rem;
     }
   }    
 }
@@ -54,9 +30,7 @@
   .services {
     margin: 0rem 9rem 1rem 9rem;
     height: 18rem;
-    color: black;
-
-
+    color: #fff;
 
     &__img {
       width: 25rem;
@@ -115,6 +89,12 @@
       transition:0.5s ease-in;
       transition: 1s ease-out;
   
+    }
+
+    &__title {
+      color: vars.$blue-color;
+      opacity: 0.85;
+      font-weight: 700;
     }
 
     &__title:hover {
