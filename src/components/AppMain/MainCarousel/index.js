@@ -1,6 +1,7 @@
 // == Import
 // import PropTypesLib from 'prop-types';
 import Carousel from 'nuka-carousel';
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchCarousel } from '../../../actions/carousel';
@@ -30,8 +31,9 @@ function MainCarousel() {
         autoplayInterval={8000}
         renderBottomCenterControls={({ currentSlide }) => (
           <div className="info">
-            <span className="info--title"> nb services et soins</span>
+            <span className="info--title">NB SERVICES ET SOINS</span>
             <span className="info--content">est une entreprise de services à la personne opérant dans plusieurs domaines. N’hésitez pas à faire appel à nous en bas de besoin !</span>
+            <Link to="/en-savoir-plus" className="info--link">en savoir plus</Link>
           </div>
         )}
         defaultControlsConfig={{

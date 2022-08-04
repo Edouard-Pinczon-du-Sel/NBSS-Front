@@ -1,4 +1,6 @@
 //? Tu as choisi c'est nom de class ou ils étaient dans la doc ? 
+@use 'src/styles/vars';
+
 
 .test {
   display: block;
@@ -36,20 +38,33 @@
   height: 9.5rem;
   background-color: rgba(0, 96, 114,0.5);
   &--title {
+    font-size: 1.25rem;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 0 0 1.1rem 0;
+    margin-bottom: 1rem;
   }
   &--content {
     text-align: center;
-    line-height: 1.5rem;
+    line-height: 1rem;
+    font-size: 1.2rem;
+  }
+
+  &--link {
+    margin-top: 0.5rem;;
+    color: vars.$pink-color;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.4s;
+  }
+
+  &--link:hover {
+    color:rgba(0, 96, 114,0.5);
+    transform: scale(1.1);
   }
 
 }
+
 .test_v2 {
   margin-bottom: 7rem;
 }
-
-
-
 

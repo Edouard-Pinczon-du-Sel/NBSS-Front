@@ -1,0 +1,72 @@
+@use 'src/styles/vars';
+
+// Format Native en min 0 max 375 px
+
+//! max-width == jusqu'à 375px ! ! ! 
+
+// MOBILE
+
+
+// TABLET 
+@media screen and (min-width: 426px) {
+  .infos--page {
+    &__title {
+      font-size: 1.1rem;
+    }
+
+    &__subtitle {
+      font-size: 1.05rem;
+    }
+  }
+}
+
+// TABLET 
+@media screen and (min-width: 768px){
+  .infos--page {
+    &__title {
+      font-size: 1.3rem;
+    }
+
+    &__subtitle {
+      font-size: 1.1rem;
+    }
+  }
+}
+// LAPTOP 
+@media screen and (min-width: 1024px){
+  .infos--page {
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.3rem;
+    }
+
+    &__txt {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1250px){ 
+  .infos--page {
+    .infos--page {
+      &__title {
+        font-size: 1.9rem;
+      }
+  
+      &__subtitle {
+        font-size: 1.7rem;
+      }
+
+      &__img {
+        width: 85%;
+      }
+  
+      &__txt {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
