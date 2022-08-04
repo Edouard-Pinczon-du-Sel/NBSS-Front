@@ -3,6 +3,10 @@
 
 .services {
   color: black;
+  background-color: vars.$pink-color;
+  margin: 0rem 2.5rem 1rem 2.5rem;
+  height: 11rem;
+  color: white;
   
   
   &__container {
@@ -21,17 +25,17 @@
     transition: 0.2s ease-in;
     transition: 0.8s ease-out;
     cursor: zoom-in;
-    color: vars.$blue-color;
-    opacity: 0.85;
-    font-weight: 700;
 
   }
 
   &__img {
-    width: 16rem;
+    width: 13.5rem;
   }
 
   &__btn {
+    margin-top: -0.42rem;
+    height: 1.8rem;
+    width: 8.5rem;
     color: #fff;
     background-color: vars.$blue-color;
     font-size: 0.9rem;
