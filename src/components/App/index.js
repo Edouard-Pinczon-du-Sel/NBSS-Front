@@ -8,6 +8,7 @@ import { fetchJobs } from '../../actions/jobs';
 // == Composant
 import AppHeader from '../AppHeader';
 import AppMain from '../AppMain';
+import InfosPage from '../AppMain/InfosPage';
 import ServicesPage from '../ServicesPage';
 import ServiceDetails from '../ServiceDetails';
 import JobsPage from '../JobsPage';
@@ -35,6 +36,7 @@ function App() {
       <AppHeader />
       <Routes>
         <Route path="/" element={<AppMain />} />
+        <Route path="/en-savoir-plus" element={<InfosPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/service/:id" element={<ServiceDetails />} />
         <Route path="/services/form" element={<AppForm />} />

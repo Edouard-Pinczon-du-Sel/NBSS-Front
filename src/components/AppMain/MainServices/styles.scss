@@ -14,20 +14,12 @@
 
   }
 
-  &__container:hover {
-    transform: scale(1.4);
-  }
-
   &__title {
     font-weight: 500;
     padding: 0.5rem;
     transition: 0.2s ease-in;
     transition: 0.8s ease-out;
-  }
-
-  &__title:hover {
-    transform: scale(1.1);
-
+    cursor: zoom-in;
   }
 
   &__img {
@@ -46,17 +38,5 @@
     border-bottom-right-radius: 800px;
     border-bottom-left-radius: 8000px;
     transition: box-shadow 500ms, border-radius 1s ease-in-out;
-  }
-
-  &__btn:hover{
-    box-shadow: 2px 5px 20px 3px rgba(0, 0, 0, 0.5);
-    border-top-left-radius: 5000px;
-    border-top-right-radius: 800px;
-    border-bottom-right-radius: 8000px;
-    border-bottom-left-radius: 800px;
-    transform: scale(1.1);
-    transition:0.5s ease-in;
-    transition: 1s ease-out;
-
-  }
+  } 
 }
