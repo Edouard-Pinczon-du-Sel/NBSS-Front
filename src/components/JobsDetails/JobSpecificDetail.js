@@ -2,6 +2,7 @@
 // == Import
 import { useEffect } from 'react';
 import PropTypesLib from 'prop-types';
+import './styles.scss';
 import './stylesMediaQueries.scss';
 
 // == Composant
@@ -15,7 +16,7 @@ function JobSpecificDetail({
   description2,
   title_description3,
   description3,
-  weSearch,
+  we_search,
   avantage,
   licence_requeried,
   experience_requeried,
@@ -25,87 +26,149 @@ function JobSpecificDetail({
   deplacement_info,
   day_off,
   opportunity,
-  workingHour,
+  working_hour,
+  drive_license,
 }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="preview">
-      <div className="job job--details">
-        <div className="job__container">
-          <h1 className="job__title">
-            <span className="job__title--name">
-              {title}
-            </span>
-            <span className="job__title--disponibility">
-              {
-                // TODO Faire une ternaire affichage oui/non
-              }
-              {/*
-                (Post disponible) Mettre une ternaire
-                avec visibility et class display none ou
-                visible
-              */
-                }
-            </span>
-          </h1>
-          <p className="job__text">
-            <span className="job__text--date">
-              <time dateTime="2022-11-18">
-                {published_on}
-              </time>
-            </span>
-            {weSearch}
-          </p>
-          <p className="job__text">
-            <span className="job__text--title">{title_description}</span>
-            {description}
-          </p>
-          <p className="job__text">
-            <span className="job__text--title">{title_description2}</span>
-            {description2}
-          </p>
-          <p className="job__text">
-            <span className="job__text--title">{title_description3}</span>
-            {description3}
-          </p>
-          <p className="job__text">
-            {avantage}
-          </p>
-          <p className="job__text">
-            Type de contrat : {type_contrat}
-          </p>
-          <p className="job__text">
-            Salaire : {salary}
-          </p>
-          <p className="job__text">
-            Deplacement : {deplacement_info}
-          </p>
-          <p className="job__text">
-            {licence_requeried}
-          </p>
-          <p className="job__text">
-            Expérience requise : {experience_requeried}
-          </p>
-          <p className="job__text">
-            Congé : {day_off}
-          </p>
-          <p className="job__text">
-            {opportunity}
-          </p>
-          <p className="job__text">
-            {workingHour}
-          </p>
-          <a
-            className="job__btn"
-            href="mailto:nbserviceetsoinsrecrutement@gmail.com"
-          >
-            Postuler
-          </a>
-        </div>
-      </div>
-    </div>
+    <acticle className="JobView">
+
+      <section className="jobView__container jobView--main_title">
+        <h1 className="jobView--main_title--content">
+          {title}
+        </h1>
+      </section>
+
+      <section className="jobView__container">
+        <span className="jobView__text--date">
+          <time dateTime={published_on.substring(0, 10)}>
+            Posté le : {published_on.substring(0, 10)}
+          </time>
+        </span>
+
+        <p className="jobView__text">
+          {we_search}
+        </p>
+
+        <hr className="separator" />
+
+        <h2 className="jobView__text--title">{title_description} :</h2>
+        <p className="jobView__text">
+          {description}
+        </p>
+
+        <hr className="separator" />
+
+        <h2 className="jobView__text--title">{title_description2} :</h2>
+        <p className="jobView__text">
+          {description2}
+        </p>
+
+        <hr className="separator" />
+
+        <h2 className="jobView__text--title">{title_description3} :</h2>
+        <p className="jobView__text">
+          {description3}
+        </p>
+
+        <hr className="separator" />
+
+        <h2 className="jobView__text--title">Les avantages :</h2>
+        <p className="jobView__text">
+          {avantage}
+        </p>
+
+        <hr className="separator" />
+
+        <h2 className="jobView__text--title">Type de contrat :</h2>
+        <p className="jobView__text">
+          {type_contrat}
+        </p>
+
+        <hr className="separator" />
+
+        <h2 className="jobView__text--title">Salaire :</h2>
+        <p className="jobView__text">
+          {salary}
+        </p>
+
+        <hr className="separator" />
+
+        <h2 className="jobView__text--title">Deplacement :</h2>
+        <p className="jobView__text">
+          {deplacement_info}
+        </p>
+
+        <hr className="separator" />
+        <h2 className="jobView__text--title">Diplôme requis :</h2>
+        <p className="jobView__text">
+          {licence_requeried}
+        </p>
+
+        <hr className="separator" />
+
+        {experience_requeried === null ? ''
+          : (
+            <><h2 className="jobView__text--title">Expérience requise :</h2>
+              <p className="jobView__text">
+                {experience_requeried}
+              </p>
+              <hr />
+            </>
+          )}
+
+        <h2 className="jobView__text--title">Congé :</h2>
+        <p className="jobView__text">
+          {day_off}
+        </p>
+
+        <hr className="separator" />
+        <h2 className="jobView__text--title">Permis de conduire :</h2>
+        <p className="jobView__text">
+          {drive_license === true ? 'Permis voiture obligatoire' : 'Permis voiture non-obligatoire'}
+        </p>
+
+        <hr className="separator" />
+
+        <h2 className="jobView__text--title">Frais de déplacement :</h2>
+        <p className="jobView__text">
+          {deplacement_info}
+        </p>
+
+        <hr className="separator" />
+
+        <h2 className="jobView__text--title">Etat du post :</h2>
+        <p className="jobView__text">
+          {opportunity}
+        </p>
+
+        <hr className="separator" />
+
+        <h2 className="jobView__text--title">Horaires de travail :</h2>
+        <p className="jobView__text">
+          {working_hour}
+        </p>
+
+        <hr className="separator" />
+
+        <h2 className="jobView__text--title">Jour de congé :</h2>
+        <p className="jobView__text">
+          {day_off}
+        </p>
+
+        <hr className="separator" />
+
+        <a
+          className="jobView__btn"
+          href="mailto:nbserviceetsoinsrecrutement@gmail.com"
+        >
+          Postuler
+        </a>
+      </section>
+    </acticle>
+
   );
 }
 
@@ -126,7 +189,7 @@ JobSpecificDetail.propTypes = {
   description2: PropTypesLib.string,
   title_description3: PropTypesLib.string,
   description3: PropTypesLib.string,
-  weSearch: PropTypesLib.string.isRequired,
+  we_search: PropTypesLib.string.isRequired,
   avantage: PropTypesLib.string.isRequired,
   licence_requeried: PropTypesLib.string.isRequired,
   experience_requeried: PropTypesLib.string.isRequired,
@@ -136,7 +199,8 @@ JobSpecificDetail.propTypes = {
   deplacement_info: PropTypesLib.string.isRequired,
   day_off: PropTypesLib.string.isRequired,
   opportunity: PropTypesLib.string.isRequired,
-  workingHour: PropTypesLib.string.isRequired,
+  working_hour: PropTypesLib.string.isRequired,
+  drive_license: PropTypesLib.bool.isRequired,
 };
 // == Export
 export default JobSpecificDetail;

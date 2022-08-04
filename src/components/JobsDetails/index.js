@@ -16,7 +16,6 @@ function JobsDetails() {
   );
 
   if (dataJobs != null) {
-    // console.log(dataJobs);
     return (
       <main className="main">
         {[dataJobs].map((item) => (

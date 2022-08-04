@@ -28,6 +28,8 @@ function JobsPage() {
                     title={item.title}
                     weSearch={item.we_search}
                     id={item.id}
+                    opportunity={item.opportunity}
+                    date={item.published_on}
                   />
                 )
                 : ''

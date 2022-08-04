@@ -9,6 +9,9 @@ function JobsList({
   title,
   weSearch,
   id,
+  visibility,
+  opportunity,
+  date,
 }) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,14 +25,17 @@ function JobsList({
             { title }
           </span>
           <span className="job__title--disponibility">
-            (Post disponible)
+            { visibility ? '(Post disponible)' : '' }
           </span>
         </h1>
         <p className="job__text">
           { weSearch }
+        </p>
+        <p className="job__text">
+          { opportunity }
           <span className="job__text--date">
             <time dateTime="2022-11-18">
-              2022-11-18
+              Posté le : {date.substring(0, 10)}
             </time>
           </span>
         </p>
@@ -48,7 +54,9 @@ JobsList.propTypes = {
   title: PropTypesLib.string.isRequired,
   weSearch: PropTypesLib.string.isRequired,
   id: PropTypesLib.number.isRequired,
+  visibility: PropTypesLib.bool.isRequired,
+  opportunity: PropTypesLib.string.isRequired,
+  date: PropTypesLib.string.isRequired,
 };
 
-// == Export
 export default JobsList;
