@@ -84,6 +84,8 @@
 
     &__container--txt {
       font-size: 1.6rem;
+      line-height: 1.1;
+
     }
 
     &__container--btn {
@@ -111,7 +113,7 @@
     }
 
     &__service--container:hover {
-      transform: scale(0.985);
+      transform: scale(1.01);
     }
 
     &__service--container--content {
@@ -127,6 +129,7 @@
 
     &__service--txt {
       font-size: 1.6rem;
+      line-height: 1.3;
     }
 
     &__service--img {
