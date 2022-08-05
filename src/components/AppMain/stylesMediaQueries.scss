@@ -85,7 +85,6 @@
       border-top-right-radius: 800px;
       border-bottom-right-radius: 8000px;
       border-bottom-left-radius: 800px;
-      transform: scale(1.1);
       transition:0.5s ease-in;
       transition: 1s ease-out;
   
@@ -95,11 +94,6 @@
       color: vars.$blue-color;
       opacity: 0.85;
       font-weight: 700;
-    }
-
-    &__title:hover {
-      transform: scale(1.1);
-  
     }
   }
 
