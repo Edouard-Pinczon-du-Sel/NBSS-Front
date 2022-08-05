@@ -2,13 +2,14 @@
 @use 'src/styles/vars';
 
 
-.test {
+.imgDisplayed {
   display: block;
   object-fit:cover;
-  width: 100vw;
-  height: 40vh;
+  width: 100%;
+  height: 45vh;
   margin: 0 auto;
-  // object-fit:contain;
+  object-fit:cover;
+  border-radius: 5px;
   // height: 250px;
 }
 .slider-control-topcenter {
@@ -63,8 +64,9 @@
   }
 
 }
+.carouselNuka {
+  margin-top: 2rem;
+  margin-bottom: 8rem;
 
-.test_v2 {
-  margin-bottom: 7rem;
 }
 
