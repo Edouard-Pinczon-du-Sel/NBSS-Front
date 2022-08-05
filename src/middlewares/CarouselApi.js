@@ -5,7 +5,7 @@ import { FETCH_CAROUSEL, saveCarousel } from '../actions/carousel';
 const carouselMiddleWare = (store) => (next) => (action) => {
   switch (action.type) {
     case FETCH_CAROUSEL: {
-      axios.get('http://gatechien-server.eddi.cloud/NB-services-et-soin/current/public/api/picture')
+      axios.get('https://gatechien-server.eddi.cloud/NB-services-et-soin/current/public/api/picture')
         .then(
           (response) => {
             // console.log('reponse de l\'API :', response); // NOTE A supprimer avant Build
