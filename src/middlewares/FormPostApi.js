@@ -1,6 +1,5 @@
 import axios from 'axios';
-// import { useSelector } from 'react-redux';
-import { FETCH_FORM_POST } from '../actions/formPost';
+import { FETCH_FORM_POST, initState } from '../actions/formPost';
 import encodeContact from '../encoder/encoderContact';
 
 const formMiddleWare = (store) => (next) => (action) => {
@@ -12,6 +11,9 @@ const formMiddleWare = (store) => (next) => (action) => {
         .then(
           (response) => {
             console.log('reponse de l\'API :', response); // NOTE //! A SUPPRIMER AVANT BUILD
+            if (response.status === 201) {
+              store.dispatch(initState());
+            }
           },
         )
         .catch(

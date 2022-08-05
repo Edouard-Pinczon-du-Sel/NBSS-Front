@@ -20,6 +20,7 @@ import {
   CHANGE_PERSONNAL_ASSISTANCE_UN_CHECK,
   SERVICE_SELECTED,
 } from '../actions/form';
+import { INIT_STATE } from '../actions/formPost';
 import FormAdmin from '../components/AppForm/FormAdmin';
 import FormGarde from '../components/AppForm/FormGarde';
 import FormMenagers from '../components/AppForm/FormMenagers';
@@ -367,6 +368,64 @@ const reducer = (state = initialState, action = {}) => {
           administrativeDepartment: {
             ...state.recap.administrativeDepartment,
             [action.key]: action.selected,
+          },
+        },
+      };
+    case INIT_STATE:
+      return {
+        ...state,
+        recap: {
+          contact: {
+            firstname: '',
+            lastname: '',
+            maidenName: '',
+            mail: '',
+            adress: '',
+            zipCode: 0,
+            city: '',
+            phoneNumber: '',
+            content: '',
+            preferency: true,
+            createdAt: '',
+          },
+          administrativeDepartment: {
+            firstname: '',
+            lastname: '',
+            mail: '',
+            adress: '',
+            city: '',
+            content: '',
+            firstnameOfDeceased: '',
+            lastnameOfDeceased: '',
+            maidenNameOfDeceased: '',
+            adressDeceased: '',
+            zipCodeOfDeceased: 0,
+            cityOfDeceased: '',
+            dateOfBirth: '',
+            placeOfBirth: '',
+            dateOfDeceased: '',
+            placeOfDeceased: '',
+            postalCode: 0,
+          },
+          babysittingService: {
+            content: '',
+            days: [],
+            intervention: [],
+            numberChild: 0,
+            numberHour: 0,
+          },
+          housekeeping: {
+            content: '',
+            frequency: [],
+            numberHour: 0,
+          },
+          personalAssistanceService: {
+            content: '',
+            organization: '',
+            personalAssistance: [],
+            intervention: [],
+            financialHelp: false,
+            numberHour: '',
           },
         },
       };
