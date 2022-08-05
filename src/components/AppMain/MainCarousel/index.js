@@ -29,7 +29,7 @@ function MainCarousel() {
         cellAlign="center"
         className="carouselNuka"
         adaptiveHeightAnimation
-        speed={800}
+        speed={1000}
         autoplayInterval={8000}
         renderBottomCenterControls={({ currentSlide }) => (
           <div className="info">
